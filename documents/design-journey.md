@@ -126,7 +126,7 @@ We will also include an image gallery so that the client may showcase any pictur
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
 
-For each milestone, we should finish our parts at least a day before the Tuesday deadline so that we can review each others' works. There is no member who is solely in charge of coding or design but instead each week we will discuss our parts so that all of us will play a part in both areas.
+For each milestone, we should finish our parts at least a day before the Tuesday deadline so that we can review each others' works. There is no member who is solely in charge of coding or design but instead each week we will discuss our parts so that all of us will play a part in both areas. Like we did in milestone 1, we first met up and discussed how we would split up the work evenly, and then completed each of our parts well before the deadline.
 
 ## Additional Comments
 
