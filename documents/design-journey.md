@@ -1,6 +1,6 @@
 # Project 4: Design Journey
 
-Your Team Name: [your team name]
+Your Team Name: [green-lion]
 
 **All images must be visible in Markdown Preview. No credit will be provided for images in your repository that are not properly linked in Markdown. Assume all file paths are case sensitive!**
 
@@ -9,6 +9,8 @@ Your Team Name: [your team name]
 
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
 
+> Our client is a Cornell student that is currently involved in the Armenian Student Organization on campus. Being that her organization does not have a website, she would like to have one that mainly provides further information about current members and events ongoing. Some of the key goals that she would like the website to accomplish are notifying others of future events involved with ASO, general information about current members, and to spread more awareness about ASO both on campus and in the Ithaca community.
+
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
 
@@ -16,16 +18,19 @@ Your Team Name: [your team name]
 
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
+![Milestone 1 Meeting Notes](m1notes.png)
 
 ## Purpose & Content
 
 [Tell us the purpose of the website and what it is all about.]
 
+> The purpose of this website is to provide one space with consolidated information about upcoming events, blog/news posts, contact information, photos, and member rosters (with bios) to both current members and others in the Cornell/Ithaca community looking to get involved. This website will mostly be about the members currently involved in ASO, and any events or news the organization would like to spread awareness about to the community.
 
 ## Target Audience(s)
 
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
 
+> The potential audience for this website will be current and potential ASO members (including staff and Ithaca community members), and other organizations looking to collaborate on events/campaigns together. An example of when users might interact with the website is when potential members visit it to gain a better understanding of the organization's goals or purpose.
 
 ## Client Requirements & Target Audiences' Needs
 
@@ -62,6 +67,17 @@ Example:
     - Mobile Apps
     - Tablets
   - About Me
+
+
+Website:
+- **Navigation**
+  - About Us
+    - Contact
+  - Gallery
+    - Members
+  - Blogs
+  - Upcoming Events
+  - Alumni
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
