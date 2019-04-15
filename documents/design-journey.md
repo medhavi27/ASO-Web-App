@@ -19,6 +19,10 @@ Your Team Name: [green-lion]
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
 ![Milestone 1 Meeting Notes](m1notes.png)
+![Header Template](header_template.jpg)
+![About Page](about.JPG)
+![Alumni Page](alumni.JPG)
+![Contact Page](contact.JPG)
 
 ## Purpose & Content
 
@@ -110,6 +114,7 @@ Website:
   - *About*: Introduction to ASO using text and several images
     - *Introduction/History*: Text
     - *Images*: Images of past experiences with organization and background image of club picture
+  - *Alumni*: Photo gallery including all alumni of the organization
     - *Alumni*: Separate page that is shown through a dropdown menu when hovering over "About" in the navigation bar. Picture all alumni of ASO through a similar display as the gallery webpage. Use images with captions, but most likely shorter descriptions.
   - *Members*: Photo gallery including all members of the organization
     - *Members*: Picture of every member in ASO as well as a description paired with the image
