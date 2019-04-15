@@ -94,6 +94,18 @@ Website:
   - *Mobile Apps*: showcase all the mobile apps designed by the client, with thumbnail images and a brief description for each design;
   - *Tablets*: showcase all the tablet applications designed by the client, with thumbnail images and a brief description for each design;
 
+- ASO website
+  - *About Us*: Introduction to ASO using text and several images
+    - *Contact*: Contact information to the organization (including email, phone number, location, etc.)
+
+  - *Gallery*: Photo gallery including all members of the organization
+    - *Members*: Picture of every member in ASO as well as a description paired with the image
+
+  - *Blogs*: Any relevant news that the ASO e-board believes is important to annouce/share with the community
+
+  - *Upcoming Events*: showcase all upcoming events through the use of pictures, captions, descriptions, dates, etc.
+
+  - *Alumni*: Picture all alumni of ASO through a similar display as the gallery webpage. Use images with captions, but most likely shorter descriptions.
 - **Process**
   - [photo of card sort]
   - [explanation of how your come up with your content organization and navigation.]
