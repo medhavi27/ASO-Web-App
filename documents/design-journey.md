@@ -39,12 +39,21 @@ Your Team Name: [green-lion]
 Example:
 - (_pick one:_) Client Requirement/Target Audience Need
   - **Requirement or Need** [What does your client and audience need or want?]
-    - Client wants to cater to people who speak different languages.
+   - Client wants to cater to people who speak different languages.
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
-    - Create web-pages manually in multiple languages.
+   - Create web-pages manually in multiple languages.
   - **Rationale** [Justify your decisions; additional notes.]
-    - Create multiple pages in multiple languages manually.
+   - Create multiple pages in multiple languages manually.
 
+Client Requirement/Target Audience Need
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - Client needs to convey information about upcoming events, and blog/new posts
+    - The client also wants to have member rosters with bios on the website
+    - The audience also wants to find ways to get involved in the Cornell/Ithaca community by attending these events
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Have a login/logout function so that e-board members can edit event/blog pages
+  - **Rationale** [Justify your decisions; additional notes.]
+    - We can create a database of events since this seems to be a critical content for the client
 
 ## Initial Design
 
@@ -95,13 +104,17 @@ Website:
 [What interactive features will your site have? What PHP elements will you include?]
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
+We will have a login/logout function for e-board members so that they can update upcoming events and the blog. This connects with the needs of the client because one main focus of the website is to deliver information on the club's events and this also fits the needs of the audience so that they can stay up to date with the organization.
 
+We will also include an image gallery so that the client may showcase any pictures of the events the club holds, club members, etc. This will also give the audience a visual perspective of the type of events and the community the club brings together.
 
 ## Work Distribution
 
 [Describe how each of your responsibilities will be distributed among your group members.]
 
 [Set internal deadlines. Determine your internal dependencies. Whose task needs to be completed first in order for another person's task to be relevant? Be specific in your task descriptions so that everyone knows what needs to be done and can track the progress effectively. Consider how much time will be needed to review and integrate each other's work. Most of all, make sure that tasks are balanced across the team.]
+
+For each milestone, we should finish our parts at least a day before the Tuesday deadline so that we can review each others' works. There is no member who is solely in charge of coding or design but instead each week we will discuss our parts so that all of us will play a part in both areas.
 
 ## Additional Comments
 
