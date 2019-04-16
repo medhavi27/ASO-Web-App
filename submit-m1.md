@@ -43,7 +43,6 @@ Each team member should sign their name and include today's date and time to sub
 
 - Full Name of Each Contributing Team Member: Joseph Mo
 - Full Name of Each Contributing Team Member: Jasmine Ng
-<<<<<<< HEAD
 - Full Name of Each Contributing Team Member: Medhavi Gandhi
 - Full Name of Each Contributing Team Member: Jiaxuan Li
 - Date & Time: Monday April 15 11:43 pm
