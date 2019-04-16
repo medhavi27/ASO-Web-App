@@ -99,11 +99,11 @@ Website:
     - *Contact*: Contact information to the organization (including email, phone number, location, etc.)
 
   - *Gallery*: Photo gallery including all members of the organization
-    - *Members*: Picture of every member in ASO as well as a description paired with the image
+    - *Members*: Picture of every member in ASO as well as a description (major,bio) paired with the image
 
   - *Blogs*: Any relevant news that the ASO e-board believes is important to annouce/share with the community
 
-  - *Upcoming Events*: showcase all upcoming events through the use of pictures, captions, descriptions, dates, etc.
+  - *Upcoming Events*: showcase all upcoming events through the use of pictures, captions, descriptions, dates, location, etc.
 
   - *Alumni*: Picture all alumni of ASO through a similar display as the gallery webpage. Use images with captions, but most likely shorter descriptions.
 - **Process**
@@ -119,6 +119,7 @@ Website:
 We will have a login/logout function for e-board members so that they can update upcoming events and the blog. This connects with the needs of the client because one main focus of the website is to deliver information on the club's events and this also fits the needs of the audience so that they can stay up to date with the organization.
 
 We will also include an image gallery so that the client may showcase any pictures of the events the club holds, club members, etc. This will also give the audience a visual perspective of the type of events and the community the club brings together.
+
 
 ## Work Distribution
 
