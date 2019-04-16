@@ -19,6 +19,10 @@ Your Team Name: [green-lion]
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
 ![Milestone 1 Meeting Notes](m1notes.png)
+![Header Template](header_template.jpg)
+![About Page](about.JPG)
+![Alumni Page](alumni.JPG)
+![Contact Page](contact.JPG)
 
 ## Purpose & Content
 
@@ -80,13 +84,25 @@ Example:
 
 Website:
 - **Navigation**
-  - About Us
-    - Contact
-  - Gallery
-    - Members
-  - Blogs
-  - Upcoming Events
-  - Alumni
+  - About
+    - Introduction/History
+    - Images (Background Image)
+    - Alumni in dropdown when hovered over
+      - Alumni
+  - Members
+    - Current Members
+    - Form to add members
+    - Donation information
+  - Events
+    - Images/Descriptions
+    - Form to add events
+  - Learn More
+    - Blog information
+    - Form to add blogs/news
+  - Contact
+    - Information for eboard
+    - Social media links
+
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
   - *Portfolio*: list all the projects (as images) this client has worked on. When the image is hovered over, display a description of the project; add a search function to enable users search for specific projects;
@@ -106,6 +122,25 @@ Website:
   - *Upcoming Events*: showcase all upcoming events through the use of pictures, captions, descriptions, dates, location, etc.
 
   - *Alumni*: Picture all alumni of ASO through a similar display as the gallery webpage. Use images with captions, but most likely shorter descriptions.
+  - *About*: Introduction to ASO using text and several images
+    - *Introduction/History*: Text
+    - *Images*: Images of past experiences with organization and background image of club picture
+  - *Alumni*: Photo gallery including all alumni of the organization
+    - *Alumni*: Separate page that is shown through a dropdown menu when hovering over "About" in the navigation bar. Picture all alumni of ASO through a similar display as the gallery webpage. Use images with captions, but most likely shorter descriptions.
+  - *Members*: Photo gallery including all members of the organization
+    - *Members*: Picture of every member in ASO as well as a description paired with the image
+    - *Members Form*: E-board members will have the option to login and add members to the photo gallery
+    - *Donation*: Bottom section of webpage describing the donation process to ASO.
+  - *Events*: List of upcoming events.
+    - *Images/Descriptions*: Pictures and captions of upcoming events
+    - *Events Form*: E-board members will have the option to login and add upcoming events to the events gallery
+  - *Learn More*: Additional information about ASO.
+    - *Blog Information*: Images associated with blog titles
+    - *Blog Form*: E-board members will have the option to login and add new blog information to the blog gallery that they think is important to announce/share with the community
+  - *Contact*: Webpage designed to reach the organization
+    - *Info of e-board*: Positions with contact information (email, phone number, name)
+    - *Social Media links*: Links to social media such as Facebook or Instagram
+
 - **Process**
   - [photo of card sort]
   - [explanation of how your come up with your content organization and navigation.]
