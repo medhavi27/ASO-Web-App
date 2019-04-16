@@ -23,6 +23,8 @@ Your Team Name: [green-lion]
 ![About Page](about.JPG)
 ![Alumni Page](alumni.JPG)
 ![Contact Page](contact.JPG)
+![Members Page](members.jpg)
+![Members Page Logged In](members_logged_in.jpg)
 
 ## Purpose & Content
 
