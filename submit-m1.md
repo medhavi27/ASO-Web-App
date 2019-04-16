@@ -42,4 +42,6 @@ See the course website for a detailed citation policy with more information on u
 Each team member should sign their name and include today's date and time to submit **MILESTONE 1**.
 
 - Full Name of Each Contributing Team Member: Joseph Mo
-- Date & Time:
+- Full Name of Each Contributing Team Member: Jasmine Ng
+- Full Name of Each Contributing Team Member: Medhavi Gandhi
+- Date & Time: Monday April 15 11:43 pm

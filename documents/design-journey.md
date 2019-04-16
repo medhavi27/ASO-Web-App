@@ -25,6 +25,7 @@ Your Team Name: [green-lion]
 ![Contact Page](contact.JPG)
 ![Members Page](members.jpg)
 ![Members Page Logged In](members_logged_in.jpg)
+ ![Learn More Page](learnmore.JPG)
 
 ## Purpose & Content
 
@@ -134,7 +135,21 @@ Website:
 
 - **Process**
   - [photo of card sort]
+  ![Content to Card Sort](cs1.jpg)
+  ![Pages to Card Sort](cs2.jpg)
+  ![Pages to Card Sort](cs3.jpg)
+
+
   - [explanation of how your come up with your content organization and navigation.]
+  After listening to our client's requests, we came up with a list of content we wanted to add to the website.
+  We then decided that it would make sense to cluster some of this content together
+  * It made sense to have an About/Home page introducing ASO and its history, along with some images of the club.
+  * Our client wanted member bios, so it made sense to have a separate page for members with a picture and bio for each one. With this, we needed the option to add a new member bio, so we added the form to this page (for logged in eboard members only). She also mentioned wanting a donation link, which we decided to add to this page as well, as it is mostly members' families that donate.
+  * Our client wanted a list of events, so we added an Events page, in which we'll have the list of upcoming events, as well as the form to add new events (for logged in eboard members)
+  * Our client wanted to display a few blog posts, so we decided to add a "Learn More" page for people interested in reading more in detail about the club. We also included the form to submit blog posts on this page.
+  * We decided it would be good to have all the contact information in one place, so we're going to create a Contact page, and add to it the eboard contact info, and the social media links.
+  * Thus, we ended up with our 6 main pages (About, Members, Alumni, Events, Learn More, Contact) and the information we're going to add to each one of them.
+
 
 
 ## Interactivity
