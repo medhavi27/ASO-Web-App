@@ -65,7 +65,12 @@ Client Requirement/Target Audience Need
 ## Initial Design
 
 [Include exploratory idea sketches of your website.]
-
+![About us](about.JPG)
+![Members](members.jpg)
+![members logged in ](members_logged_in.jpg)
+![Events](events.jpg)
+![Learn More](learnmore.JPG)
+![Contact](contact.JPG)
 
 ## Information Architecture, Content, and Navigation
 
