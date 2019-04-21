@@ -28,6 +28,7 @@ We want to have regular check-ins to make sure we're making progress and listeni
 * Be helpful and non-condescending
 
 
+
 3. By what means and how frequently will we meet or communicate?
 
 We're going to have a group Slack for regular communication, as well as biweekly progress meetings.
@@ -36,15 +37,19 @@ We're going to have a group Slack for regular communication, as well as biweekly
 
 4. How will we communicate and work with our client?
 
-We're going to have one initial skype or in-person meeting with our client, and then communicate via email.
+We're going to have one initial skype or in-person meeting with our client, and then communicate via email. We will also send a weekly check-in with details on our progress, and any requests we may have from them.
 
 
 5. What roles will we create? Include a description of exactly what each role is responsible for.
 
-For the most part, everyone is going be treated equally and expected to do the same amount of work,and be equally as responsive and communicative.
-One team member may be assigned the role of the primary communicator, to schedule meetings or set reminders, if necessary.
-We will also have roles of coders/designers. Coders will be responsible for implementing certain designs
-or functionalities of the website while designers will sketch out how each webpage will look.
+For the most part, everyone is going be treated equally and expected to do the same amount of work, and be equally as responsive and communicative. Everyone is expected to write PHP code, everyone is expected to write SQL queries, everyone is expected to design and sketch.
+
+We will have everyone discuss what they think their strengths are, and based on this, we will assign leads for the following roles:
+- Database lead: while everyone will add to the database and help set it up, one person will look over our database every week to make sure our queries are correct, the transactionl standards are being met, and that everything looks good in general.
+- Design lead: while everyone will write CSS, we will have one person check that our website is clean and consistent with our client's goals before every milestone. This inclues making sure our CSS is error free and non-repetetive. While we don't have a "brand guide", they will also ensure we're not going too bold or using too many design features.
+- Communication lead: this person will plan weekly meetings, send emails to our client, and make sure there is steady communication between everyone.
+- Details lead: this person will go over our final submission before every deadline and make sure we're meeting every requirement, and notify the group well in advance if we're not. We don't want to mess up and lose points for not validating html or uploading large files!
+
 
 
 6. How will we hold ourselves and one another accountable? What (exactly) will we say to a team member who appears not to be contributing equally? To a team member who fails to deliver what was promised?
