@@ -414,8 +414,11 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 ## Final Design
 
 [Include sketches of your finalized design.]
+![Members Page](final_member.jpg)
+![Member Page when user logs in and when user clicks on single member image](final_memberlogged.jpg)
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
+On the members page, we added a search function so anyone could search for a member(s) with the name that the user typed in or obtain a list of members with the corresponding searched year/major. We also discussed about adding a seperate php to have the user click on a specific member's headshot to be able to delete their profile on the member page. We included this because we thought it would be useful to have a delete function in conjunction to the add member function.
 
 
 ## Database Schema
@@ -511,7 +514,52 @@ Overview wrapped in h2
 
 p element giving an overview of ASO
 ```
+```
+Pseudocode for member.php...
 
+include init.php
+
+include header.php
+
+background image (member centered)
+
+log in form
+
+Executive Board 2019 (wrapped in h2)
+
+Positions and names of each e-board member along with headshot, major/minor and bio
+
+Members 2019 (wrapped in h2)
+
+names of each member along with headshot, major/minor and bio
+
+Footer at bottom containing fb and instagram logo
+that links to ASO's respective fb and ig
+
+```
+```
+Pseudocode for membersingle.php...
+
+include init.php
+
+include header.php
+
+background image (member centered)
+
+signed in as .... (sign out button)
+
+Name of member 'year (centered)
+
+Headshot/image of member (centered)
+
+major/minor (centered)
+
+remove button (centered)
+
+Footer at bottom containing fb and instagram logo
+that links to ASO's respective fb and ig
+
+```
 ```
 Pseudocode for alumni.php...
 
@@ -541,6 +589,7 @@ Footer at bottom containing fb and instagram logo
 that links to ASO's respective fb and ig
 
 ```
+
 
 
 ## Additional Comments
