@@ -422,25 +422,25 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
-Table: movies
-* field 1: description...
-* field...
-
 Table: members
 * field 1: id (PK)
-* field 2: name (TEXT NOT NULL)
-* field 3: year (INTEGER NOT NULL)
-* field 4: eboard (BOOLEAN NOT NULL)
-* field 5: alumni (BOOLEAN NOT NULL)
-* field 6: major (TEXT)
-* field 7: minor (TEXT)
-* field 8: bio (TEXT)
+* field 2: user_id (INTEGER)
+* field 3: name (TEXT NOT NULL)
+* field 4: year (INTEGER NOT NULL)
+* field 5: eboard (BOOLEAN NOT NULL)
+* field 6: alumni (BOOLEAN NOT NULL)
+* field 7: major (TEXT)
+* field 8: minor (TEXT)
+* field 9: bio (TEXT)
 
 Table: events
 * field 1: id (PK)
-* field 2: description (TEXT)
-* field 3: file_name (TEXT)
-* field 4: file_ext
+* field 2: file_name (TEXT)
+* field 3: file_ext (TEXT)
+* field 4: event_name (TEXT)
+* field 5: description (TEXT)
+* field 6: time (TEXT)
+* field 7: location (TEXT)
 
 Table: blog
 * field 1: id (PK)
@@ -449,7 +449,7 @@ Table: blog
 * field 4: date (TEXT NOT NULL)
 * field 5: author (TEXT NOT NULL)
 
-Table: eboard
+Table: users
 * field 1: id (PK)
 * field 2: username (TEXT NOT NULL)
 * field 3: password (TEXT NOT NULL)
