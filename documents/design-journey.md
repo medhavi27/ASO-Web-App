@@ -293,6 +293,77 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 
 #### Task 2 - Cognitive Walkthrough
 
+Task 2: [Abby is on the e-board for ASO, and has been taking the lead of planning an upcoming event hosted by ASO. To spread awareness about the event, she would like to add it to the website.]
+
+**Subgoal # [1] : [Find events page]**
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [Yes]
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
+    Abby has the task in mind to add in events so intuitively she would form a goal to navigate to a page where she could see information on the events. She would be able to form this goal since she is a logical thinker and it is logical to navigate to a page of related content.
+
+**Action # [1] : [Click on the events page in the navgiation bar]**
+
+    - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+    Why? (Especially consider [persona]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+    Abby is a comprehensive learner and is also logical based so she will read what pages are on the nav bar and reason that the page to add in events would possibly be under the events webpage.
+
+    - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
+    Abby will see that she has gone to a page that have relevant information on events and see the log in form that can lead her into being able to add in events onto the page.
+
+  **Action # [2] : [Input username and password so that she is logged in]**
+
+    - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+    Abby will read what is on the page. Since the log in is designed to be at the top of the page, Abby could see that there is a section for her to be able to log in with a username and password to submit the form.
+
+    - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
+
+    Abby will see that she has logged in and this should permit her to be able to update events.
+
+  **Subgoal # [2] : [Add in the event onto the website]**
+
+  - Will [persona name] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
+    She would form this sub goal because once she has completed the first sub goal she should see a page where she is logged in and is permitted to see a form which has the purpose of adding an event. Since she is the type of person to read through information before tinkering, she would naturally see that at the top of the page (clearly visible) that now her step is to add in the event that she has been planning and to input all the relevant information.
+
+**Action # [1] : [Input all information that is required to add a new event]**
+
+    - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+    Abby should see a form section at the top of the page when logged in. Since Abby is the type of person to gather information to understand the task, Abby would read through the form of all the questions, (add button) to understand that she would have to complete the form by inserting information to add events.
+
+    - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
+
+    Abby will see that she is a step closer to accomplishing the task because then she'll see that all the information that she wants to relay to the audience is being placed in a form that will allow her to display the information on the webpage.
+**Action # [2] : [Click on the add button to successfully add the event]**
+
+    - Will [persona name] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+    Abby would read through the information and buttons asked on the form and would see that at the end of the form is the add button. Intuitively she would click the add button to send in all the information that she placed.
+
+    - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
+
+    Abby will see that she has added an event to the page because once she presses the add button, she should still be on the events page and would see that the event that she inserted was directly updated and displayed on the page.
+
 
 ### Cognitive Walk-though Results
 
