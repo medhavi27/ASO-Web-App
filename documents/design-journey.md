@@ -216,7 +216,6 @@ Task 1: [Abby is on the e-board for ASO, and is in charge of the initiation of n
   1. [Click on the members page in the navigation bar]
   2. [Input username and password so that she is logged in]
   3. [Input all information that is required to add a new member (name, year, e-board member?, major/minor, bio)]
-  4. [Click on add button and repeat if necessary for other members]
 
 Task 2: [Abby is on the e-board for ASO, and has been taking the lead of planning an upcoming event hosted by ASO. To spread awareness about the event, she would like to add it to the website.]
 
@@ -246,9 +245,9 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
   - Will [Abby] have formed this sub-goal as a step to their overall goal?
     - Yes, maybe or no: [yes]
     - Why? (Especially consider [Abby]'s Motivations/Strategies.)
-      > We think that due to Abby's persona of being comprehensive and her strategy of fully trying to understand what the problem is beforehand, she would be able to form this sub-goal.
+      > We think that due to Abby's persona of being comprehensive and her strategy of fully trying to understand what the problem is beforehand, she would be able to form this sub-goal. Because she gathers all relevant information before trying to solve a problem, forming this sub-goal for her would seem like a beginning step to achieving the overall goal.
 
-**Action # [1] : [Physically clicking on members webpage]**
+**Action # [1A] : [Physically clicking on members webpage]**
 
   - Will [Abby] know what to do at this step?
     - Yes, maybe or no: [yes]
@@ -260,33 +259,69 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
       > Abby will know that she did the right thing because correctly executing this action will not cause problems, instead it will do exactly what the user may think it will do, navigate to a separate page, the members webpage.
 
-**Action # [2] : [Inputting username and password to login]**
+**Subgoal # [2] : [Logging in]**
+
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Motivations/Strategies.)
+      > We believe that Abby will be able to have formed this sub-goal once again due to her comprehensiveness, and her technique when learning new technologies. Because she begins with gathering all the necessary information first before tacking a problem completely, we think that she will eventually reason that she must login to progress towards the overall goal. Moreover, because she is on e-board, the short
+      description at the top indicating e-board members may sign in will also give her clues to form this sub-goal. Furthermore, although she may not prefer to tinker with software, in the case that she does she will most likely stumble upon the added features of logging in based on her learning mechanisms.
+
+**Action # [2A] : [Physically typing in username and password information]**
 
   - Will [Abby] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
-
-        [Tell us why...]
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      > Once again, due to Abby's comprehensiveness, we believe that she will be able to execute this specific action. Moreover, this action is also not too complex, and does not require much computing skills other than typing in information that she should already know.
 
   - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
+    - Yes, maybe or no: [maybe]
     - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      > Although Abby may do the right thing, it may not be obvious at first that she did the right thing due to nothing happening after typing in the information for username and password. This is because it is only after she clicks the login button will there be a change on the screen making it more obvious that she is doing the right thing. As a result, we concluded that she may or may not be fully confident after executing this action due to her risk averse attitude and low confidence with computing tasks.
 
-        [Tell us why...]
-
-**Action # [3] : [action name]**
+**Action # [2B] : [Physically clicking the login button]**
 
   - Will [Abby] know what to do at this step?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
-
-        [Tell us why...]
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      > We believe that Abby will definitely know what to do at this step because there seems to be only one option after typing in the username and password credentials, which is clicking the login button. Again, this can be attributed to her comprehensiveness and her ability to process all the information laid out in front of her before trying to solve the problem.
 
   - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
-    - Yes, maybe or no: [yes/maybe/no]
-    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
+      > Abby will know that she did the right thing because clicking the login button will immediately display a change on the screen. Additionally, the newly displayed screen will also indiciate that she is logged in from the text at the top of the webpage. As a result, Abby will not blame herself because there will be no problem, and she is familiar with features that are predictable, such as clicking a login button after typing in the username and password.
 
-        [Tell us why...]
+**Subgoal # [3] : [Input information to add a new member]**
+
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
+      > Yes, because we believe that during Abby's phase of gathering information comprehensively, she will be able reason that there must be a general format or method to add new members into the webpage.
+
+**Action # [3A] : [Physically typing in all information of new member]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      > Although Abby may not be confident in her computing skills, we think that she still would be able to complete this action because it is not too complex of a task. Moreover, Abby's comprehensive nature also allowed us to gather that she would be able to execute this action without any issues.
+
+  - If [persona name] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [Maybe]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      > Maybe, because only adding the information in without clicking the add button will not display any changes on the screen. As a result, Abby may or may not know that she did the right thing due to her risk averse attitude and unfamiliar computing skills.
+
+**Action # [3B] : [Physically clicking add member button]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      > We believe that Abby will know what to do at this step because her logical thinking should lead her to performing this action after inputting all the necessary information.
+
+  - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Self-Efficacy and Attitude toward Risk.)
+      > Abby will know she did the right thing because clicking the add member button will transition into a new screen that contains a gallery of members with the most recent member added. Moreover, a short description confirming this action will also allow Abby to know that she did the right thing.
+
 
 *Source*: Margaret Burnett, Simone Stumpf, Laura Beckwith, and Anicia Peters, "The GenderMag Kit: How to Use the GenderMag Method to Find Inclusiveness Issues through a Gender Lens", http://gendermag.org, Feb. 1 2018 .
 
