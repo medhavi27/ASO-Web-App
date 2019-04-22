@@ -201,7 +201,7 @@ For each milestone, we should finish our parts at least a day before the Tuesday
 
 [Pick a persona that you believe will help you address the gender bias within your design.]
 
-I've selected **[Abby/Patricia/Patrick/Tim]** as my persona.
+I've selected **[Abby]** as my persona.
 
 I've selected my persona because... [Tell us why you picked your persona in 1-3 sentences. Your explanation should include why your persona will help you address gender-inclusiveness bugs in your design.]
 
@@ -211,13 +211,19 @@ I've selected my persona because... [Tell us why you picked your persona in 1-3 
 
 [For each task, list the ideal set of actions that you would like your users to take when working towards the task.]
 
-Task 1: [describe your task]
+Task 1: [Abby is on the e-board for ASO, and is in charge of the initiation of new members. This past semester, there have been new members that joined ASO, which means that Abby must add those members onto the website.]
 
-  1. [action 1...]
-  2. [action 2...]
-  3. ...
+  1. [Click on the members page in the navigation bar]
+  2. [Input username and password so that she is logged in]
+  3. [Input all information that is required to add a new member (name, year, e-board member?, major/minor, bio)]
+  4. [Click on add button and repeat if necessary for other members]
 
-Task 2:
+Task 2: [Abby is on the e-board for ASO, and has been taking the lead of planning an upcoming event hosted by ASO. To spread awareness about the event, she would like to add it to the website.]
+
+  1. [Click on the events page in the navgiation bar]
+  2. [Input username and password so that she is logged in]
+  3. [Input all information that is required to add a new event]
+  4. [Click on the add button to successfully add the event]
 
 
 ### Cognitive Walkthrough
@@ -229,6 +235,60 @@ Task 2:
 [copy the GenderMag template here and conduct a cognitive walkthrough to evaluate your design (wireframes).]
 
 [You may need to add additional subgoals and/or actions for each task.]
+
+# GenderMag Template
+
+**Task name: [Add New Member]**
+
+[Add as many subgoals as you needs]
+**Subgoal # [1] : [Click members webpage]**
+
+  - Will [Abby] have formed this sub-goal as a step to their overall goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Motivations/Strategies.)
+      > We think that due to Abby's persona of being comprehensive and her strategy of fully trying to understand what the problem is beforehand, she would be able to form this sub-goal.
+
+**Action # [1] : [Physically clicking on members webpage]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [Abby]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+      > We believe that Abby's strategy to approaching problems will ultimately allow her to reason that clicking on the members webpage is the most appropriate first action to making progress towards finishing the task.
+
+  - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+      > Abby will know that she did the right thing because correctly executing this action will not cause problems, instead it will do exactly what the user may think it will do, navigate to a separate page, the members webpage.
+
+**Action # [2] : [Inputting username and password to login]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+**Action # [3] : [action name]**
+
+  - Will [Abby] know what to do at this step?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Knowledge/Skills, Motivations/Strategies, Self-Efficacy and Tinkering.)
+
+        [Tell us why...]
+
+  - If [Abby] does the right thing, will she know that she did the right thing, and is making progress towards her goal?
+    - Yes, maybe or no: [yes/maybe/no]
+    - Why? (Especially consider [persona name]'s Self-Efficacy and Attitude toward Risk.)
+
+        [Tell us why...]
+
+*Source*: Margaret Burnett, Simone Stumpf, Laura Beckwith, and Anicia Peters, "The GenderMag Kit: How to Use the GenderMag Method to Find Inclusiveness Issues through a Gender Lens", http://gendermag.org, Feb. 1 2018 .
 
 
 #### Task 2 - Cognitive Walkthrough
@@ -256,6 +316,33 @@ Table: movies
 * field 1: description...
 * field...
 
+Table: members
+* field 1: id (PK)
+* field 2: name (TEXT NOT NULL)
+* field 3: year (INTEGER NOT NULL)
+* field 4: eboard (BOOLEAN NOT NULL)
+* field 5: alumni (BOOLEAN NOT NULL)
+* field 6: major (TEXT)
+* field 7: minor (TEXT)
+* field 8: bio (TEXT)
+
+Table: events
+* field 1: id (PK)
+* field 2: description (TEXT)
+* field 3: file_name (TEXT)
+* field 4: file_ext
+
+Table: blog
+* field 1: id (PK)
+* field 2: title (TEXT NOT NULL)
+* field 3: link (TEXT NOT NULL)
+* field 4: date (TEXT NOT NULL)
+* field 5: author (TEXT NOT NULL)
+
+Table: eboard
+* field 1: id (PK)
+* field 2: username (TEXT NOT NULL)
+* field 3: password (TEXT NOT NULL)
 
 ## Database Queries
 
