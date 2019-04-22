@@ -405,7 +405,11 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 [Did you discover any issues with your design? What were they? How will you change your design to address the gender-inclusiveness bugs you discovered?]
 
 [Your responses here should be **very** thorough and thoughtful.]
+- Members page
+  - We discovered that after a user is logged, we forgot to add a button to physically add a new member, which would completely defeat the whole purpose of a form to add members. As a result, we will simply include a button that visibly noticable for users to click after typing in all necessary information to add a new member. Moreover, another issue that we noticed was that we didn't include a feature to remove members. This is an issue because members that disaffiliate with the organization, or become alumni should not be included in the members webpage anymore. To solve this issue, we will include a delete feature that is visible only when the logged in user clicks on the image of the member.
 
+- Events page
+  - After going through a cognitive walk-through with our events page, we noticed a few issues with our design. These issues consisted of a missing login section, which in turn does not allow users to add or delete events. As a result, implementing a delete functionality would allow us to get rid of the past events section since users can simply delete specific events.
 
 ## Final Design
 
