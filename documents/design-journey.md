@@ -501,7 +501,45 @@ Pseudocode for index.php...
 
 include init.php
 
-TODO
+include header.php
+
+background image (Armenian Student Organization centered)
+
+3 images (displayed as flex, spaced evenly)
+
+Overview wrapped in h2
+
+p element giving an overview of ASO
+```
+
+```
+Pseudocode for alumni.php...
+
+include init.php
+
+include header.php
+
+background image (Alumni centered)
+
+Images and description of each alumni (displayed as flex, evenly spaced)
+```
+
+```
+Pseudocode for contact.php...
+
+include init.php
+
+include header.php
+
+background image (Contact centered)
+
+Executive Board 2019 (wrapped in h2)
+
+Positions and names of each e-board member along with email and phone number
+
+Footer at bottom containing fb and instagram logo
+that links to ASO's respective fb and ig
+
 ```
 
 
