@@ -481,7 +481,13 @@ Table: users
 
 * index.php - main page.
 * includes/init.php - stuff that useful for every web page.
-* TODO
+* events.php
+* eventsingle.php
+* member.php
+* membersingle.php
+* learn.php
+* contact.php
+* alumni.php
 
 
 ## Pseudocode
