@@ -19,13 +19,6 @@ Your Team Name: [green-lion]
 [By this point, you have met once with your client to discuss all their requirements. Include your notes from the meeting, an email they sent you, or whatever you used to keep track of what was discussed at the meeting. Include these artifacts here.]
 
 ![Milestone 1 Meeting Notes](m1notes.png)
-![Header Template](header_template.jpg)
-![About Page](about.JPG)
-![Alumni Page](alumni.JPG)
-![Contact Page](contact.JPG)
-![Members Page](members.jpg)
-![Members Page Logged In](members_logged_in.jpg)
- ![Learn More Page](learnmore.JPG)
 
 ## Purpose & Content
 
@@ -65,12 +58,15 @@ Client Requirement/Target Audience Need
 ## Initial Design
 
 [Include exploratory idea sketches of your website.]
-![About us](about.JPG)
-![Members](members.jpg)
-![members logged in ](members_logged_in.jpg)
+![Header Template](header_template.jpg)
+![About Page](about.JPG)
+![Alumni Page](alumni.JPG)
+![Members Page](members.jpg)
+![Members Page Logged In](members_logged_in.jpg)
 ![Events](events.jpg)
-![Learn More](learnmore.JPG)
-![Contact](contact.JPG)
+![Learn More Page](learnmore.JPG)
+![Contact Page](contact.JPG)
+
 
 ## Information Architecture, Content, and Navigation
 
