@@ -416,6 +416,10 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 [Include sketches of your finalized design.]
 ![Members Page](final_member.jpg)
 ![Member Page when user logs in and when user clicks on single member image](final_memberlogged.jpg)
+![About Page](final_about.jpg)
+![Alumni Page](final_alumni.jpg)
+![Alumni Page when user logs in](final_alumni_loggedin.jpg)
+![Contact Page](final_contact.jpg)
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 On the members page, we added a search function so anyone could search for a member(s) with the name that the user typed in or obtain a list of members with the corresponding searched year/major. We also discussed about adding a seperate php to have the user click on a specific member's headshot to be able to delete their profile on the member page. We included this because we thought it would be useful to have a delete function in conjunction to the add member function.
@@ -506,13 +510,17 @@ include init.php
 
 include header.php
 
-background image (Armenian Student Organization centered)
-
-3 images (displayed as flex, spaced evenly)
+background image (About centered)
 
 Overview wrapped in h2
 
 p element giving an overview of ASO
+
+A Message From Our President (text wrapped in h2 element)
+
+p element displaying the message
+
+6 images (displayed as flex, spaced evenly)
 ```
 ```
 Pseudocode for member.php...
@@ -569,7 +577,27 @@ include header.php
 
 background image (Alumni centered)
 
-Images and description of each alumni (displayed as flex, evenly spaced)
+login form for e-board members only
+
+Meet the Alumni (text wrapped in h2 element)
+
+Name, major/minor, and bio about each alumni along with headshot
+```
+
+```
+Pseudocode for alumni_loggedin.php...
+
+include init.php
+
+include header.php
+
+Text indiciating that user is signed in, sign out button next to it
+
+Form to add alumni
+
+Meet the Alumni (text wrapped in h2 element)
+
+Name, major/minor, and bio about each alumni along with headshot
 ```
 
 ```
@@ -584,9 +612,6 @@ background image (Contact centered)
 Executive Board 2019 (wrapped in h2)
 
 Positions and names of each e-board member along with email and phone number
-
-Footer at bottom containing fb and instagram logo
-that links to ASO's respective fb and ig
 
 ```
 
