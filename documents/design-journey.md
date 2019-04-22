@@ -458,6 +458,22 @@ Table: users
 
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
 
+- Members page
+  - SELECT * FROM members WHERE alumni = "False";
+    - retrieves all members that are not alumni
+  - SELECT * FROM members WHERE alumni = "False" AND eboard = "True";
+    - retrieves only e-board members
+  - DELETE * FROM members WHERE user_id = :id;
+    - Option to delete a specific member that is clicked on
+
+- Events page
+  - SELECT * FROM events;
+    - Retrieves all events from database
+  - DELETE * FROM events WHERE id=:id;
+    - Option to delete a specific event
+
+- Learn More page
+  - SELECT * FROM blog;
 
 ## PHP File Structure
 
