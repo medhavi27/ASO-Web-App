@@ -42,4 +42,5 @@ See the course website for a detailed citation policy with more information on u
 Each team member should sign their name and include today's date and time to submit **MILESTONE 2**.
 
 - Full Name of Each Contributing Team Member:
+Jasmine Carmen Ng
 - Date & Time:
