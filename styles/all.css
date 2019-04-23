@@ -1,0 +1,63 @@
+body {
+  font-family: "Palatino";
+}
+
+h1 {
+  color: #FB1919;
+  width: 500px;
+  margin: 30px auto 30px auto;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about {
+  margin: 100px 0 50px 0;
+}
+
+.navBar li {
+  display: inline-block;
+  padding: 0 50px;
+  font-size: 16px;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #463F3F;
+}
+
+.navBar {
+  text-align: center;
+}
+
+.home:hover,
+.members:hover,
+.events:hover,
+.learn_more:hover,
+.contact:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.overview {
+  width: 780px;
+  opacity: 0.5;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+}
+.pres_text {
+  width: 300px;
+  margin: 50px auto 100px auto;
+  line-height: 40px;
+}
+
+hr {
+  width: 1250px;
+  opacity: 0.5;
+  border-width: 0.7px;
+}

@@ -1,5 +1,5 @@
 <?php
- // INCLUDE ON EVERY TOP-LEVEL PAGE!
+// INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
 ?>
 <!DOCTYPE html>
@@ -8,13 +8,35 @@ include("includes/init.php");
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="styles/all.css" rel="stylesheet" type="text/css" />
 
-  <title>Home</title>
+  <title>About</title>
 </head>
 
 <body>
 
   <!-- TODO: This should be your main page for your site. -->
+  <?php include("includes/header.php") ?>
+
+  <h2 class="about">About</h2>
+  <hr />
+  <h2>Overview</h2>
+  <p class="overview">
+    The Armenian Student Organization fosters community among those of
+    Armenian ethnicity and/or those with any interest in Armenian culture and
+    history on Cornell's campus and across Ithaca at large. Throughout the school
+    year, we organize many social potlucks, BBQs, and backgammon tournaments, as
+    well as educational activities such as free Armenian language lessons, guest
+    speakers, and workshops. The ASO is also a great resource to connect interested
+    individuals with networking and/or internship opportunities in the Diaspora and
+    Armenia. Finally, we seek to promote intersectionality and build connections
+    with other student groups on campus.
+  </p>
+
+  <hr />
+
+  <h2 class="pres_text">A Message From Our PRESIDENT</h2>
 
 </body>
+
 </html>
