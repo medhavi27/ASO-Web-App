@@ -185,11 +185,23 @@ For each milestone, we should finish our parts at least a day before the Tuesday
 
 [Share the feedback notes you received from your client about your initial design.]
 
+Our client was generally happy with our design, but noticed a few things she wanted us to update:
+* She wanted our Learn More page to showcase the blogs more, instead of half the page having the form to add blogs, which only eboard members can do anyway.
+* She wanted very specific member bios- like the ones on the Arts and Sciences page (http://ambassadors.as.cornell.edu/meet-the-ambassadors/).
+* She wanted the Events page to be clearer in functionality.
+
 
 ## Iterated Design
 
 [Improve your design based on the feedback you received from your client.]
+![Edits to Events Page](iterated_events.png)
+For the Events page, we added the functionality to view events in a list and add more.
+![Edits to Learn More Page](iterated_learnmore.png)
+For the Learn More page, we changed the layout of the blog posts.
+![Edits to Member Bios](final_member.jpg)
+For the Members page, we displayed bios in the way that our client wanted.
 
+Something we realized is that the login form appears in multiple places, so we decide to create an include for it, instead of coding it out on all 3 pages.
 
 ## Evaluate your Design
 
@@ -411,11 +423,14 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 
 [Include sketches of your finalized design.]
 ![Members Page](final_member.jpg)
-![Member Page when user logs in and when user clicks on single member image](final_memberlogged.jpg)
+![Member Page when user logs in and when user clicks on single member image](final_memberlogged/membersingle.jpg)
 ![About Page](final_about.jpg)
 ![Alumni Page](final_alumni.jpg)
 ![Alumni Page when user logs in](final_alumni_loggedin.jpg)
 ![Contact Page](final_contact.jpg)
+![Events Page](final_events.jpg)
+![Learn More Page](final_LM.jpg)
+
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
 On the members page, we added a search function so anyone could search for a member(s) with the name that the user typed in or obtain a list of members with the corresponding searched year/major. We also discussed about adding a seperate php to have the user click on a specific member's headshot to be able to delete their profile on the member page. We included this because we thought it would be useful to have a delete function in conjunction to the add member function.
@@ -527,7 +542,7 @@ include header.php
 
 background image (member centered)
 
-log in form
+log in form (include)
 
 Executive Board 2019 (wrapped in h2)
 
@@ -573,7 +588,7 @@ include header.php
 
 background image (Alumni centered)
 
-login form for e-board members only
+login form for e-board members only (include)
 
 Meet the Alumni (text wrapped in h2 element)
 
@@ -607,15 +622,54 @@ background image (Contact centered)
 
 Executive Board 2019 (wrapped in h2)
 
-Positions and names of each e-board member along with email and phone number
+Positions and names of each e-board member along with email and linkedin
 
 ```
+```
+Pseudocode for events.php
+
+include init.php
+
+include header.php
+
+Title (h1) Events
+
+List of events
+
+Delete button for each event
+
+Login form (include)
+
+Form to add new events: includes date, location, title, and fb/iCal link
+
+```
+
+
+```
+Pseudocode for learnmore.php
+
+include init.php
+
+include header.php
+
+Title (h1) Blog Posts
+
+Blog posts displayed as flex elements- including details like who wrote it, a title, a date and a link
+
+Login form (include)
+
+Form to add a new blog post with the data mentioned above
+
+```
+
 
 
 
 ## Additional Comments
 
 [Add any additional comments you have here.]
+
+Right now we decided to use an include for the login form, but it might be a better design choice to have a separate page
 
 
 --- <!-- ^^^ Milestone 2; vvv Milestone 3 -->
