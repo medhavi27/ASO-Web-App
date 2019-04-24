@@ -427,7 +427,7 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 ![Members Page](final_member.jpg)
 ![Member Page when user logs in and when user clicks on single member image](final_membersingle.jpg)
 ![About Page](final_about.jpg)
-![Alumni Page](final_alumni.jpg)
+![Alumni Page](final_alumni1.jpg)
 ![Alumni Page when user logs in](final_alumni_loggedin.jpg)
 ![Contact Page](final_contact.jpg)
 ![Events Page](final_events.jpg)
