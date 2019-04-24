@@ -213,6 +213,8 @@ I've selected **[Abby]** as my persona.
 
 I've selected my persona because... [Tell us why you picked your persona in 1-3 sentences. Your explanation should include why your persona will help you address gender-inclusiveness bugs in your design.]
 
+> We selected Abby as our persona because we believe that she embodies or is most similar to what we perceive a user in our target audience to be. Moreover, she also has the ability to process information comprehensively, which means that she is competent enough to complete certain tasks. Finally, due to her risk averse attitude and low confidence with computing tasks, we figured that she may be able to point out some bugs when running into problems.
+
 ### Tasks
 
 [You will need to evaluate at least 2 tasks (known as scenarios in the GenderMag literature). List your tasks here. These tasks are the same as the task you learned in INFO/CS 1300.]
