@@ -494,8 +494,9 @@ Table: sessions
 
 Table: donations
 * field 1: id (PK, INTEGER U, NOT, AT)
-* field 2: member_id (INTEGER, NOT, FOREIGN KEY)
+* field 2: donor_name (TEXT, NOT),
 * field 3: amount (INTEGER NOT)
+* field 4: cause (TEXT)
 
 ## Database Queries
 
@@ -531,8 +532,8 @@ Table: donations
  - SELECT members.name, events.title FROM members INNER JOIN members_and_events ON members_and_events.member_id = members.id INNER JOIN events on members_and_events.event_id = events.id;
  Shows eboard members who is attending their events and meeting requirements
 
- - SELECT members.name, donations.amount from members INNER JOIN donations on members.id = donations.member_id WHERE alumni = TRUE;
- shows donations from alumni and details
+ - SELECT * from donations;
+ shows donations and details
 
 
 ## PHP File Structure

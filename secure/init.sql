@@ -53,8 +53,9 @@ CREATE TABLE 'members_and_events' (
 
 CREATE TABLE 'donations' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    'member_id' INTEGER NOT NULL,
-    'amount' INTEGER NOT NULL
+    'donor_name' TEXT NOT NULL,
+    'amount' INTEGER NOT NULL,
+    'cause' TEXT NOT NULL
 );
 
 -- TODO: initial seed data
