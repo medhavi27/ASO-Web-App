@@ -7,5 +7,6 @@
       <li class="events"><a href="events.php">Events</a></li>
       <li class="learn_more"><a href="blog.php">Learn More</a></li>
       <li class="contact"><a href="contact.php">Contact</a></li>
+      <li class="eboard"><a href="eboard.php">Eboard</a></li>
   </nav>
 </header>
