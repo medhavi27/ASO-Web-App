@@ -201,7 +201,8 @@ For the Learn More page, we changed the layout of the blog posts.
 ![Edits to Member Bios](final_member.jpg)
 For the Members page, we displayed bios in the way that our client wanted.
 
-Something we realized is that the login form appears in multiple places, so we decide to create an include for it, instead of coding it out on all 3 pages.
+Something we realized is that the login form appears in multiple places, so we decide to create a separate page for eboard members, called eboard.php. This page will let eboard members log in, view member info other than bios, and see what events members have attended, and keep track of donations.
+![Eboard.php](final_eboard.jpg)
 
 ## Evaluate your Design
 
@@ -432,6 +433,8 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 ![Contact Page](final_contact.jpg)
 ![Events Page](final_events.jpg)
 ![Learn More Page](final_LM.jpg)
+![Eboard Page](final_eboard.jpg)
+
 
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
@@ -443,48 +446,77 @@ On the members page, we added a search function so anyone could search for a mem
 [Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this.]
 
 Table: members
-* field 1: id (PK)
-* field 2: user_id (INTEGER)
-* field 3: name (TEXT NOT NULL)
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: name (TEXT NOT NULL)
+* field 3: netid (TEXT NOT NULL)
 * field 4: year (INTEGER NOT NULL)
 * field 5: eboard (BOOLEAN NOT NULL)
 * field 6: alumni (BOOLEAN NOT NULL)
 * field 7: major (TEXT)
 * field 8: minor (TEXT)
 * field 9: bio (TEXT)
+* field 10: phone number (INTEGER)
+
+Table: member_images
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: member_id (INTEGER, NOT, FOREIGN KEY)
+* field 3: ext (TEXT NOT NULL)
+* field 4: name (TEXT NOT NULL)
 
 Table: events
-* field 1: id (PK)
-* field 2: file_name (TEXT)
-* field 3: file_ext (TEXT)
-* field 4: event_name (TEXT)
-* field 5: description (TEXT)
-* field 6: time (TEXT)
-* field 7: location (TEXT)
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: event_name (TEXT)
+* field 3: description (TEXT)
+* field 4: time (TEXT)
+* field 5: location (TEXT)
 
-Table: blog
-* field 1: id (PK)
+Table: blogs
+* field 1: id (PK, INTEGER U, NOT, AT)
 * field 2: title (TEXT NOT NULL)
 * field 3: link (TEXT NOT NULL)
 * field 4: date (TEXT NOT NULL)
 * field 5: author (TEXT NOT NULL)
 
 Table: users
-* field 1: id (PK)
+* field 1: id (PK, INTEGER U, NOT, AT)
 * field 2: username (TEXT NOT NULL)
 * field 3: password (TEXT NOT NULL)
+
+Table: members_and_events
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: member_id (INTEGER, NOT, FOREIGN KEY)
+* field 3: event_id (INTEGER, NOT, FOREIGN KEY)
+
+Table: sessions
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: user_id (INTEGER NOT NULL)
+* field 3: session (TEXT NOT NULL)
+
+Table: donations
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: member_id (INTEGER, NOT, FOREIGN KEY)
+* field 3: amount (INTEGER NOT)
 
 ## Database Queries
 
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
 
 - Members page
-  - SELECT * FROM members WHERE alumni = "False";
+  - SELECT * FROM members INNER JOIN member_images WHERE members.id = member_images.member_id;
+    Query needed to display images
+  - SELECT name, bio FROM members WHERE alumni = "False";
     - retrieves all members that are not alumni
-  - SELECT * FROM members WHERE alumni = "False" AND eboard = "True";
+  - SELECT name, bio FROM members WHERE alumni = "False" AND eboard = "True";
     - retrieves only e-board members
   - DELETE * FROM members WHERE user_id = :id;
     - Option to delete a specific member that is clicked on
+
+  - SELECT name, bio FROM members WHERE " . $searchfield . " LIKE  '%' || :search ||  '%';
+   Shows specific members according to what is searched
+
+  - INSERT into members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber) values(form_name, form_netid, form_year, form_a, form_eb, form_major, form_minor, form_bio, form_number);
+  - INSERT into members_images(member_id, ext, name) values(member_id, form_img, form_name);
+  to add a new member, and update their member image
 
 - Events page
   - SELECT * FROM events;
@@ -495,12 +527,21 @@ Table: users
 - Learn More page
   - SELECT * FROM blog;
 
+- Eboard page:
+ - SELECT members.name, events.title FROM members INNER JOIN members_and_events ON members_and_events.member_id = members.id INNER JOIN events on members_and_events.event_id = events.id;
+ Shows eboard members who is attending their events and meeting requirements
+
+ - SELECT members.name, donations.amount from members INNER JOIN donations on members.id = donations.member_id WHERE alumni = TRUE;
+ shows donations from alumni and details
+
+
 ## PHP File Structure
 
 [List the PHP files you will have. You will probably want to do this with a bulleted list.]
 
 * index.php - main page.
 * includes/init.php - stuff that useful for every web page.
+* includes/login.php - include for login code
 * events.php
 * eventsingle.php
 * member.php
@@ -508,7 +549,7 @@ Table: users
 * learn.php
 * contact.php
 * alumni.php
-
+* eboard.php
 
 ## Pseudocode
 
@@ -543,8 +584,6 @@ include init.php
 include header.php
 
 background image (member centered)
-
-log in form (include)
 
 Executive Board 2019 (wrapped in h2)
 
@@ -589,8 +628,6 @@ include init.php
 include header.php
 
 background image (Alumni centered)
-
-login form for e-board members only (include)
 
 Meet the Alumni (text wrapped in h2 element)
 
@@ -640,8 +677,6 @@ List of events
 
 Delete button for each event
 
-Login form (include)
-
 Form to add new events: includes date, location, title, and fb/iCal link
 
 ```
@@ -658,9 +693,24 @@ Title (h1) Blog Posts
 
 Blog posts displayed as flex elements- including details like who wrote it, a title, a date and a link
 
-Login form (include)
-
 Form to add a new blog post with the data mentioned above
+
+```
+
+```
+Pseudocode for eboard.php
+
+include init.php
+
+include header.php
+
+Login form to login as eboard
+
+Table displaying all members and their information
+
+Table displaying members and events they've attended
+
+Table displaying donations, amounts, and who they're from
 
 ```
 
