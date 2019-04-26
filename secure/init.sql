@@ -7,6 +7,12 @@ CREATE TABLE 'users' (
     'username' TEXT UNIQUE NOT NULL,
     'password' TEXT NOT NULL
 );
+
+-- Users seed data
+INSERT INTO `users` (username, password) VALUES ('jcn66', '$2y$10$G8EoHLs5K289N4o3V.8aR.8EZse7UBgh.Qdl4sLH9ouXs5nDUQ3y2'); -- password: jH89345k
+INSERT INTO `users` (username, password) VALUES ('kws77', '$2y$10$zGqJKFJDymFUA54vW95/4.RDaP9kBXubSZ9hw3t5HocUZp.bbvefa'); -- password: kelephant86
+
+
 CREATE TABLE 'sessions' (
 	'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	'user_id' INTEGER NOT NULL,

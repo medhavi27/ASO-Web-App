@@ -17,6 +17,7 @@ include("includes/init.php");
 
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php") ?>
+  <?php include("includes/login.php")?>
 
 
 </body>
