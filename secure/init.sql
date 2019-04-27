@@ -9,7 +9,7 @@ CREATE TABLE 'users' (
 );
 
 -- Users seed data
-INSERT INTO `users` (username, password) VALUES ('jcn66', '$2y$10$G8EoHLs5K289N4o3V.8aR.8EZse7UBgh.Qdl4sLH9ouXs5nDUQ3y2'); -- password: jH89345k
+INSERT INTO `users` (username, password) VALUES ('eboard23', '$2y$10$fsMB8HL4ClKOzxo5kJoRZOQIjJfvRJe7UkOJ8fyPTPIbXqGDu38qW'); -- password: eboard2332
 INSERT INTO `users` (username, password) VALUES ('kws77', '$2y$10$zGqJKFJDymFUA54vW95/4.RDaP9kBXubSZ9hw3t5HocUZp.bbvefa'); -- password: kelephant86
 
 
@@ -52,9 +52,9 @@ CREATE TABLE 'events' (
     'location' TEXT NOT NULL
 );
 
-INSERT INTO `events` (title, description, time, location) VALUES ('Awareness Days','Monday and Tuesday is discussion', 'Monday 12:00 PM', 'WSH');
+INSERT INTO `events` (title, description, time, location) VALUES ('Awareness Days','Monday and Tuesday is discussion', '03/04/19 12:00 PM', 'WSH');
 
-INSERT INTO `events` (title, description, time, location) VALUES ('Ice Cream Social','Come meet the members', 'Wednesday 1:00 PM', 'WSH');
+INSERT INTO `events` (title, description, time, location) VALUES ('Ice Cream Social','Come meet the members', '03/06/19 1:00 PM', 'WSH');
 
 CREATE TABLE 'blogs' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,

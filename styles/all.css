@@ -69,6 +69,7 @@ hr {
   text-align: center;
   display: block;
 }
+<<<<<<< HEAD
 
 .row{
   display:flex;
@@ -117,4 +118,28 @@ label{
   background-color: #FB1919;
   padding: 10px;
 
+.first_row,
+.second_row,
+.third_row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.about_image {
+  height: 300px;
+  width: 300px;
+}
+
+#eventstable {
+    margin-left: 500px;
+       border-collapse: collapse;
+  }
+th,td {
+  border: 2px solid red;
+
+}
+.eboardinfo {
+  text-align: center;
 }
