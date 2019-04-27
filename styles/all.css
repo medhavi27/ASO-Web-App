@@ -2,6 +2,8 @@ body {
   font-family: "Palatino";
 }
 
+/* CSS Styling for about.php */
+
 h1 {
   color: #FB1919;
   width: 500px;
@@ -15,7 +17,22 @@ h2 {
 }
 
 .about {
-  margin: 100px 0 50px 0;
+  /* margin: 100px 0 50px 0; */
+  color: #ffffff;
+  font-family: cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  text-align: center;
+}
+
+.background {
+  background-image: url("/uploads/images/about_cover.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.8;
 }
 
 .navBar li {
@@ -82,4 +99,48 @@ hr {
 .about_image {
   height: 300px;
   width: 300px;
+}
+
+.membersTitle {
+  font-size: 20px;
+}
+
+h3 {
+  margin: 50px 0 30px 40px;
+}
+
+.mem_categories {
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-around;
+}
+
+/* CSS Styling of members.php */
+
+.membersText {
+  color: #ffffff;
+  font-family: cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  text-align: center;
+}
+
+.members_background {
+  background-image: url("/uploads/images/members_background.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.8;
+}
+
+.members_image {
+  height: 250px;
+}
+
+.member_bios {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
