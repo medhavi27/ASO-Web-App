@@ -34,10 +34,11 @@ h2 {
 }
 
 .background {
-  background-image: url("/uploads/images/about_cover.jpg");
+  background-image: url("/uploads/images/about_cover2.jpg");
   background-position: center;
   height: 550px;
-  opacity: 0.8;
+  opacity: 0.9;
+  background-size: cover;
 }
 
 .navBar li {
