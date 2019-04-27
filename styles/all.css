@@ -69,3 +69,52 @@ hr {
   text-align: center;
   display: block;
 }
+
+.row{
+  display:flex;
+  flex-direction: row;
+}
+
+.ourevent{
+  width: 100%;
+}
+
+.addevent{
+  width:100%;
+}
+
+.border-right{
+  border-right: 0.7px darkgrey solid;
+}
+
+#event-form input{
+  margin-left: 15px;
+}
+
+#event-form textarea{
+  margin-left: 15px;
+}
+
+#event-form ul{
+  list-style-type: none;
+}
+
+#event-form li{
+  padding:10px;
+}
+
+label{
+  width:150px;
+  display: inline-block;
+  text-align: right;
+}
+
+#add-button{
+  display: block;
+  margin:20px auto;
+  font-size: 15px;
+  border: none;
+  background-color: #FB1919;
+  padding: 10px;
+
+}
