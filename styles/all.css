@@ -75,23 +75,19 @@ hr {
   flex-direction: row;
 }
 
-.ourevent{
+.ourevent,
+.addevent
+{
   width: 100%;
-}
-
-.addevent{
-  width:100%;
 }
 
 .border-right{
   border-right: 0.7px darkgrey solid;
 }
 
-#event-form input{
-  margin-left: 15px;
-}
-
-#event-form textarea{
+#event-form input,
+#event-form textarea
+{
   margin-left: 15px;
 }
 
