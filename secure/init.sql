@@ -9,7 +9,6 @@ CREATE TABLE 'users' (
 );
 
 -- Users seed data
-<<<<<<< HEAD
 INSERT INTO `users` (
 username,
 password
@@ -22,7 +21,6 @@ password
 ) VALUES
 ('kws77', '$2y$10$zGqJKFJDymFUA54vW95/4.RDaP9kBXubSZ9hw3t5HocUZp.bbvefa');
 -- password: kelephant86
-=======
 INSERT INTO `users` (
 username,
 password
@@ -33,8 +31,8 @@ INSERT INTO `users` (
 username,
 password
 ) VALUES
-('kws77', '$2y$10$zGqJKFJDymFUA54vW95/4.RDaP9kBXubSZ9hw3t5HocUZp.bbvefa'); -- password: kelephant86
->>>>>>> f04ce03448a75ab95272e5712e7ecf51284ce4f8
+('kws77', '$2y$10$zGqJKFJDymFUA54vW95/4.RDaP9kBXubSZ9hw3t5HocUZp.bbvefa');
+-- password: kelephant86
 
 
 CREATE TABLE 'sessions' (
