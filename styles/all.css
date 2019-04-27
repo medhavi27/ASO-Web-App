@@ -87,6 +87,50 @@ hr {
   display: block;
 }
 
+.row{
+  display:flex;
+  flex-direction: row;
+}
+
+.ourevent,
+.addevent
+{
+  width: 100%;
+}
+
+.border-right{
+  border-right: 0.7px darkgrey solid;
+}
+
+#event-form input,
+#event-form textarea
+{
+  margin-left: 15px;
+}
+
+#event-form ul{
+  list-style-type: none;
+}
+
+#event-form li{
+  padding:10px;
+}
+
+label{
+  width:150px;
+  display: inline-block;
+  text-align: right;
+}
+
+#add-button{
+  display: block;
+  margin:20px auto;
+  font-size: 15px;
+  border: none;
+  background-color: #FB1919;
+  padding: 10px;
+}
+
 .first_row,
 .second_row,
 .third_row {
@@ -143,4 +187,19 @@ h3 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
+}
+.eboardtable {
+    margin-left: 520px;
+    border-collapse: collapse;
+  }
+th,td {
+  border: 2px solid red;
+
+}
+.eventstable {
+    margin-left: 330px;
+    border-collapse: collapse;
+  }
+.eboardinfo {
+  text-align: center;
 }

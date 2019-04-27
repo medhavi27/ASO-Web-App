@@ -9,6 +9,7 @@ CREATE TABLE 'users' (
 );
 
 -- Users seed data
+<<<<<<< HEAD
 INSERT INTO `users` (
 username,
 password
@@ -21,6 +22,19 @@ password
 ) VALUES
 ('kws77', '$2y$10$zGqJKFJDymFUA54vW95/4.RDaP9kBXubSZ9hw3t5HocUZp.bbvefa');
 -- password: kelephant86
+=======
+INSERT INTO `users` (
+username,
+password
+) VALUES
+('eboard23', '$2y$10$fsMB8HL4ClKOzxo5kJoRZOQIjJfvRJe7UkOJ8fyPTPIbXqGDu38qW');
+-- password: eboard2332
+INSERT INTO `users` (
+username,
+password
+) VALUES
+('kws77', '$2y$10$zGqJKFJDymFUA54vW95/4.RDaP9kBXubSZ9hw3t5HocUZp.bbvefa'); -- password: kelephant86
+>>>>>>> f04ce03448a75ab95272e5712e7ecf51284ce4f8
 
 
 CREATE TABLE 'sessions' (
@@ -41,9 +55,18 @@ CREATE TABLE 'members' (
     'bio' TEXT,
     'phonenumber' INTEGER
 );
+<<<<<<< HEAD
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthro', 'Archaeo', 'xys', '4040440');
+=======
+INSERT INTO members
+    (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Archaeology, Business, Global Health', 'xys', '404-044-0000');
+INSERT INTO members
+    (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Kim Kardashian', 'kk281', 'Junior', 'FALSE', 'FALSE', 'Sociology', 'Law', 'xys', '404-222-3334');
+>>>>>>> f04ce03448a75ab95272e5712e7ecf51284ce4f8
 
 CREATE TABLE 'member_images' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -89,6 +112,21 @@ time,
 location
 ) VALUES
 ('Ice Cream Social','Come meet the members', 'Wednesday 1:00 PM', 'WSH');
+INSERT INTO `events` (
+title,
+description,
+time,
+location
+) VALUES
+('Awareness Days','Monday and Tuesday is discussion', '03/04/19 12:00 PM', 'WSH');
+
+INSERT INTO `events` (
+title,
+description,
+time,
+location
+) VALUES
+('Ice Cream Social','Come meet the members', '03/06/19 1:00 PM', 'WSH');
 
 CREATE TABLE 'blogs' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
