@@ -37,6 +37,28 @@ include("includes/init.php");
 
   <h2 class="pres_text">A Message From Our PRESIDENT</h2>
 
+  <hr />
+
+  <div class='first_row'>
+    <img class="about_image" src="uploads/images/about1.jpg">
+    <img class="about_image" src="uploads/images/about2.jpg">
+    <img class="about_image" src="uploads/images/about3.jpg">
+    <img class="about_image" src="uploads/images/about4.jpg">
+  </div>
+
+  <div class="second_row">
+    <img class="about_image" src="uploads/images/about5.jpg">
+    <img class="about_image" src="uploads/images/about6.jpg">
+    <img class="about_image" src="uploads/images/about7.jpg">
+    <img class="about_image" src="uploads/images/about8.jpg">
+  </div>
+
+  <div class="third_row">
+    <img class="about_image" src="uploads/images/about9.jpg">
+    <img class="about_image" src="uploads/images/about10.jpg">
+    <img class="about_image" src="uploads/images/about11.jpg">
+    <img class="about_image" src="uploads/images/about12.jpg">
+  </div>
 </body>
 
 </html>

@@ -69,6 +69,19 @@ hr {
   text-align: center;
   display: block;
 }
+.first_row,
+.second_row,
+.third_row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.about_image {
+  height: 300px;
+  width: 300px;
+}
 
 #eventstable {
     margin-left: 500px;
