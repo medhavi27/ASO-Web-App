@@ -60,7 +60,8 @@ h2 {
 .members:hover,
 .events:hover,
 .learn_more:hover,
-.contact:hover {
+.contact:hover,
+.eboard:hover {
   opacity: 0.6;
   cursor: pointer;
 }
