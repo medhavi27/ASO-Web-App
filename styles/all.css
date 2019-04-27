@@ -128,14 +128,18 @@ label{
   width: 300px;
 }
 
-#eventstable {
-    margin-left: 500px;
-       border-collapse: collapse;
+.eboardtable {
+    margin-left: 520px;
+    border-collapse: collapse;
   }
 th,td {
   border: 2px solid red;
 
 }
+.eventstable {
+    margin-left: 330px;
+    border-collapse: collapse;
+  }
 .eboardinfo {
   text-align: center;
 }
