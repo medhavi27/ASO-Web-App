@@ -19,7 +19,7 @@ include("includes/init.php");
   <?php include("includes/header.php") ?>
 
   <div class="background">
-    <h2 class="about">About</h2>
+    <h2 class="background_text">About</h2>
   </div>
 
   <!-- <hr /> -->

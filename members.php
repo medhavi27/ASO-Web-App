@@ -19,7 +19,7 @@ include("includes/init.php");
   <?php include("includes/header.php") ?>
 
   <div class="members_background">
-    <h2 class="membersText">Members</h2>
+    <h2 class="background_text">Members</h2>
   </div>
 
   <?php if (is_user_logged_in()) {  ?>

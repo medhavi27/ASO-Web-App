@@ -1,14 +1,19 @@
 body {
   font-family: "Palatino";
+  margin: 0;
 }
 
 /* CSS Styling for about.php */
 
 h1 {
   color: #FB1919;
-  width: 500px;
+  width: 480px;
   margin: 30px auto 30px auto;
   text-align: center;
+}
+
+.title span {
+  font-size: 24px;
 }
 
 h2 {
@@ -16,16 +21,16 @@ h2 {
   margin-top: 50px;
 }
 
-.about {
-  /* margin: 100px 0 50px 0; */
+.background_text {
   color: #ffffff;
   font-family: cursive;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3em;
+  font-size: 4em;
   text-align: center;
+  text-shadow: 2px 2px black;
 }
 
 .background {
@@ -38,7 +43,7 @@ h2 {
 .navBar li {
   display: inline-block;
   padding: 0 50px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .navBar a {
@@ -160,17 +165,6 @@ h3 {
 }
 
 /* CSS Styling of members.php */
-
-.membersText {
-  color: #ffffff;
-  font-family: cursive;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
-  text-align: center;
-}
 
 .members_background {
   background-image: url("/uploads/images/members_background.jpg");
