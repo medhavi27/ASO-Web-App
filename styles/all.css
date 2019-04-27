@@ -69,3 +69,15 @@ hr {
   text-align: center;
   display: block;
 }
+
+#eventstable {
+    margin-left: 500px;
+       border-collapse: collapse;
+  }
+th,td {
+  border: 2px solid red;
+
+}
+.eboardinfo {
+  text-align: center;
+}
