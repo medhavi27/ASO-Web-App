@@ -31,7 +31,8 @@ CREATE TABLE 'members' (
     'bio' TEXT,
     'phonenumber' INTEGER
 );
-INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber) values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthro', 'Archaeo', 'xys', '4040440');
+INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber) values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Archaeology, Business, Global Health', 'xys', '404-044-0000');
+INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber) values('Kim Kardashian', 'kk281', 'Junior', 'FALSE', 'FALSE', 'Sociology', 'Law', 'xys', '404-222-3334');
 
 CREATE TABLE 'member_images' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
