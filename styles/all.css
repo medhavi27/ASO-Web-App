@@ -101,15 +101,11 @@ hr {
 .post {
   width: 33.3%;
   margin-left: 20px;
-
-<<<<<<< HEAD
 }
-.ourevent{
-=======
+
 .ourevent,
 .addevent
 {
->>>>>>> 7610d923a6366c5e6f8afe3c975ddb1233eb3194
   width: 100%;
 }
 
