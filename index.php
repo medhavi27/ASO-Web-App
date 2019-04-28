@@ -43,7 +43,14 @@ include("includes/init.php");
   <hr />
 
   <div class='first_row'>
-    <img class="about_image" src="uploads/images/about1.jpg">
+    <?php
+    $records = exec_sql_query($db, "SELECT * FROM gal_images")->fetchAll(PDO::FETCH_ASSOC);
+        foreach($records as $record){
+
+          echo  "<img class='about_image' src= 'uploads/images/about_gallery/about".htmlspecialchars($record["id"]).".".htmlspecialchars($record["ext"])."' alt = '".htmlspecialchars($record["alt"])."'>";
+        }
+        ?>
+    <!-- <img class="about_image" src="uploads/images/about1.jpg">
     <img class="about_image" src="uploads/images/about2.jpg">
     <img class="about_image" src="uploads/images/about3.jpg">
     <img class="about_image" src="uploads/images/about4.jpg">
@@ -60,7 +67,7 @@ include("includes/init.php");
     <img class="about_image" src="uploads/images/about9.jpg">
     <img class="about_image" src="uploads/images/about10.jpg">
     <img class="about_image" src="uploads/images/about11.jpg">
-    <img class="about_image" src="uploads/images/about12.jpg">
+    <img class="about_image" src="uploads/images/about12.jpg"> -->
   </div>
 </body>
 

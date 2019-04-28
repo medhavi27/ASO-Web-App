@@ -142,11 +142,13 @@ label{
   padding: 10px;
 }
 
-.first_row,
+/* ,
 .second_row,
-.third_row {
+.third_row  */
+.first_row{
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 20px;
 }
@@ -154,6 +156,7 @@ label{
 .about_image {
   height: 300px;
   width: 300px;
+  margin-bottom: 20px;
 }
 
 .membersTitle {

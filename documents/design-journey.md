@@ -465,6 +465,12 @@ Table: member_images
 * field 3: ext (TEXT NOT NULL)
 * field 4: name (TEXT NOT NULL)
 
+Table: gal_images
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: filename (TEXT NOT NULL)
+* field 3: ext (TEXT NOT NULL)
+* field 4: alt (TEXT)
+
 Table: events
 * field 1: id (PK, INTEGER U, NOT, AT)
 * field 2: event_name (TEXT)

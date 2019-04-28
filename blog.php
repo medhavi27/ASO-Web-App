@@ -1,5 +1,7 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
+$sql = "SELECT * from blogs;";
+
 include("includes/init.php");
 ?>
 <!DOCTYPE html>
@@ -24,7 +26,7 @@ include("includes/init.php");
     <h2>Blog Post One</h2>
 
   </div>
- 
+
 </div>
 
 </body>
