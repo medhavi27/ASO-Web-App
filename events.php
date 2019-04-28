@@ -21,8 +21,10 @@ include("includes/init.php");
   <h2 class="about">Events</h2>
   <hr />
   <div class="row">
+
   <div class="ourevent border-right">
   <h2>Our Events</h2>
+
   </div>
 
   <div class="addevent">
