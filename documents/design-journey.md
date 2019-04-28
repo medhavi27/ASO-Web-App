@@ -106,6 +106,10 @@ Website:
   - Contact
     - Information for eboard
     - Social media links
+  - Eboard
+    - View all members
+    - View additional info about members
+    - Add images to image gallery
 
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
