@@ -74,7 +74,11 @@ hr {
   display:flex;
   flex-direction: row;
 }
+.post {
+  width: 33.3%;
+  margin-left: 20px;
 
+}
 .ourevent{
   width: 100%;
 }
