@@ -1,6 +1,35 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
+
+$messages = array();
+if ( isset($_POST["upload"]) && is_user_logged_in() ) {
+    $upload_info = $_FILES["add_img"];
+    $upload_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+    if ( $upload_info['error'] == UPLOAD_ERR_OK ) {
+        $upload_link = basename($upload_info["name"]);
+        $upload_ext = strtolower(pathinfo($upload_link, PATHINFO_EXTENSION));
+        $input_link = $upload_link.".".$upload_ext;
+        $alt = "ASO Image";
+        var_dump($upload_ext);
+        $sql = "INSERT INTO gal_images(filename, ext, alt) VALUES(:title, :ext, :alt );";
+        $params = array(
+            ':title' => $upload_title,
+            ':ext' => $upload_ext,
+            ':alt' => $alt
+          );
+          $result = exec_sql_query($db, $sql, $params);
+          if ($result) {
+            $file_id = $db->lastInsertId('id');
+            $id_filename = "uploads/images/about_gallery/about".$file_id.".".$upload_ext;
+            move_uploaded_file($upload_info['tmp_name'],$id_filename);
+            }
+            else {
+              array_push($messages, "Couldn't upload image");
+            }
+          }
+}
+
 function print_event_record($record) {
           ?>
         <tr>
@@ -98,10 +127,31 @@ function print_member_record($record) {
 
        <?php
        }
+    ?>
+     <p class="eboardinfo"> Add a new gallery image </p>
 
+    <form id="uploadImage" action="eboard.php" method="post" enctype="multipart/form-data">
+<ul>
 
+<li>
+<label for="add_img">Choose an Image:</label>
+<input id="add_img" type="file" name="add_img">
+</li>
+<li>
+<label for="img_name">Title:</label>
+<input id="img_name" type="text" name="title">
+</li>
+<!-- <li>
+<label for="img_source">Provide a source:</label>
+<input id="img_source" type="text" name="img_source">
+</li> -->
+<li>
+<button name="upload" type="submit">Upload File</button>
+</li>
+</ul>
+</form>
 
-
+<?php
 }
 else {
   include("includes/login.php");

@@ -1,5 +1,7 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
+$sql = "SELECT * from blogs;";
+
 include("includes/init.php");
 ?>
 <!DOCTYPE html>
@@ -17,7 +19,15 @@ include("includes/init.php");
 
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php") ?>
+  <h2 class="about">Learn more about ASO at Cornell</h2>
+<hr>
+<div class="row">
+  <div class="post">
+    <h2>Blog Post One</h2>
 
+  </div>
+
+</div>
 
 </body>
 

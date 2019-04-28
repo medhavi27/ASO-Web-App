@@ -18,8 +18,11 @@ include("includes/init.php");
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php") ?>
 
-  <h2 class="about">About</h2>
-  <hr />
+  <div class="background">
+    <h2 class="background_text">About</h2>
+  </div>
+
+  <!-- <hr /> -->
   <h2>Overview</h2>
   <p class="overview">
     The Armenian Student Organization fosters community among those of
@@ -35,29 +38,20 @@ include("includes/init.php");
 
   <hr />
 
-  <h2 class="pres_text">A Message From Our PRESIDENT</h2>
+  <h2 class="pres_text">A Message From Our President</h2>
 
   <hr />
 
   <div class='first_row'>
-    <img class="about_image" src="uploads/images/about1.jpg">
-    <img class="about_image" src="uploads/images/about2.jpg">
-    <img class="about_image" src="uploads/images/about3.jpg">
-    <img class="about_image" src="uploads/images/about4.jpg">
-  </div>
+    <?php
+    $records = exec_sql_query($db, "SELECT * FROM gal_images")->fetchAll(PDO::FETCH_ASSOC);
+        foreach($records as $record){
 
-  <div class="second_row">
-    <img class="about_image" src="uploads/images/about5.jpg">
-    <img class="about_image" src="uploads/images/about6.jpg">
-    <img class="about_image" src="uploads/images/about7.jpg">
-    <img class="about_image" src="uploads/images/about8.jpg">
-  </div>
+          echo  "<img class='about_image' src= 'uploads/images/about_gallery/about".htmlspecialchars($record["id"]).".".htmlspecialchars($record["ext"])."' alt = '".htmlspecialchars($record["alt"])."'>";
+        }
+        ?>
+  
 
-  <div class="third_row">
-    <img class="about_image" src="uploads/images/about9.jpg">
-    <img class="about_image" src="uploads/images/about10.jpg">
-    <img class="about_image" src="uploads/images/about11.jpg">
-    <img class="about_image" src="uploads/images/about12.jpg">
   </div>
 </body>
 

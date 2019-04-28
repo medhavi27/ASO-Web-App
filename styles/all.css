@@ -1,12 +1,19 @@
 body {
   font-family: "Palatino";
+  margin: 0;
 }
+
+/* CSS Styling for about.php */
 
 h1 {
   color: #FB1919;
-  width: 500px;
+  width: 480px;
   margin: 30px auto 30px auto;
   text-align: center;
+}
+
+.title span {
+  font-size: 24px;
 }
 
 h2 {
@@ -14,14 +21,30 @@ h2 {
   margin-top: 50px;
 }
 
-.about {
-  margin: 100px 0 50px 0;
+.background_text {
+  color: #ffffff;
+  font-family: cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.background {
+  background-image: url("/uploads/images/about_cover2.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.9;
+  background-size: cover;
 }
 
 .navBar li {
   display: inline-block;
   padding: 0 50px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .navBar a {
@@ -37,7 +60,8 @@ h2 {
 .members:hover,
 .events:hover,
 .learn_more:hover,
-.contact:hover {
+.contact:hover,
+.eboard:hover {
   opacity: 0.6;
   cursor: pointer;
 }
@@ -69,10 +93,18 @@ hr {
   text-align: center;
   display: block;
 }
+#filter_form {
+  margin-top: 10px;
+  text-align: center;
+}
 
 .row{
   display:flex;
   flex-direction: row;
+}
+.post {
+  width: 33.3%;
+  margin-left: 20px;
 }
 
 .ourevent,
@@ -114,11 +146,13 @@ label{
   padding: 10px;
 }
 
-.first_row,
+/* ,
 .second_row,
-.third_row {
+.third_row  */
+.first_row{
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 20px;
 }
@@ -126,8 +160,41 @@ label{
 .about_image {
   height: 300px;
   width: 300px;
+  margin-bottom: 20px;
 }
 
+.membersTitle {
+  font-size: 20px;
+}
+
+h3 {
+  margin: 50px 0 30px 40px;
+}
+
+.mem_categories {
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-around;
+}
+
+/* CSS Styling of members.php */
+
+.members_background {
+  background-image: url("/uploads/images/members_background.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.8;
+}
+
+.members_image {
+  height: 250px;
+}
+
+.member_bios {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
 .eboardtable {
     margin-left: 520px;
     border-collapse: collapse;
@@ -142,4 +209,11 @@ th,td {
   }
 .eboardinfo {
   text-align: center;
+}
+#uploadImage {
+  text-align: center;
+
+}
+#uploadImage li {
+    list-style: none;
 }

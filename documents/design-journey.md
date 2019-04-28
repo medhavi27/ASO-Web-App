@@ -106,6 +106,10 @@ Website:
   - Contact
     - Information for eboard
     - Social media links
+  - Eboard
+    - View all members
+    - View additional info about members
+    - Add images to image gallery
 
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
@@ -464,6 +468,12 @@ Table: member_images
 * field 2: member_id (INTEGER, NOT, FOREIGN KEY)
 * field 3: ext (TEXT NOT NULL)
 * field 4: name (TEXT NOT NULL)
+
+Table: gal_images
+* field 1: id (PK, INTEGER U, NOT, AT)
+* field 2: filename (TEXT NOT NULL)
+* field 3: ext (TEXT NOT NULL)
+* field 4: alt (TEXT)
 
 Table: events
 * field 1: id (PK, INTEGER U, NOT, AT)
