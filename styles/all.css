@@ -1,12 +1,19 @@
 body {
   font-family: "Palatino";
+  margin: 0;
 }
+
+/* CSS Styling for about.php */
 
 h1 {
   color: #FB1919;
-  width: 500px;
+  width: 480px;
   margin: 30px auto 30px auto;
   text-align: center;
+}
+
+.title span {
+  font-size: 24px;
 }
 
 h2 {
@@ -14,14 +21,30 @@ h2 {
   margin-top: 50px;
 }
 
-.about {
-  margin: 100px 0 50px 0;
+.background_text {
+  color: #ffffff;
+  font-family: cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.background {
+  background-image: url("/uploads/images/about_cover2.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.9;
+  background-size: cover;
 }
 
 .navBar li {
   display: inline-block;
   padding: 0 50px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .navBar a {
@@ -37,7 +60,8 @@ h2 {
 .members:hover,
 .events:hover,
 .learn_more:hover,
-.contact:hover {
+.contact:hover,
+.eboard:hover {
   opacity: 0.6;
   cursor: pointer;
 }
@@ -78,24 +102,24 @@ hr {
   width: 33.3%;
   margin-left: 20px;
 
+<<<<<<< HEAD
 }
 .ourevent{
+=======
+.ourevent,
+.addevent
+{
+>>>>>>> 7610d923a6366c5e6f8afe3c975ddb1233eb3194
   width: 100%;
-}
-
-.addevent{
-  width:100%;
 }
 
 .border-right{
   border-right: 0.7px darkgrey solid;
 }
 
-#event-form input{
-  margin-left: 15px;
-}
-
-#event-form textarea{
+#event-form input,
+#event-form textarea
+{
   margin-left: 15px;
 }
 
@@ -136,6 +160,38 @@ label{
   width: 300px;
 }
 
+.membersTitle {
+  font-size: 20px;
+}
+
+h3 {
+  margin: 50px 0 30px 40px;
+}
+
+.mem_categories {
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: space-around;
+}
+
+/* CSS Styling of members.php */
+
+.members_background {
+  background-image: url("/uploads/images/members_background.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.8;
+}
+
+.members_image {
+  height: 250px;
+}
+
+.member_bios {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
 .eboardtable {
     margin-left: 520px;
     border-collapse: collapse;

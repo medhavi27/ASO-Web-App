@@ -18,8 +18,11 @@ include("includes/init.php");
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php") ?>
 
-  <h2 class="about">About</h2>
-  <hr />
+  <div class="background">
+    <h2 class="background_text">About</h2>
+  </div>
+
+  <!-- <hr /> -->
   <h2>Overview</h2>
   <p class="overview">
     The Armenian Student Organization fosters community among those of
