@@ -93,6 +93,10 @@ hr {
   text-align: center;
   display: block;
 }
+#filter_form {
+  margin-top: 10px;
+  text-align: center;
+}
 
 .row{
   display:flex;
@@ -205,4 +209,11 @@ th,td {
   }
 .eboardinfo {
   text-align: center;
+}
+#uploadImage {
+  text-align: center;
+
+}
+#uploadImage li {
+    list-style: none;
 }

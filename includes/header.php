@@ -1,5 +1,5 @@
 <header>
-  <h1 class="title">Armenian Student Organization <span>at Cornell<span></h1>
+  <h1 class="title">Armenian Student Organization <span>at Cornell</span></h1>
   <nav class="navBar">
     <ul>
       <li class="home"><a href="index.php">About</a></li>

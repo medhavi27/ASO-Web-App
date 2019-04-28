@@ -34,9 +34,11 @@ include("includes/init.php");
   <!-- Filter form that allows user to view members for specific a specific filter, or just view
     all members in the gallery -->
   <form id="filter_form" action="members.php" method="post">
-    <label for="member">Search</label>
+<label for="member">Filter</label>
     <input name="member_search" id="member_search">
-    By: <select name="filter">
+    By:
+
+    <select name="filter">
       <option value="None">None</option>
       <?php $tags = exec_sql_query($db, "SELECT * FROM members_tags;")->fetchAll();
       foreach ($tags as $tag) { ?>
