@@ -48,7 +48,7 @@ include("includes/init.php");
     <button name="sort_tag" type="submit">Filter</button>
   </form>
 
-  <h3>Meet the Members</h3>
+  <h3>Meet the Eboard Members</h3>
 
   <div class="mem_categories">
     <h4>Name</h4>
@@ -64,7 +64,38 @@ include("includes/init.php");
       $tag_filtered = $_POST['filter'];
       // Still need to implement
     } else {
-      $sql = "SELECT * FROM members";
+      $sql = "SELECT * FROM members WHERE eboard='TRUE'";
+      $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($records as $record) {
+        echo "<div class='member_bios'>
+                <figure><a href=\"view_member.php?image_id=" . $record["id"] . "\"><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\"></a>
+                <figcaption>" .  $record['name'] . "</figcaption>
+                <figcaption>" .  $record['year'] . "</figcaption></figure>
+                <h4 class='mem_major'>" . $record['major']  . '/'.$record['minor'] ."</h4>
+                <h4 class='mem_bio'>" . $record['bio'] . "</h4>
+                </div>";
+      }
+    }
+    ?>
+    </div>
+
+  <h3>Meet the Members</h3>
+
+<div class="mem_categories">
+  <h4>Name</h4>
+  <h4>Major/Minor</h4>
+  <h4>About</h4>
+</div>
+
+<hr />
+
+<div class="mem_info">
+  <?php
+  if (isset($_POST["sort_tag"]) && ($_POST['filter'] != "None")) {
+    $tag_filtered = $_POST['filter'];
+    // Still need to implement
+  } else {
+      $sql = "SELECT * FROM members WHERE eboard='FALSE'";
       $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
       foreach ($records as $record) {
         echo "<div class='member_bios'>

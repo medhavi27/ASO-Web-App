@@ -102,11 +102,26 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
     );
     $result = exec_sql_query($db, $sql, $params);
 
-    $sql = "DELETE FROM member_images WHERE member_id=:id";
+    $recs = exec_sql_query($db, "SELECT * FROM member_images WHERE member_id='$new_memid'")->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($recs as $rec) {
+      $new_imgid = $rec['id'];
+      $image_file_ext = $rec['ext'];
+    }
+
+    $sql = "DELETE FROM member_images WHERE id=:id";
     $params = array(
-      ':id' => $new_memid,
+      ':id' => $new_imgid,
     );
+
     $result2 = exec_sql_query($db, $sql, $params);
+    unlink("uploads/headshots/" . $new_imgid . "." . $image_file_ext);
+
+    if ($result2) {
+      array_push($messages, "Image File Successfully Deleted");
+
+    } else {
+      array_push($messages, "Failed to Delete Image File");
+    }
   }
 
 
