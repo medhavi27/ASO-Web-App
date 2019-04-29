@@ -40,6 +40,8 @@ h2 {
   opacity: 0.9;
   background-size: cover;
 }
+/* -- source: original content, Armenian Students Organization at Cornell-- */
+
 
 .navBar li {
   display: inline-block;
@@ -181,10 +183,12 @@ h3 {
 
 .members_background {
   background-image: url("/uploads/images/members_background.jpg");
+
   background-position: center;
   height: 550px;
   opacity: 0.8;
 }
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
 
 .members_image {
   height: 250px;
