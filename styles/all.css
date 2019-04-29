@@ -213,6 +213,7 @@ th,td {
   }
 .eboardinfo {
   text-align: center;
+  font-weight: bold;
 }
 #uploadImage {
   text-align: center;
@@ -220,4 +221,15 @@ th,td {
 }
 #uploadImage li {
     list-style: none;
+}
+
+#addMember ul{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+}
+
+#addMember li{
+  list-style: none;
 }
