@@ -40,7 +40,7 @@ CREATE TABLE 'members' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'name' TEXT NOT NULL,
     'netid' TEXT NOT NULL UNIQUE,
-    'year' INTEGER NOT NULL,
+    'year' TEXT NOT NULL,
     'alumni' BOOLEAN NOT NULL,
     'eboard' BOOLEAN NOT NULL,
     'major' TEXT,
