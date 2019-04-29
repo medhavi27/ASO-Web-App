@@ -53,7 +53,7 @@ CREATE TABLE 'members' (
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Archaeology, Business, Global Health', 'xys', '404-044-0000');
+values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Business', 'Our President, Armine, is a Junior from studying Anthropology, Archaeology, Business and Global Health', '404-044-0000');
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Kim Kardashian', 'kk281', 'Junior', 'FALSE', 'FALSE', 'Sociology', 'Law', 'xys', '404-222-3334');

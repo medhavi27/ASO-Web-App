@@ -192,6 +192,7 @@ h3 {
 
 .members_image {
   height: 250px;
+  width: 250px;
 }
 
 .member_bios {
@@ -232,4 +233,15 @@ th,td {
 
 #addMember li{
   list-style: none;
+}
+
+h4.mem_major{
+  margin-right: 80px;
+  width: 150px;
+}
+
+h4.mem_bio{
+  margin-right: 30px;
+  display: block;
+  width: 250px;
 }
