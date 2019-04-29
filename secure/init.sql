@@ -88,17 +88,40 @@ CREATE TABLE 'gal_images' (
 
 );
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('1','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('2','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('3','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('4','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('5','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('6','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('7','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('8','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('9','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('10','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('11','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('12','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 
 CREATE TABLE 'events' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
