@@ -78,7 +78,7 @@ member_id,
 ext,
 name
 ) VALUES
-(2,'.jpg','Jasmine Ng');
+(2,'jpg','Jasmine Ng');
 
 CREATE TABLE 'gal_images' (
      'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,

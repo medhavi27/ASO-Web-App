@@ -101,6 +101,12 @@ if ( isset($_POST["add"]) && is_user_logged_in() ) {
       ':id' => $new_memid,
     );
     $result = exec_sql_query($db, $sql, $params);
+
+    $sql = "DELETE FROM member_images WHERE member_id=:id";
+    $params = array(
+      ':id' => $new_memid,
+    );
+    $result2 = exec_sql_query($db, $sql, $params);
   }
 
 
