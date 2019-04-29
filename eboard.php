@@ -243,7 +243,7 @@ function print_member_record($record) {
       <li><label for="major">Major:</label>
       <input id="major" type="text" name="major"></li>
 
-      <li><label for="major">Minor:</label>
+      <li><label for="major">Minor (N/A if none):</label>
       <input id="minor" type="text" name="minor"></li>
 
       <li><label for="bio">Bio:</label>
