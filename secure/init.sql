@@ -84,7 +84,7 @@ CREATE TABLE 'gal_images' (
      'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'filename' TEXT NOT NULL,
     'ext' TEXT NOT NULL,
-    'alt' TEXT 
+    'alt' TEXT
 
 );
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('1','jpg', 'ASO student picture');

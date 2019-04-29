@@ -69,6 +69,7 @@ include("includes/init.php");
       foreach ($records as $record) {
         echo "<div class='member_bios'>
                 <figure><a href=\"view_member.php?image_id=" . $record["id"] . "\"><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\"></a>
+                <figcaption>" .  $record['name'] . "</figcaption>
                 <figcaption>" .  $record['year'] . "</figcaption></figure>
                 <h4 class='mem_major'>" . $record['major']  . "</h4>
                 <h4 class='mem_bio'>" . $record['bio'] . "</h4>
