@@ -4,23 +4,25 @@ include("includes/init.php");
 
 $messages = array();
 if (isset($_POST["upload"]) && is_user_logged_in()) {
+  $upload_last = $db->lastInsertId('id');
+  $upload_imgname = $upload_last + 1;
   $upload_info = $_FILES["add_img"];
   $upload_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   if ($upload_info['error'] == UPLOAD_ERR_OK) {
     $upload_link = basename($upload_info["name"]);
     $upload_ext = strtolower(pathinfo($upload_link, PATHINFO_EXTENSION));
-    $input_link = $upload_link . "." . $upload_ext;
+    $input_link = $upload_link.".".$upload_ext;
     $alt = "ASO Image";
     $sql = "INSERT INTO gal_images(filename, ext, alt) VALUES(:title, :ext, :alt );";
     $params = array(
-      ':title' => $upload_title,
+      ':title' => $upload_imgname,
       ':ext' => $upload_ext,
-      ':alt' => $alt
+      ':alt' => $upload_title
     );
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       $file_id = $db->lastInsertId('id');
-      $id_filename = "uploads/images/about_gallery/about" . $file_id . "." . $upload_ext;
+      $id_filename = "uploads/images/about_gallery/about" . $file_id.".".$upload_ext;
       move_uploaded_file($upload_info['tmp_name'], $id_filename);
     } else {
       array_push($messages, "Couldn't upload image");
@@ -287,21 +289,45 @@ function print_member_record($record)
           <input id="img_name" type="text" name="title">
         </li>
         <!-- <li>
-      <label for="img_source">Provide a source:</label>
-      <input id="img_source" type="text" name="img_source">
-      </li> -->
+              <label for="img_source">Provide a source:</label>
+              <input id="img_source" type="text" name="img_source">
+              </li> -->
         <li>
           <button name="upload" type="submit">Upload File</button>
         </li>
       </ul>
     </form>
+    <p class="eboardinfo"> Add a new blog post</p>
 
+    <form id="uploadBlog" action="eboard.php" method="post">
+      <ul>
+        <li>
+          <label for="add_blog">Title:</label>
+          <input id="add_blog" type="text" name="add_blod">
+        </li>
+        <li>
+          <label for="add_link">Link:</label>
+          <input id="add_link" type="text" name="add_link">
+        </li>
+        <li>
+          <label for="add_date">Date:</label>
+          <input id="add_date" type="date" name="add_date">
+        </li>
+        <li>
+          <label for="add_auth">Author:</label>
+          <input id="add_auth" type="text" name="add_auth">
+        </li>
+        <li>
+          <button name="addblog" id="addblog" type="submit">Add Blog</button>
+        </li>
+      </ul>
+    </form>
   <?php
 } else {
   include("includes/login.php");
 }
 ?>
-
+  <?php include("includes/footer.php") ?>
 </body>
 
 </html>

@@ -9,7 +9,6 @@ include("includes/init.php");
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="styles/all.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>About</title>
 </head>
 
@@ -35,10 +34,11 @@ include("includes/init.php");
     Armenia. Finally, we seek to promote intersectionality and build connections
     with other student groups on campus.
   </p>
-
   <hr />
-
   <h2 class="pres_text">A Message From Our President</h2>
+  <p class="message">
+    P/Barev and welcome to the Armenian Student Organization at Cornell University, your Big Red (Blue, and Orange) home away from տուն! I first became involved in the ASO on campus as a first-year undergraduate student, and quickly found comfort in this small, yet welcoming Cornellian Armenian community over the years, and I hope you will too! Join us for monthly meetings over Armenian coffee, BBQs at Stewart Park, weekly Armenian language and culture lessons, outings to NYC, and our many other events throughout the semester with fellow undergraduate and graduate students, professors and faculty, and local community members. We are a cultural student organization, with a focus on curating social, educational, and professional events and connections for the Cornell and Ithaca community at large. The ASO is open to all that are interested in learning more about Armenian culture!
+  </p>
 
   <hr />
 
@@ -47,14 +47,12 @@ include("includes/init.php");
     $records = exec_sql_query($db, "SELECT * FROM gal_images")->fetchAll(PDO::FETCH_ASSOC);
     foreach ($records as $record) {
 
-                echo  "<a href ='view_member.php?image_id=". $record['id']."'> <img class='about_image' src= 'uploads/images/about_gallery/about".htmlspecialchars($record["id"]).".".htmlspecialchars($record["ext"])."' alt = '".htmlspecialchars($record["alt"])."'></a>";
+      echo  "<a href='view_img.php?" . http_build_query(array('id' => $record['id'])) . "'> <img class='about_image' src= 'uploads/images/about_gallery/about" . htmlspecialchars($record["id"]) . "." . htmlspecialchars($record["ext"]) . "' alt = '" . htmlspecialchars($record["alt"]) . "'></a>" . PHP_EOL;
 
       // echo  "<img class='about_image' src= 'uploads/images/about_gallery/about" . htmlspecialchars($record["id"]) . "." . htmlspecialchars($record["ext"]) . "' alt = '" . htmlspecialchars($record["alt"]) . "'>";
     }
     ?>
 
-        }
-        ?>
 
 
   </div>

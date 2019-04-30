@@ -1,11 +1,12 @@
 body {
   font-family: "Palatino";
   margin: 0;
+  /* background-color:#1b1c1d; */
 }
 
 footer {
   background-color: #1b1c1d;
-  height: 250px;
+  height: 325px;
   text-align: center;
 }
 
@@ -41,7 +42,7 @@ footer p {
 
 .social_media {
   padding-bottom: 0;
-  padding-top: 75px;
+  padding-top: 125px;
 }
 
 /* CSS Styling for about.php */
@@ -83,7 +84,18 @@ h2 {
 }
 /* -- source: original content, Armenian Students Organization at Cornell-- */
 
-
+.bigimg {
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  border-radius: 3%;
+}
+.caption {
+  text-align: center;
+  font-size: 23px;
+  color: red;
+  font-style: italic;
+}
 .navBar li {
   display: inline-block;
   padding: 0 50px;
@@ -111,15 +123,25 @@ h2 {
 
 .overview {
   width: 780px;
-  opacity: 0.5;
+  opacity: 0.8;
   margin: 0 auto 50px auto;
   text-align: center;
   line-height: 40px;
   font-size: 14px;
 }
+.message {
+  width: 800px;
+  color: black;
+  opacity: 0.8;
+  margin-left: 23%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+
+}
 .pres_text {
   width: 300px;
-  margin: 50px auto 100px auto;
+  margin-left: 40%;
   line-height: 40px;
 }
 
@@ -130,9 +152,7 @@ hr {
 }
 
 #loginForm{
-  margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 100px auto 100px auto;
   text-align: center;
   display: block;
 }
@@ -149,7 +169,26 @@ hr {
   width: 33.3%;
   margin-left: 20px;
 }
-
+.post a {
+  text-decoration: none;
+  color: red;
+}
+.post a:hover {
+  color: maroon;
+}
+.post li {
+  list-style: none;
+  text-align: center;
+  width: 85%;
+}
+.posth3 {
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 95%;
+}
 /* CSS Styling for events.php */
 .events{
 text-align: center;
@@ -169,6 +208,10 @@ text-align: center;
   border-right: 0.7px darkgrey solid;
 }
 
+.eventhead {
+  font-size: 20px;
+  margin: auto;
+}
 #event-form input,
 #event-form textarea
 {
@@ -273,7 +316,16 @@ th,td {
 #uploadImage li {
     list-style: none;
 }
-
+#uploadBlog {
+    text-align: center;
+}
+#uploadBlog li {
+  list-style: none;
+  margin-left: -80px;
+}
+#addblog {
+  margin-left: 90px;
+}
 #addMember ul{
   margin-left: auto;
   margin-right: auto;

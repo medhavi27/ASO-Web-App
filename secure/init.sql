@@ -87,39 +87,39 @@ CREATE TABLE 'gal_images' (
     'alt' TEXT
 
 );
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('1','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('1','jpg', 'Our Members at Clubfest');
 -- source: original content, Armenian Students Organization at Cornell
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('2','jpg', 'ASO student picture');
--- source: original content, Armenian Students Organization at Cornell
-
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('3','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('2','jpg', 'Our President in Armenia');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('4','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('3','jpg', 'Our Annual Picnic');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('5','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('4','jpg', 'Students at Clubfest');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('6','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('5','jpg', 'Proud Armenians and their flag');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('7','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('6','jpg', 'Our members bonding over a meal');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('8','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('7','jpg', 'Our members enjoying a meal');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('9','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('8','jpg', 'Our president showing some Armenian pride');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('10','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('9','jpg', 'Our members feeling the love at Mann Library');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('11','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('10','jpg', 'Our President, Armine Kalbakian');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('12','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('11','jpg', 'Never too crowded for some Armenian pride!');
+-- source: original content, Armenian Students Organization at Cornell
+
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('12','jpg', 'A wonderful day in the park');
 -- source: original content, Armenian Students Organization at Cornell
 
 
@@ -146,6 +146,7 @@ date,
 location
 ) VALUES
 ('Ice Cream Social','Come meet the members', 'Wednesday 1:00 PM', 'WSH');
+
 INSERT INTO `events` (
 title,
 description,
@@ -176,7 +177,7 @@ link,
 date,
 author
 ) VALUES
-('Today marks 104th anniversary of Armenian Genocide','https://www.panorama.am/en/news/2019/04/24/Armenian-Genocide/2103987?fbclid=IwAR0AkM1lDNBww8uDHSBKXIduFIumlN0UhEvk4WFYqHQelWFtOVJi2II5h6I', 'April 24 2019', 'Panorama');
+('Today marks 104th anniversary of Armenian Genocide','https://www.panorama.am/en/news/2019/04/24/Armenian-Genocide/2103987?fbclid=IwAR0AkM1lDNBww8uDHSBKXIduFIumlN0UhEvk4WFYqHQelWFtOVJi2II5h6I', 'April 24, 2019', 'Panorama Staff');
 
 INSERT INTO `blogs` (
 title,
@@ -184,7 +185,15 @@ link,
 date,
 author
 ) VALUES
-('15 Reasons why you should go to Armenia','https://www.bloomberg.com/news/photo-essays/2019-04-23/armenia-travel-guide-churches-brandy-mountains?fbclid=IwAR1F9E9HGVoth9v3fl3Yh68QfUi-V4HWw2YlSaYiWtW3B8RgkjnJU_tlKbk', 'April 23 2019', 'Benjamin Kemper');
+('15 Reasons why you should go to Armenia','https://www.bloomberg.com/news/photo-essays/2019-04-23/armenia-travel-guide-churches-brandy-mountains?fbclid=IwAR1F9E9HGVoth9v3fl3Yh68QfUi-V4HWw2YlSaYiWtW3B8RgkjnJU_tlKbk', 'April 23, 2019', 'Benjamin Kemper');
+
+INSERT INTO `blogs` (
+title,
+link,
+date,
+author
+) VALUES
+('Today marks prominent writer Hovhannes Tumanyan’s 150th birthday','https://www.panorama.am/en/news/2019/02/19/Hovhannes-Tumanyan-birthday/2074576?fbclid=IwAR21VU28H2gWO55W78_rNEKgo7EnCKTNUDzib-E5IlMf3PZC3u889akyO44', 'April 30, 2019', 'Panorama Staff');
 
 CREATE TABLE 'members_and_events' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,

@@ -56,11 +56,11 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   <p>".htmlspecialchars($record["date"])."'</p>
   <p>".htmlspecialchars($record["location"])."'</p>
   </div>";
-} ?>
-  </div>
+      } ?>
+    </div>
 
-  <div class="addevent">
-  <h2>Add an event</h2>
+    <div class="addevent">
+      <h2>Add an event</h2>
 
   <form id="event-form" action="events.php" method="post">
     <ul>
@@ -84,8 +84,9 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
     <button name="submit-event" type="submit" id="add-button">Add</button>
   </form>
 
+    </div>
   </div>
-
+  <?php include("includes/footer.php") ?>
 </body>
 
 </html>
