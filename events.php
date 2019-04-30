@@ -49,9 +49,9 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
       foreach ($records as $record) {
 
         echo  "<div class='events'>
-  <h3>" . htmlspecialchars($record["title"]) . "</h3>
+  <h3 class='eventhead'>" . htmlspecialchars($record["title"]) . "</h3>
   <p>" . htmlspecialchars($record["description"]) . "</p>
-  <p>" . htmlspecialchars($record["date"]) . "</p>
+  <p>" . htmlspecialchars($record["time"]) . "</p>
   <p>" . htmlspecialchars($record["location"]) . "</p>
   </div>";
       } ?>
