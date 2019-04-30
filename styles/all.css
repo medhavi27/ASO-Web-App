@@ -161,6 +161,11 @@ hr {
   margin-left: 20px;
 }
 
+/* CSS Styling for events.php */
+.events{
+text-align: center;
+}
+
 .ourevent,
 .addevent
 {

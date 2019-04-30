@@ -20,9 +20,21 @@ include("includes/init.php");
 
   <h2 class="about">Events</h2>
   <hr />
+
   <div class="row">
+
   <div class="ourevent border-right">
   <h2>Our Events</h2>
+  <?php $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
+foreach($records as $record){
+
+  echo  "<div class='events'>
+  <h3>".htmlspecialchars($record["title"])."</h3>
+  <p>".htmlspecialchars($record["description"])."'</p>
+  <p>".htmlspecialchars($record["time"])."'</p>
+  <p>".htmlspecialchars($record["location"])."'</p>
+  </div>";
+} ?>
   </div>
 
   <div class="addevent">
