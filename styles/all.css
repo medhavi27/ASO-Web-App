@@ -169,6 +169,13 @@ hr {
   width: 33.3%;
   margin-left: 20px;
 }
+.post a {
+  text-decoration: none;
+  color: red;
+}
+.post a:hover {
+  color: maroon;
+}
 
 /* CSS Styling for events.php */
 .events{

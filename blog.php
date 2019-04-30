@@ -1,5 +1,11 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
+function getsource($inp) {
+  $substr = explode(".", $inp);
+  $res = $substr[1];
+  return strtoupper($res);
+
+}
 
 
 include("includes/init.php");
@@ -25,7 +31,7 @@ include("includes/init.php");
     <?php $records = exec_sql_query($db, "SELECT * FROM blogs")->fetchAll(PDO::FETCH_ASSOC);
     foreach ($records as $record) {
 
-      echo  "<div class='post'><h3>" . htmlspecialchars($record["title"]) . "</h3><p>" . htmlspecialchars($record["link"]) . "'</p></div>";
+      echo  "<div class='post'><h3><a href='".htmlspecialchars($record['link']) ."'>". htmlspecialchars($record["title"]) . "</a></h3><p>" . htmlspecialchars(getsource($record["link"])) . "</p></div>";
     } ?>
 
   </div>
