@@ -71,6 +71,10 @@ INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Archaeology', '', 'Department: Near Eastern Studies', '');
 
+INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Maya Martirossyan
+', 'mmm457', 'First Year, PhD Student', 'FALSE', 'FALSE', 'Materials Science and Engineering', '', 'Department: Materials Science and Engineering', '');
+
 CREATE TABLE 'member_images' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'member_id' INTEGER NOT NULL,
