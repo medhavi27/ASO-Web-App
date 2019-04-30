@@ -17,7 +17,7 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   );
 
   $result = exec_sql_query($db, $sql, $params);
-  $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
+  // $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
 }
 
 ?>
@@ -37,8 +37,11 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php") ?>
 
-  <h2 class="about">Events</h2>
-  <hr />
+  <div class="events_background">
+    <h2 class="background_text">Events</h2>
+  </div>
+  <!-- <h2 class="about">Events</h2> -->
+  <!-- <hr /> -->
 
 
   <div class="row">

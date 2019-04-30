@@ -42,7 +42,6 @@ footer p {
 }
 
 .orgsync {
-  /* margin-left: 50px; */
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -216,6 +215,15 @@ hr {
 text-align: center;
 }
 
+.events_background {
+  background-image: url("/uploads/images/events_background1.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .events h3{
   color: #FB1919;
 }
@@ -316,7 +324,7 @@ figcaption {
   justify-content: space-around;
 }
 .eboardtable {
-    margin-left: 520px;
+    margin: 0 auto;
     border-collapse: collapse;
   }
 th,td {
@@ -331,6 +339,31 @@ th,td {
   text-align: center;
   font-weight: bold;
 }
+
+.eboard_forms {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.eboard_background {
+  background-image: url("/uploads/images/eboard_background.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog_background {
+  background-image: url("/uploads/images/learn_more.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.8;
+  background-size: 100% 550px;
+  background-repeat: no-repeat;
+}
+
 #uploadImage {
   text-align: center;
 
@@ -377,6 +410,15 @@ h4.mem_bio{
   margin-bottom: 50px;
 }
 
+.contact_background {
+  background-image: url("/uploads/images/contact_background.jpg");
+  background-position: center;
+  height: 550px;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+}
+
 h4 {
   text-align: center;
   margin-bottom: 20px;
@@ -392,12 +434,16 @@ h5 {
 }
 
 .president,
-.vp_internal,
-.vp_external,
+.vice_president,
 .treasurer,
-.secretary {
+.secretary,
+.faculty_advisor {
   text-align: center;
   display: inline-block;
+}
+
+.email a {
+  text-decoration: none;
 }
 
 .positions {
