@@ -161,7 +161,7 @@ link,
 date,
 author
 ) VALUES
-('Today marks 104th anniversary of Armenian Genocide','https://www.panorama.am/en/news/2019/04/24/Armenian-Genocide/2103987?fbclid=IwAR0AkM1lDNBww8uDHSBKXIduFIumlN0UhEvk4WFYqHQelWFtOVJi2II5h6I', 'April 24 2019', 'Panorama');
+('Today marks 104th anniversary of Armenian Genocide','https://www.panorama.am/en/news/2019/04/24/Armenian-Genocide/2103987?fbclid=IwAR0AkM1lDNBww8uDHSBKXIduFIumlN0UhEvk4WFYqHQelWFtOVJi2II5h6I', 'April 24, 2019', 'Panorama Staff');
 
 INSERT INTO `blogs` (
 title,
@@ -169,7 +169,15 @@ link,
 date,
 author
 ) VALUES
-('15 Reasons why you should go to Armenia','https://www.bloomberg.com/news/photo-essays/2019-04-23/armenia-travel-guide-churches-brandy-mountains?fbclid=IwAR1F9E9HGVoth9v3fl3Yh68QfUi-V4HWw2YlSaYiWtW3B8RgkjnJU_tlKbk', 'April 23 2019', 'Benjamin Kemper');
+('15 Reasons why you should go to Armenia','https://www.bloomberg.com/news/photo-essays/2019-04-23/armenia-travel-guide-churches-brandy-mountains?fbclid=IwAR1F9E9HGVoth9v3fl3Yh68QfUi-V4HWw2YlSaYiWtW3B8RgkjnJU_tlKbk', 'April 23, 2019', 'Benjamin Kemper');
+
+INSERT INTO `blogs` (
+title,
+link,
+date,
+author
+) VALUES
+('Today marks prominent writer Hovhannes Tumanyan’s 150th birthday','https://www.panorama.am/en/news/2019/02/19/Hovhannes-Tumanyan-birthday/2074576?fbclid=IwAR21VU28H2gWO55W78_rNEKgo7EnCKTNUDzib-E5IlMf3PZC3u889akyO44', 'April 30, 2019', 'Panorama Staff');
 
 CREATE TABLE 'members_and_events' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,

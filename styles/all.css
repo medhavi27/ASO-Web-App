@@ -176,7 +176,19 @@ hr {
 .post a:hover {
   color: maroon;
 }
-
+.post li {
+  list-style: none;
+  text-align: center;
+  width: 85%;
+}
+.posth3 {
+  margin-top: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 95%;
+}
 /* CSS Styling for events.php */
 .events{
 text-align: center;
@@ -300,7 +312,16 @@ th,td {
 #uploadImage li {
     list-style: none;
 }
-
+#uploadBlog {
+    text-align: center;
+}
+#uploadBlog li {
+  list-style: none;
+  margin-left: -80px;
+}
+#addblog {
+  margin-left: 90px;
+}
 #addMember ul{
   margin-left: auto;
   margin-right: auto;

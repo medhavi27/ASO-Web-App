@@ -297,7 +297,31 @@ function print_member_record($record)
         </li>
       </ul>
     </form>
+    <p class="eboardinfo"> Add a new blog post</p>
 
+    <form id="uploadBlog" action="eboard.php" method="post">
+      <ul>
+        <li>
+          <label for="add_blog">Title:</label>
+          <input id="add_blog" type="text" name="add_blod">
+        </li>
+        <li>
+          <label for="add_link">Link:</label>
+          <input id="add_link" type="text" name="add_link">
+        </li>
+        <li>
+          <label for="add_date">Date:</label>
+          <input id="add_date" type="date" name="add_date">
+        </li>
+        <li>
+          <label for="add_auth">Author:</label>
+          <input id="add_auth" type="text" name="add_auth">
+        </li>
+        <li>
+          <button name="addblog" id="addblog" type="submit">Add Blog</button>
+        </li>
+      </ul>
+    </form>
   <?php
 } else {
   include("includes/login.php");
