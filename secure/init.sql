@@ -165,14 +165,14 @@ CREATE TABLE 'events' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'title' TEXT NOT NULL,
     'description' TEXT,
-    'date' TEXT NOT NULL,
+    'time' TEXT NOT NULL,
     'location' TEXT NOT NULL
 );
 
 INSERT INTO `events` (
 title,
 description,
-date,
+time,
 location
 ) VALUES
 ('Awareness Days','Monday and Tuesday is discussion', 'Monday 12:00 PM', 'WSH');
@@ -180,7 +180,7 @@ location
 INSERT INTO `events` (
 title,
 description,
-date,
+time,
 location
 ) VALUES
 ('Ice Cream Social','Come meet the members', 'Wednesday 1:00 PM', 'WSH');

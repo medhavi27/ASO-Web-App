@@ -3,9 +3,10 @@
 function getsource($inp) {
   $substr = explode(".", $inp);
   $res = $substr[1];
-  return strtoupper($res);
+  return ucfirst($res);
 
 }
+
 
 
 include("includes/init.php");
