@@ -1,6 +1,6 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
-$sql = "SELECT * from blogs;";
+
 
 include("includes/init.php");
 ?>
@@ -22,8 +22,11 @@ include("includes/init.php");
   <h2 class="about">Learn more about ASO at Cornell</h2>
 <hr>
 <div class="row">
-  <div class="post">
-    <h2>Blog Post One</h2>
+<?php $records = exec_sql_query($db, "SELECT * FROM blogs")->fetchAll(PDO::FETCH_ASSOC);
+foreach($records as $record){
+
+  echo  "<div class='post'><h3>".htmlspecialchars($record["title"])."</h3><p>".htmlspecialchars($record["link"])."'</p></div>";
+} ?>
 
   </div>
 

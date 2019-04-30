@@ -3,6 +3,47 @@ body {
   margin: 0;
 }
 
+footer {
+  background-color: #1b1c1d;
+  height: 250px;
+  text-align: center;
+}
+
+footer p {
+  color: #4d4d4d;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align:middle;
+}
+
+.fa {
+  padding:10px;
+  width: 20px;
+  text-decoration: none;
+  margin: 0px 3px;
+  border-radius: 60%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background-color: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background-color: #125688;
+  color: white;
+}
+
+.social_media {
+  padding-bottom: 0;
+  padding-top: 75px;
+}
+
 /* CSS Styling for about.php */
 
 h1 {
@@ -40,6 +81,8 @@ h2 {
   opacity: 0.9;
   background-size: cover;
 }
+/* -- source: original content, Armenian Students Organization at Cornell-- */
+
 
 .navBar li {
   display: inline-block;
@@ -132,7 +175,7 @@ hr {
 }
 
 label{
-  width:150px;
+  width:160px;
   display: inline-block;
   text-align: right;
 }
@@ -146,9 +189,6 @@ label{
   padding: 10px;
 }
 
-/* ,
-.second_row,
-.third_row  */
 .first_row{
   display: flex;
   flex-direction: row;
@@ -181,15 +221,21 @@ h3 {
 
 .members_background {
   background-image: url("/uploads/images/members_background.jpg");
+
   background-position: center;
   height: 550px;
   opacity: 0.8;
 }
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
 
 .members_image {
   height: 250px;
+  width: 250px;
+  margin-left: 50px;
 }
-
+figcaption {
+  margin-left: 60px;
+}
 .member_bios {
   display: flex;
   flex-wrap: nowrap;
@@ -209,6 +255,7 @@ th,td {
   }
 .eboardinfo {
   text-align: center;
+  font-weight: bold;
 }
 #uploadImage {
   text-align: center;
@@ -216,4 +263,60 @@ th,td {
 }
 #uploadImage li {
     list-style: none;
+}
+
+#addMember ul{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+}
+
+#addMember li{
+  list-style: none;
+}
+
+h4.mem_major{
+  margin-right: 80px;
+  width: 300px;
+}
+
+h4.mem_bio{
+  margin-right: 30px;
+  display: block;
+  width: 250px;
+}
+
+/* CSS Styling of contact.php */
+
+.contact_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+}
+
+h5 {
+  margin: 15px;
+}
+
+.president,
+.vp_internal,
+.vp_external,
+.treasurer,
+.secretary {
+  text-align: center;
+  display: inline-block;
+}
+
+.positions {
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }

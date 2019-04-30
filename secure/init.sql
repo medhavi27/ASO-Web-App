@@ -40,7 +40,7 @@ CREATE TABLE 'members' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'name' TEXT NOT NULL,
     'netid' TEXT NOT NULL UNIQUE,
-    'year' INTEGER NOT NULL,
+    'year' TEXT NOT NULL,
     'alumni' BOOLEAN NOT NULL,
     'eboard' BOOLEAN NOT NULL,
     'major' TEXT,
@@ -53,7 +53,7 @@ CREATE TABLE 'members' (
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Archaeology, Business, Global Health', 'xys', '404-044-0000');
+values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Business', 'Our President, Armine, is a Junior from studying Anthropology, Archaeology, Business and Global Health', '404-044-0000');
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Kim Kardashian', 'kk281', 'Junior', 'FALSE', 'FALSE', 'Sociology', 'Law', 'xys', '404-222-3334');
@@ -78,7 +78,7 @@ member_id,
 ext,
 name
 ) VALUES
-(2,'.jpg','Jasmine Ng');
+(2,'jpg','Jasmine Ng');
 
 CREATE TABLE 'gal_images' (
      'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -88,17 +88,40 @@ CREATE TABLE 'gal_images' (
 
 );
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('1','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('2','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('3','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('4','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('5','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('6','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('7','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('8','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('9','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('10','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('11','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT into 'gal_images' (filename, ext, alt) VALUES ('12','jpg', 'ASO student picture');
+-- source: original content, Armenian Students Organization at Cornell
+
 
 CREATE TABLE 'events' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
