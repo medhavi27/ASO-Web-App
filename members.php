@@ -82,7 +82,7 @@ include("includes/init.php");
         if (count($records) > 0 ) {
           foreach ($records as $record) {
             echo "<div class='member_bios'>
-            <figure><a href=\"view_member.php?image_id=" . $record["id"] . "\"><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\"></a>
+            <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
             <figcaption>" .  $record['name'] . "</figcaption>
             <figcaption>" .  $record['year'] . "</figcaption></figure>
             <h4 class='mem_major'>" . $record['major']  . '/'.$record['minor'] ."</h4>
@@ -92,8 +92,9 @@ include("includes/init.php");
         <?php
       }
      }
-     } else {
-      echo "<p>No matching restaurants found.</p>";
+     else {
+      echo "<p>No members found.</p>";
+     }
       }
     ?>
 
@@ -114,7 +115,7 @@ include("includes/init.php");
       $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
       foreach ($records as $record) {
         echo "<div class='member_bios'>
-                <figure><a href=\"view_member.php?image_id=" . $record["id"] . "\"><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\"></a>
+                <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
                 <figcaption>" .  $record['name'] . "</figcaption>
                 <figcaption>" .  $record['year'] . "</figcaption></figure>
                 <h4 class='mem_major'>" . $record['major']  . '/'.$record['minor'] ."</h4>
@@ -142,7 +143,7 @@ include("includes/init.php");
       $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
       foreach ($records as $record) {
         echo "<div class='member_bios'>
-                <figure><a href=\"view_member.php?image_id=" . $record["id"] . "\"><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\"></a>
+                <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
                 <figcaption>" .  $record['name'] . "</figcaption>
                 <figcaption>" .  $record['year'] . "</figcaption></figure>
                 <h4 class='mem_major'>" . $record['major']  . '/'.$record['minor'] ."</h4>

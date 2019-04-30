@@ -190,8 +190,11 @@ h3 {
 .members_image {
   height: 250px;
   width: 250px;
+  margin-left: 50px;
 }
-
+figcaption {
+  margin-left: 60px;
+}
 .member_bios {
   display: flex;
   flex-wrap: nowrap;
@@ -234,7 +237,7 @@ th,td {
 
 h4.mem_major{
   margin-right: 80px;
-  width: 150px;
+  width: 300px;
 }
 
 h4.mem_bio{
