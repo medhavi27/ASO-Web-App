@@ -154,6 +154,7 @@ include("includes/init.php");
     ?>
 
   </div>
+  <?php include("includes/footer.php") ?>
 
 </body>
 
