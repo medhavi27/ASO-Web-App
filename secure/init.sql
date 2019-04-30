@@ -146,21 +146,6 @@ time,
 location
 ) VALUES
 ('Ice Cream Social','Come meet the members', 'Wednesday 1:00 PM', 'WSH');
-INSERT INTO `events` (
-title,
-description,
-time,
-location
-) VALUES
-('Awareness Days','Monday and Tuesday is discussion', '03/04/19 12:00 PM', 'WSH');
-
-INSERT INTO `events` (
-title,
-description,
-time,
-location
-) VALUES
-('Ice Cream Social','Come meet the members', '03/06/19 1:00 PM', 'WSH');
 
 CREATE TABLE 'blogs' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,

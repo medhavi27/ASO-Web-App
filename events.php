@@ -29,10 +29,10 @@ include("includes/init.php");
       foreach ($records as $record) {
 
         echo  "<div class='events'>
-  <h3>" . htmlspecialchars($record["title"]) . "</h3>
-  <p>" . htmlspecialchars($record["description"]) . "'</p>
-  <p>" . htmlspecialchars($record["time"]) . "'</p>
-  <p>" . htmlspecialchars($record["location"]) . "'</p>
+  <h3 class='eventhead'>" . htmlspecialchars($record["title"]) . "</h3>
+  <p>" . htmlspecialchars($record["description"]) . "</p>
+  <p>" . htmlspecialchars($record["time"]) . "</p>
+  <p>" . htmlspecialchars($record["location"]) . "</p>
   </div>";
       } ?>
     </div>
