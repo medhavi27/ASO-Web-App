@@ -119,6 +119,10 @@ h2 {
 .navBar {
   text-align: center;
 }
+.eventhead {
+	  font-size: 20px;
+	  margin: auto;
+	}
 
 .home:hover,
 .members:hover,
