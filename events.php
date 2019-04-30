@@ -5,14 +5,14 @@ include("includes/init.php");
 if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  $submit_date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
+  $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING);
   $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
 
-  $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :date, :location)";
+  $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
   $params = array(
     ':title' => $submit_title,
     ':description' => $submit_desc,
-    ':date' => $submit_date,
+    ':time' => $submit_date,
     ':location' => $submit_loc,
   );
 
@@ -71,7 +71,7 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
           </li>
           <li>
             <label>Date:</label>
-            <input type="date" name="date">
+            <input type="date" name="time">
           </li>
           <li>
             <label>Location:</label>
