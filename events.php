@@ -18,8 +18,6 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
   $result = exec_sql_query($db, $sql, $params);
   $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
-
-
 }
 
 ?>
@@ -45,16 +43,16 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
   <div class="row">
 
-  <div class="ourevent border-right">
-  <h2>Our Events</h2>
-  <?php $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
-   foreach($records as $record){
+    <div class="ourevent border-right">
+      <h2>Our Events</h2>
+      <?php $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($records as $record) {
 
-  echo  "<div class='events'>
-  <h3>".htmlspecialchars($record["title"])."</h3>
-  <p>".htmlspecialchars($record["description"])."</p>
-  <p>".htmlspecialchars($record["date"])."</p>
-  <p>".htmlspecialchars($record["location"])."</p>
+        echo  "<div class='events'>
+  <h3>" . htmlspecialchars($record["title"]) . "</h3>
+  <p>" . htmlspecialchars($record["description"]) . "</p>
+  <p>" . htmlspecialchars($record["date"]) . "</p>
+  <p>" . htmlspecialchars($record["location"]) . "</p>
   </div>";
       } ?>
     </div>
@@ -62,27 +60,27 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
     <div class="addevent">
       <h2>Add an event</h2>
 
-  <form id="event-form" action="events.php" method="post">
-    <ul>
-      <li>
-        <label>Title: </label>
-        <input type="text" name="title">
-      </li>
-      <li>
-        <label>Date:</label>
-        <input type="date" name="date">
-      </li>
-      <li>
-        <label>Location:</label>
-        <input type="text" name="location">
-      </li>
-      <li>
-        <label>Description:</label>
-        <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
-     </li>
-    </ul>
-    <button name="submit-event" type="submit" id="add-button">Add</button>
-  </form>
+      <form id="event-form" action="events.php" method="post">
+        <ul>
+          <li>
+            <label>Title: </label>
+            <input type="text" name="title">
+          </li>
+          <li>
+            <label>Date:</label>
+            <input type="date" name="date">
+          </li>
+          <li>
+            <label>Location:</label>
+            <input type="text" name="location">
+          </li>
+          <li>
+            <label>Description:</label>
+            <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+          </li>
+        </ul>
+        <button name="submit-event" type="submit" id="add-button">Add</button>
+      </form>
 
     </div>
   </div>

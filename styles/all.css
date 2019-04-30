@@ -1,8 +1,9 @@
 body {
   font-family: "Palatino";
   margin: 0;
-  /* background-color:#1b1c1d; */
 }
+
+/* CSS Styling of footer */
 
 footer {
   background-color: #1b1c1d;
@@ -35,14 +36,23 @@ footer p {
   color: white;
 }
 
-.fa-instagram {
-  background-color: #125688;
-  color: white;
-}
-
 .social_media {
   padding-bottom: 0;
   padding-top: 125px;
+}
+
+.orgsync {
+  /* margin-left: 50px; */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #F33131;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.orgsync:hover {
+  opacity: 0.7;
 }
 
 /* CSS Styling for about.php */
@@ -143,6 +153,14 @@ h2 {
   width: 300px;
   margin-left: 40%;
   line-height: 40px;
+}
+
+.pres {
+  font-weight: bold;
+}
+
+.pres_message {
+  font-weight: lighter;
 }
 
 hr {
@@ -361,10 +379,12 @@ h4 {
   font-size: 24px;
   border-bottom: 1px solid black;
   margin: 0 auto;
+  font-weight:300;
 }
 
 h5 {
   margin: 15px;
+  font-weight: 100;
 }
 
 .president,

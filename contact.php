@@ -29,20 +29,20 @@ include("includes/init.php");
   <div class="positions">
     <div class="president">
       <h4>President</h4>
-      <h5>Name</h5>
+      <h5>Armine Kalbakian</h5>
       <h5>Email</h5>
       <h5>Phone Number</h5>
     </div>
 
     <div class="vp_internal">
-      <h4>VP Internal</h4>
+      <h4>Vice President</h4>
       <h5>Name</h5>
       <h5>Email</h5>
       <h5>Phone Number</h5>
     </div>
 
     <div class="vp_external">
-      <h4>VP External</h4>
+      <h4>Treasurer</h4>
       <h5>Name</h5>
       <h5>Email</h5>
       <h5>Phone Number</h5>
@@ -51,14 +51,14 @@ include("includes/init.php");
 
   <div class="positions">
     <div class="treasurer">
-      <h4>Treasurer</h4>
+      <h4>Secretary</h4>
       <h5>Name</h5>
       <h5>Email</h5>
       <h5>Phone Number</h5>
     </div>
 
     <div class="secretary">
-      <h4>Secretary</h4>
+      <h4>Faculty Advisor</h4>
       <h5>Name</h5>
       <h5>Email</h5>
       <h5>Phone Number</h5>
