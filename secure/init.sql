@@ -127,14 +127,14 @@ CREATE TABLE 'events' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'title' TEXT NOT NULL,
     'description' TEXT,
-    'time' TEXT NOT NULL,
+    'date' TEXT NOT NULL,
     'location' TEXT NOT NULL
 );
 
 INSERT INTO `events` (
 title,
 description,
-time,
+date,
 location
 ) VALUES
 ('Awareness Days','Monday and Tuesday is discussion', 'Monday 12:00 PM', 'WSH');
@@ -142,14 +142,14 @@ location
 INSERT INTO `events` (
 title,
 description,
-time,
+date,
 location
 ) VALUES
 ('Ice Cream Social','Come meet the members', 'Wednesday 1:00 PM', 'WSH');
 INSERT INTO `events` (
 title,
 description,
-time,
+date,
 location
 ) VALUES
 ('Awareness Days','Monday and Tuesday is discussion', '03/04/19 12:00 PM', 'WSH');
@@ -157,7 +157,7 @@ location
 INSERT INTO `events` (
 title,
 description,
-time,
+date,
 location
 ) VALUES
 ('Ice Cream Social','Come meet the members', '03/06/19 1:00 PM', 'WSH');

@@ -155,6 +155,10 @@ hr {
 text-align: center;
 }
 
+.events h3{
+  color: #FB1919;
+}
+
 .ourevent,
 .addevent
 {
