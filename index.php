@@ -9,7 +9,7 @@ include("includes/init.php");
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="styles/all.css" rel="stylesheet" type="text/css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>About</title>
 </head>
 
@@ -45,7 +45,11 @@ include("includes/init.php");
   <div class='first_row'>
     <?php
     $records = exec_sql_query($db, "SELECT * FROM gal_images")->fetchAll(PDO::FETCH_ASSOC);
-        foreach($records as $record){
+    foreach ($records as $record) {
+
+      echo  "<img class='about_image' src= 'uploads/images/about_gallery/about" . htmlspecialchars($record["id"]) . "." . htmlspecialchars($record["ext"]) . "' alt = '" . htmlspecialchars($record["alt"]) . "'>";
+    }
+    ?>
 
           echo  "<a href ='view_member.php?image_id=". $record['id']."'> <img class='about_image' src= 'uploads/images/about_gallery/about".htmlspecialchars($record["id"]).".".htmlspecialchars($record["ext"])."' alt = '".htmlspecialchars($record["alt"])."'></a>";
         }
@@ -53,6 +57,9 @@ include("includes/init.php");
 
 
   </div>
+
+  <?php include("includes/footer.php") ?>
+
 </body>
 
 </html>

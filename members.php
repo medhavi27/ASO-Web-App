@@ -34,19 +34,19 @@ include("includes/init.php");
   <!-- Filter form that allows user to view members for specific a specific filter, or just view
     all members in the gallery -->
   <form id="filter_form" action="members.php" method="get">
-<label for="member">Filter by:</label>
+    <label for="member">Filter by:</label>
     <select name="category">
       <option value="None">None</option>
       <?php $tags = exec_sql_query($db, "SELECT * FROM members_tags;")->fetchAll();
       foreach ($tags as $tag) { ?>
         <option value="<?php echo $tag['tag']; ?>"><?php echo $tag['tag']; ?></option><?php } ?>
     </select>
-    <input type="text" name="search"/>
+    <input type="text" name="search" />
     <button name="sort_tag" type="submit">Filter</button>
   </form>
 
   <?php
-  if (isset($_GET['search']) && isset($_GET['category']) ) {
+  if (isset($_GET['search']) && isset($_GET['category'])) {
     $do_search = TRUE;
     $category = filter_input(INPUT_GET, 'category', FILTER_SANITIZE_STRING);
 
@@ -85,7 +85,7 @@ include("includes/init.php");
             <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
             <figcaption>" .  $record['name'] . "</figcaption>
             <figcaption>" .  $record['year'] . "</figcaption></figure>
-            <h4 class='mem_major'>" . $record['major']  . '/'.$record['minor'] ."</h4>
+            <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
             <h4 class='mem_bio'>" . $record['bio'] . "</h4>
             </div>";}
           ?>
@@ -110,7 +110,7 @@ include("includes/init.php");
 
   <div class="mem_info">
     <?php
-    if (!isset($_GET['search']) && !isset($_GET['category']) ) {
+    if (!isset($_GET['search']) && !isset($_GET['category'])) {
       $sql = "SELECT * FROM members WHERE eboard='TRUE'";
       $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
       foreach ($records as $record) {
@@ -118,27 +118,27 @@ include("includes/init.php");
                 <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
                 <figcaption>" .  $record['name'] . "</figcaption>
                 <figcaption>" .  $record['year'] . "</figcaption></figure>
-                <h4 class='mem_major'>" . $record['major']  . '/'.$record['minor'] ."</h4>
+                <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
                 <h4 class='mem_bio'>" . $record['bio'] . "</h4>
                 </div>";
       }
     }
     ?>
-    </div>
+  </div>
 
   <h3>Meet the Members</h3>
 
-<div class="mem_categories">
-  <h4>Name</h4>
-  <h4>Major/Minor</h4>
-  <h4>About</h4>
-</div>
+  <div class="mem_categories">
+    <h4>Name</h4>
+    <h4>Major/Minor</h4>
+    <h4>About</h4>
+  </div>
 
-<hr />
+  <hr />
 
-<div class="mem_info">
-  <?php
-  if (!isset($_GET['search']) && !isset($_GET['category']) ) {
+  <div class="mem_info">
+    <?php
+    if (!isset($_GET['search']) && !isset($_GET['category'])) {
       $sql = "SELECT * FROM members WHERE eboard='FALSE'";
       $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
       foreach ($records as $record) {
@@ -146,7 +146,7 @@ include("includes/init.php");
                 <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
                 <figcaption>" .  $record['name'] . "</figcaption>
                 <figcaption>" .  $record['year'] . "</figcaption></figure>
-                <h4 class='mem_major'>" . $record['major']  . '/'.$record['minor'] ."</h4>
+                <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
                 <h4 class='mem_bio'>" . $record['bio'] . "</h4>
                 </div>";
       }
