@@ -1,11 +1,12 @@
 body {
   font-family: "Palatino";
   margin: 0;
+  /* background-color:#1b1c1d; */
 }
 
 footer {
   background-color: #1b1c1d;
-  height: 250px;
+  height: 325px;
   text-align: center;
 }
 
@@ -41,7 +42,7 @@ footer p {
 
 .social_media {
   padding-bottom: 0;
-  padding-top: 75px;
+  padding-top: 125px;
 }
 
 /* CSS Styling for about.php */
@@ -151,9 +152,7 @@ hr {
 }
 
 #loginForm{
-  margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 100px auto 100px auto;
   text-align: center;
   display: block;
 }
