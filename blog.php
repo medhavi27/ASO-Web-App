@@ -20,18 +20,18 @@ include("includes/init.php");
   <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php") ?>
   <h2 class="about">Learn more about ASO at Cornell</h2>
-<hr>
-<div class="row">
-<?php $records = exec_sql_query($db, "SELECT * FROM blogs")->fetchAll(PDO::FETCH_ASSOC);
-foreach($records as $record){
+  <hr>
+  <div class="row">
+    <?php $records = exec_sql_query($db, "SELECT * FROM blogs")->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($records as $record) {
 
-  echo  "<div class='post'><h3>".htmlspecialchars($record["title"])."</h3><p>".htmlspecialchars($record["link"])."'</p></div>";
-} ?>
+      echo  "<div class='post'><h3>" . htmlspecialchars($record["title"]) . "</h3><p>" . htmlspecialchars($record["link"]) . "'</p></div>";
+    } ?>
 
   </div>
 
-</div>
-
+  </div>
+  <?php include("includes/footer.php"); ?>
 </body>
 
 </html>
