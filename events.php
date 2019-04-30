@@ -8,7 +8,7 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   $submit_date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
   $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
 
-  $sql = "INSERT INTO events (title, description, date, location) VALUES (:title, :description, :date, :location)";
+  $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :date, :location)";
   $params = array(
     ':title' => $submit_title,
     ':description' => $submit_desc,
