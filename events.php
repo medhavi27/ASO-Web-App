@@ -52,9 +52,9 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
   echo  "<div class='events'>
   <h3>".htmlspecialchars($record["title"])."</h3>
-  <p>".htmlspecialchars($record["description"])."'</p>
-  <p>".htmlspecialchars($record["date"])."'</p>
-  <p>".htmlspecialchars($record["location"])."'</p>
+  <p>".htmlspecialchars($record["description"])."</p>
+  <p>".htmlspecialchars($record["date"])."</p>
+  <p>".htmlspecialchars($record["location"])."</p>
   </div>";
       } ?>
     </div>
