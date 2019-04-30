@@ -47,11 +47,12 @@ include("includes/init.php");
     $records = exec_sql_query($db, "SELECT * FROM gal_images")->fetchAll(PDO::FETCH_ASSOC);
     foreach ($records as $record) {
 
-      echo  "<img class='about_image' src= 'uploads/images/about_gallery/about" . htmlspecialchars($record["id"]) . "." . htmlspecialchars($record["ext"]) . "' alt = '" . htmlspecialchars($record["alt"]) . "'>";
+                echo  "<a href ='view_member.php?image_id=". $record['id']."'> <img class='about_image' src= 'uploads/images/about_gallery/about".htmlspecialchars($record["id"]).".".htmlspecialchars($record["ext"])."' alt = '".htmlspecialchars($record["alt"])."'></a>";
+
+      // echo  "<img class='about_image' src= 'uploads/images/about_gallery/about" . htmlspecialchars($record["id"]) . "." . htmlspecialchars($record["ext"]) . "' alt = '" . htmlspecialchars($record["alt"]) . "'>";
     }
     ?>
 
-          echo  "<a href ='view_member.php?image_id=". $record['id']."'> <img class='about_image' src= 'uploads/images/about_gallery/about".htmlspecialchars($record["id"]).".".htmlspecialchars($record["ext"])."' alt = '".htmlspecialchars($record["alt"])."'></a>";
         }
         ?>
 
