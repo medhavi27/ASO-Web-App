@@ -18,25 +18,26 @@ $idimg = $_GET['id'];
   <?php include("includes/header.php");
 
   $sqlforimgonly = "SELECT * from gal_images WHERE  id=:imgid";
-$params = array(
+  $params = array(
     ':imgid' => $idimg
-);
+  );
 
-$resultforimg = exec_sql_query($db, $sqlforimgonly, $params);
-if ($resultforimg) {
-  $img = $resultforimg->fetchAll();
-  $dispimg = $img[0];
-  echo "<p class='caption'>".htmlspecialchars($dispimg["alt"])."</p>";
-  echo "<img class='bigimg' src= 'uploads/images/about_gallery/about".htmlspecialchars($dispimg["id"]).".".htmlspecialchars($dispimg["ext"])."'>";
-}
-
-
+  $resultforimg = exec_sql_query($db, $sqlforimgonly, $params);
+  if ($resultforimg) {
+    $img = $resultforimg->fetchAll();
+    $dispimg = $img[0];
+    echo "<p class='caption'>" . htmlspecialchars($dispimg["alt"]) . "</p>";
+    echo "<img class='bigimg' src= 'uploads/images/about_gallery/about" . htmlspecialchars($dispimg["id"]) . "." . htmlspecialchars($dispimg["ext"]) . "'>";
+  }
 
 
 
 
-   ?>
-   <?php include("includes/footer.php") ?>
 
- </body>
- </html>
+
+  ?>
+  <?php include("includes/footer.php") ?>
+
+</body>
+
+</html>

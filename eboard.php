@@ -289,9 +289,9 @@ function print_member_record($record)
           <input id="img_name" type="text" name="title">
         </li>
         <!-- <li>
-      <label for="img_source">Provide a source:</label>
-      <input id="img_source" type="text" name="img_source">
-      </li> -->
+              <label for="img_source">Provide a source:</label>
+              <input id="img_source" type="text" name="img_source">
+              </li> -->
         <li>
           <button name="upload" type="submit">Upload File</button>
         </li>
@@ -303,7 +303,7 @@ function print_member_record($record)
   include("includes/login.php");
 }
 ?>
-
+  <?php include("includes/footer.php") ?>
 </body>
 
 </html>

@@ -67,36 +67,36 @@ include("includes/init.php");
     $search = NULL;
   } ?>
 
-<?php
-    if ($do_search) {
-      ?>
-      <h3>Search Results</h3>
-      <?php
-      $sql = "SELECT * FROM members WHERE $search_field LIKE '%' || :search || '%'";
-      $params = array(
-        ":search" => $search
-      );
-      $result1 = exec_sql_query($db, $sql, $params);
-      if ($result1) {
-        $records = $result1->fetchAll();
-        if (count($records) > 0 ) {
-          foreach ($records as $record) {
-            echo "<div class='member_bios'>
+  <?php
+  if ($do_search) {
+    ?>
+    <h3>Search Results</h3>
+    <?php
+    $sql = "SELECT * FROM members WHERE $search_field LIKE '%' || :search || '%'";
+    $params = array(
+      ":search" => $search
+    );
+    $result1 = exec_sql_query($db, $sql, $params);
+    if ($result1) {
+      $records = $result1->fetchAll();
+      if (count($records) > 0) {
+        foreach ($records as $record) {
+          echo "<div class='member_bios'>
             <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
             <figcaption>" .  $record['name'] . "</figcaption>
             <figcaption>" .  $record['year'] . "</figcaption></figure>
             <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
             <h4 class='mem_bio'>" . $record['bio'] . "</h4>
-            </div>";}
-          ?>
-        <?php
-      }
-     }
-     else {
-      echo "<p>No members found.</p>";
-     }
-      }
-    ?>
+            </div>";
+        }
+        ?>
+      <?php
+    }
+  } else {
+    echo "<p>No members found.</p>";
+  }
+}
+?>
 
   <h3>Meet the Eboard Members</h3>
 
