@@ -2,7 +2,7 @@
 <footer>
   <div class="social_media">
     <a href="https://www.facebook.com/groups/1553948654887810/" class="fa fa-facebook" target="_blank"></a>
-    <a href="" class="fa fa-instagram"></a>
+    <a href="https://orgsync.com/74870/chapter?fbclid=IwAR1Bpx0KeD1YQApxWhPlVoU-BuHjCmN8GciNG85mNRmbfn_jpsloLFRWfFQ" class="fa fa-graduation-cap"></a>
   </div>
   <p>&copy; 2019 Cornell Armenian Student Organization. All Right Reserved.</p>
 </footer>
