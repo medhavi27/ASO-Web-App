@@ -122,15 +122,25 @@ h2 {
 
 .overview {
   width: 780px;
-  opacity: 0.5;
+  opacity: 0.8;
   margin: 0 auto 50px auto;
   text-align: center;
   line-height: 40px;
   font-size: 14px;
 }
+.message {
+  width: 800px;
+  color: black;
+  opacity: 0.8;
+  margin-left: 23%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+
+}
 .pres_text {
   width: 300px;
-  margin: 50px auto 100px auto;
+  margin-left: 40%;
   line-height: 40px;
 }
 
