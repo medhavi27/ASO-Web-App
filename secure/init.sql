@@ -55,10 +55,21 @@ INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Business', 'Our President, Armine, is a Junior from studying Anthropology, Archaeology, Business and Global Health', '404-044-0000');
 
+INSERT INTO members
+    (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Margot Chirkjian', 'mkc224', 'Junior', 'FALSE', 'TRUE', 'Global and Public Health Sciences', '', '', '');
 
--- INSERT INTO members
---     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
--- values('Kim Kardashian', 'kk281', 'Junior', 'FALSE', 'FALSE', 'Sociology', 'Law', 'xys', '404-222-3334');
+INSERT INTO members
+    (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Salpi Bocchieriyan', 'sab475', '2nd Year, PhD Student', 'TRUE', 'TRUE', 'Archaeology', '', '', '');
+
+INSERT INTO members
+    (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Tigran Mehrabyan', 'tm545', 'Senior', 'FALSE', 'TRUE', 'Biological Engineering', '', '', '');
+
+INSERT INTO members
+    (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Archaeology', '', 'Department: Near Eastern Studies', '');
 
 CREATE TABLE 'member_images' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
