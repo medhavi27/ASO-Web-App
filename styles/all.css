@@ -83,7 +83,18 @@ h2 {
 }
 /* -- source: original content, Armenian Students Organization at Cornell-- */
 
-
+.bigimg {
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  border-radius: 3%;
+}
+.caption {
+  text-align: center;
+  font-size: 23px;
+  color: red;
+  font-style: italic;
+}
 .navBar li {
   display: inline-block;
   padding: 0 50px;

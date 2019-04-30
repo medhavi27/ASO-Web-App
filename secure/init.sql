@@ -87,39 +87,39 @@ CREATE TABLE 'gal_images' (
     'alt' TEXT
 
 );
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('1','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('1','jpg', 'Our Members at Clubfest');
 -- source: original content, Armenian Students Organization at Cornell
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('2','jpg', 'ASO student picture');
--- source: original content, Armenian Students Organization at Cornell
-
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('3','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('2','jpg', 'Our President in Armenia');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('4','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('3','jpg', 'Our Annual Picnic');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('5','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('4','jpg', 'Students at Clubfest');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('6','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('5','jpg', 'Proud Armenians and their flag');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('7','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('6','jpg', 'Our members bonding over a meal');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('8','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('7','jpg', 'Our members enjoying a meal');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('9','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('8','jpg', 'Our president showing some Armenian pride');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('10','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('9','jpg', 'Our members feeling the love at Mann Library');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('11','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('10','jpg', 'Our President, Armine Kalbakian');
 -- source: original content, Armenian Students Organization at Cornell
 
-INSERT into 'gal_images' (filename, ext, alt) VALUES ('12','jpg', 'ASO student picture');
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('11','jpg', 'Never too crowded for some Armenian pride!');
+-- source: original content, Armenian Students Organization at Cornell
+
+INSERT into 'gal_images' (filename, ext, alt) VALUES ('12','jpg', 'A wonderful day in the park');
 -- source: original content, Armenian Students Organization at Cornell
 
 
