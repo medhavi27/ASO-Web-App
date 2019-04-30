@@ -4,23 +4,25 @@ include("includes/init.php");
 
 $messages = array();
 if (isset($_POST["upload"]) && is_user_logged_in()) {
+  $upload_last = $db->lastInsertId('id');
+  $upload_imgname = $upload_last + 1;
   $upload_info = $_FILES["add_img"];
   $upload_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   if ($upload_info['error'] == UPLOAD_ERR_OK) {
     $upload_link = basename($upload_info["name"]);
     $upload_ext = strtolower(pathinfo($upload_link, PATHINFO_EXTENSION));
-    $input_link = $upload_link . "." . $upload_ext;
+    $input_link = $upload_link.".".$upload_ext;
     $alt = "ASO Image";
     $sql = "INSERT INTO gal_images(filename, ext, alt) VALUES(:title, :ext, :alt );";
     $params = array(
-      ':title' => $upload_title,
+      ':title' => $upload_imgname,
       ':ext' => $upload_ext,
-      ':alt' => $alt
+      ':alt' => $upload_title
     );
     $result = exec_sql_query($db, $sql, $params);
     if ($result) {
       $file_id = $db->lastInsertId('id');
-      $id_filename = "uploads/images/about_gallery/about" . $file_id . "." . $upload_ext;
+      $id_filename = "uploads/images/about_gallery/about" . $file_id.".".$upload_ext;
       move_uploaded_file($upload_info['tmp_name'], $id_filename);
     } else {
       array_push($messages, "Couldn't upload image");
