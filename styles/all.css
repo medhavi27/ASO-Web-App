@@ -54,6 +54,10 @@ footer p {
   opacity: 0.7;
 }
 
+h6 {
+  color: white;
+}
+
 /* CSS Styling for about.php */
 
 h1 {
@@ -85,13 +89,13 @@ h2 {
 }
 
 .background {
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
   background-image: url("/uploads/images/about_cover2.jpg");
   background-position: center;
   height: 550px;
   opacity: 0.9;
   background-size: cover;
 }
-/* -- source: original content, Armenian Students Organization at Cornell-- */
 
 .bigimg {
   width: 50%;
@@ -126,7 +130,7 @@ h2 {
 
 .home:hover,
 .members:hover,
-/* .events:hover, */
+.events:hover,
 .learn_more:hover,
 .contact:hover,
 .eboard:hover {
@@ -216,6 +220,7 @@ text-align: center;
 }
 
 .events_background {
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
   background-image: url("/uploads/images/events_background1.jpg");
   background-position: center;
   height: 550px;
@@ -302,13 +307,12 @@ h3 {
 /* CSS Styling of members.php */
 
 .members_background {
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
   background-image: url("/uploads/images/members_background.jpg");
-
   background-position: center;
   height: 550px;
   opacity: 0.8;
 }
-  /* -- source: original content, Armenian Students Organization at Cornell-- */
 
 .members_image {
   height: 250px;
@@ -347,6 +351,7 @@ th,td {
 }
 
 .eboard_background {
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
   background-image: url("/uploads/images/eboard_background.jpg");
   background-position: center;
   height: 550px;
@@ -356,6 +361,7 @@ th,td {
 }
 
 .blog_background {
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
   background-image: url("/uploads/images/learn_more.jpg");
   background-position: center;
   height: 550px;
@@ -408,15 +414,17 @@ h4.mem_bio{
 .contact_title {
   text-align: center;
   margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: lighter;
 }
 
 .contact_background {
+  /* -- source: original content, Armenian Students Organization at Cornell-- */
   background-image: url("/uploads/images/contact_background.jpg");
   background-position: center;
   height: 550px;
   opacity: 0.9;
   background-repeat: no-repeat;
-  /* background-size: contain; */
 }
 
 h4 {
@@ -444,6 +452,14 @@ h5 {
 
 .email a {
   text-decoration: none;
+}
+
+.email:hover {
+  opacity: 0.7;
+}
+
+.names {
+  font-size: 16px;
 }
 
 .positions {

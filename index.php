@@ -14,14 +14,12 @@ include("includes/init.php");
 
 <body>
 
-  <!-- TODO: This should be your main page for your site. -->
   <?php include("includes/header.php") ?>
 
   <div class="background">
     <h2 class="background_text">About</h2>
   </div>
 
-  <!-- <hr /> -->
   <h2>Overview</h2>
   <p class="overview">
     The Armenian Student Organization fosters community among those of
@@ -46,10 +44,8 @@ include("includes/init.php");
     <?php
     $records = exec_sql_query($db, "SELECT * FROM gal_images")->fetchAll(PDO::FETCH_ASSOC);
     foreach ($records as $record) {
-
+      /* -- source: original content, Armenian Students Organization at Cornell-- */
       echo  "<a href='view_img.php?" . http_build_query(array('id' => $record['id'])) . "'> <img class='about_image' src= 'uploads/images/about_gallery/about" . htmlspecialchars($record["id"]) . "." . htmlspecialchars($record["ext"]) . "' alt = '" . htmlspecialchars($record["alt"]) . "'></a>" . PHP_EOL;
-
-      // echo  "<img class='about_image' src= 'uploads/images/about_gallery/about" . htmlspecialchars($record["id"]) . "." . htmlspecialchars($record["ext"]) . "' alt = '" . htmlspecialchars($record["alt"]) . "'>";
     }
     ?>
 
