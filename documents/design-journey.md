@@ -204,11 +204,11 @@ Our client was generally happy with our design, but noticed a few things she wan
 For the Events page, we added the functionality to view events in a list and add more.
 ![Edits to Learn More Page](iterated_learnmore.png)
 For the Learn More page, we changed the layout of the blog posts.
-![Edits to Member Bios](final_member.jpg)
+![Edits to Member Bios](improve_member.jpg)
 For the Members page, we displayed bios in the way that our client wanted.
 
 Something we realized is that the login form appears in multiple places, so we decide to create a separate page for eboard members, called eboard.php. This page will let eboard members log in, view member info other than bios, and see what events members have attended, and keep track of donations.
-![Eboard.php](final_eboard.jpg)
+![Eboard.php](improve_eboard.jpg)
 
 ## Evaluate your Design
 
@@ -432,7 +432,6 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 
 [Include sketches of your finalized design.]
 ![Members Page](final_member.jpg)
-![Member Page when user logs in and when user clicks on single member image](final_membersingle.jpg)
 ![About Page](final_about.jpg)
 ![Alumni Page](final_alumni1.jpg)
 ![Alumni Page when user logs in](final_alumni_loggedin.jpg)
