@@ -96,6 +96,24 @@ ext,
 name
 ) VALUES
 (2,'jpg','Jasmine Ng');
+INSERT INTO `member_images` (
+member_id,
+ext,
+name
+) VALUES
+(3,'jpg','Salpi Bocchieriyan');
+INSERT INTO `member_images` (
+member_id,
+ext,
+name
+) VALUES
+(4,'jpg','Tigran Mehrabyan');
+INSERT INTO `member_images` (
+member_id,
+ext,
+name
+) VALUES
+(5,'jpg','Prof. Lori Khatchadourian');
 
 CREATE TABLE 'gal_images' (
      'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
