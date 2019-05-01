@@ -33,7 +33,7 @@ include("includes/init.php");
     with other student groups on campus.
   </p>
   <hr />
-  <h2 class="pres_text"><span class="pres_message">A Message From Our </span><span class="pres">President<span></h2>
+  <h2 class="pres_text"><span class="pres_message">A Message From Our </span><span class="pres">PRESIDENT<span></h2>
   <p class="message">
     &#8220;P/Barev and welcome to the Armenian Student Organization at Cornell University, your Big Red (Blue, and Orange) home away from տուն! I first became involved in the ASO on campus as a first-year undergraduate student, and quickly found comfort in this small, yet welcoming Cornellian Armenian community over the years, and I hope you will too! Join us for monthly meetings over Armenian coffee, BBQs at Stewart Park, weekly Armenian language and culture lessons, outings to NYC, and our many other events throughout the semester with fellow undergraduate and graduate students, professors and faculty, and local community members. We are a cultural student organization, with a focus on curating social, educational, and professional events and connections for the Cornell and Ithaca community at large. The ASO is open to all that are interested in learning more about Armenian culture!&#8221;
   </p>
