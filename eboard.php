@@ -87,6 +87,22 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
     }
   }
 }
+////add blog post
+if (isset($_POST["addblog"]) && is_user_logged_in()) {
+  $upload_blog = filter_input(INPUT_POST, 'add_blog', FILTER_SANITIZE_STRING);
+  $upload_link = filter_input(INPUT_POST, 'add_link', FILTER_SANITIZE_STRING);
+  $upload_date = filter_input(INPUT_POST, 'add_date', FILTER_SANITIZE_STRING);
+  $upload_auth = filter_input(INPUT_POST, 'add_auth', FILTER_SANITIZE_STRING);
+$sqlblog = "INSERT INTO blogs(title,link, date, author) VALUES(:title, :link, :date, :auth );";
+$paramsblog = array(
+  ':title' => $upload_blog,
+  ':link' => $upload_link,
+  ':date' => $upload_date,
+  ':auth' => $upload_auth
+);
+$resultblog = exec_sql_query($db, $sqlblog, $paramsblog);
+
+}
 
 
 // delete member
@@ -122,6 +138,7 @@ if (isset($_GET['foo'])) {
     array_push($messages, "Failed to Delete Image File");
   }
 }
+
 
 
 function print_event_record($record)
@@ -311,7 +328,7 @@ function print_member_record($record)
           <ul>
             <li>
               <label for="add_blog">Title:</label>
-              <input id="add_blog" type="text" name="add_blod">
+              <input id="add_blog" type="text" name="add_blog">
             </li>
             <li>
               <label for="add_link">Link:</label>

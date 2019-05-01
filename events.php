@@ -46,8 +46,7 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   <!-- <hr /> -->
 
 
-  <div class="row">
-
+  <div class="row-events">
     <div class="ourevent border-right">
       <h2>Our Events</h2>
       <?php $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);

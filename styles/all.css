@@ -189,10 +189,19 @@ hr {
   margin-top: 10px;
   text-align: center;
 }
+.row-events {
+  display: flex;
+  flex-direction: row;
+}
 
 .row{
-  display:flex;
-  flex-direction: row;
+  display: flex;
+
+flex-direction: row;
+
+justify-content: space-evenly;
+
+flex-wrap: wrap;
 }
 .post {
   width: 33.3%;
@@ -237,10 +246,14 @@ text-align: center;
   color: #FB1919;
 }
 
-.ourevent,
+.ourevent{
+    width: 100%;
+
+}
 .addevent
 {
-  width: 100%;
+  width: 90%;
+  margin-right: 20px;
 }
 
 .border-right{
@@ -341,7 +354,7 @@ th,td {
 
 }
 .eventstable {
-    margin-left: 15%;
+    margin-left: 8%;
     border-collapse: collapse;
   }
 .eboardinfo {
@@ -407,6 +420,7 @@ h4.mem_major{
   margin-right: 100px;
   width: 300px;
   margin-top: 15px;
+  font-size: 20px;
 }
 
 h4.mem_bio{
@@ -414,6 +428,7 @@ h4.mem_bio{
   display: block;
   width: 250px;
   margin-top: 15px;
+  font-size: 20px;
 }
 
 /* CSS Styling of contact.php */

@@ -1,5 +1,7 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
+
+///takes in a url and returns what website it's coming from
 function getsource($inp)
 {
   $substr = explode(".", $inp);
