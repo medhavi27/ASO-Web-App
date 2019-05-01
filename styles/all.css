@@ -58,6 +58,10 @@ h6 {
   color: white;
 }
 
+h6 cite a {
+  color: white;
+}
+
 /* CSS Styling for about.php */
 
 h1 {

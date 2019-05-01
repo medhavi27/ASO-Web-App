@@ -6,5 +6,5 @@
     <a class="orgsync" href="https://orgsync.com/74870/chapter?fbclid=IwAR1Bpx0KeD1YQApxWhPlVoU-BuHjCmN8GciNG85mNRmbfn_jpsloLFRWfFQ" target="_blank">ASO Orgsync</a>
   </div>
   <p>&copy; 2019 Cornell Armenian Student Organization. All Right Reserved.</p>
-  <h6><cite>Source icon for Facebook logo: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp</cite></h6>
+  <h6><cite>Source icon for Facebook logo: <a href="https://www.w3schools.com/howto/howto_css_social_media_buttons.asp">https://www.w3schools.com/howto/howto_css_social_media_buttons.asp</a></cite></h6>
 </footer>
