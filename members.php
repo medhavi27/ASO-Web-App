@@ -67,10 +67,19 @@ include("includes/init.php");
     $search = NULL;
   } ?>
 
+  <h3>Meet the Members</h3>
+
+  <div class="mem_categories">
+    <h4>Name</h4>
+    <h4>Major/Minor</h4>
+    <h4>Hometown</h4>
+  </div>
+
+  <hr />
+
   <?php
   if ($do_search) {
     ?>
-    <h3>Search Results</h3>
     <?php
     $sql = "SELECT * FROM members WHERE $search_field LIKE '%' || :search || '%'";
     $params = array(
@@ -98,24 +107,14 @@ include("includes/init.php");
 }
 ?>
 
-  <h3>Meet the Eboard Members</h3>
-
-  <div class="mem_categories">
-    <h4>Name</h4>
-    <h4>Major/Minor</h4>
-    <h4>About</h4>
-  </div>
-
-  <hr />
-
   <div class="mem_info">
     <?php
     if (!isset($_GET['search']) && !isset($_GET['category'])) {
-      $sql = "SELECT * FROM members WHERE eboard='TRUE'";
+      $sql = "SELECT members.id AS id, members.name, members.year, members.major, members.minor, members.bio, member_images.ext FROM members INNER JOIN member_images ON members.id=member_images.member_id";
       $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
       foreach ($records as $record) {
         echo "<div class='member_bios'>
-                <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
+                <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . "." . $record['ext'] . "\">
                 <figcaption>" .  $record['name'] . "</figcaption>
                 <figcaption>" .  $record['year'] . "</figcaption></figure>
                 <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
@@ -124,35 +123,6 @@ include("includes/init.php");
       }
     }
     ?>
-  </div>
-
-  <h3>Meet the Members</h3>
-
-  <div class="mem_categories">
-    <h4>Name</h4>
-    <h4>Major/Minor</h4>
-    <h4>About</h4>
-  </div>
-
-  <hr />
-
-  <div class="mem_info">
-    <?php
-    if (!isset($_GET['search']) && !isset($_GET['category'])) {
-      $sql = "SELECT * FROM members WHERE eboard='FALSE'";
-      $records = exec_sql_query($db, $sql)->fetchAll(PDO::FETCH_ASSOC);
-      foreach ($records as $record) {
-        echo "<div class='member_bios'>
-                <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
-                <figcaption>" .  $record['name'] . "</figcaption>
-                <figcaption>" .  $record['year'] . "</figcaption></figure>
-                <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
-                <h4 class='mem_bio'>" . $record['bio'] . "</h4>
-                </div>";
-      }
-    }
-    ?>
-
   </div>
   <?php include("includes/footer.php") ?>
 

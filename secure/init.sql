@@ -53,27 +53,41 @@ CREATE TABLE 'members' (
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology', 'Business', 'Our President, Armine, is a Junior from studying Anthropology, Archaeology, Business and Global Health', '404-044-0000');
+values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology & Archaeology', 'Business,Global Health', 'Little Armenia, Los Angeles, CA', '404-044-0000');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Margot Chirkjian', 'mkc224', 'Junior', 'FALSE', 'TRUE', 'Global and Public Health Sciences', '', '', '');
+values('Margot Chirkjian', 'mkc224', 'Junior', 'FALSE', 'TRUE', 'Global and Public Health Sciences', '', 'Baltimore,Maryland', '');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Salpi Bocchieriyan', 'sab475', '2nd Year, PhD Student', 'TRUE', 'TRUE', 'Archaeology', '', '', '');
+values('Salpi Bocchieriyan', 'sab475', '2nd Year, PhD Student', 'TRUE', 'TRUE', 'Archaeology', '', 'Denver, Colorado', '');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Tigran Mehrabyan', 'tm545', 'Senior', 'FALSE', 'TRUE', 'Biological Engineering', '', '', '');
+values('Tigran Mehrabyan', 'tm545', 'Senior', 'FALSE', 'TRUE', 'Biological Engineering', '', 'Yerevan,Armenia', '');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Archaeology', '', 'Department: Near Eastern Studies', '');
+values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Department: Near Eastern Studies;Archaeology', '', '', '');
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Maya Martirossyan
-', 'mmm457', 'First Year, PhD Student', 'FALSE', 'FALSE', 'Materials Science and Engineering', '', 'Department: Materials Science and Engineering', '');
+', 'mmm457', 'First Year, PhD Student', 'FALSE', 'FALSE', 'Department: Materials Science and Engineering', '', 'Glendale,California', '');
+
+INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Alice Gevorgyan
+', 'ag997', 'Freshman', 'FALSE', 'FALSE', 'Plant Sciences', '', 'San Carlos,California', '');
+
+
+INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Anna Srapionyan
+', 'as3348', 'PhD 2019', 'TRUE', 'FALSE', 'Applied Mathematics', '', 'Yerevan, Armenia', '');
+
+INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
+values('Mané Mehrabyan
+', '', 'Class of 2017', 'TRUE', 'FALSE', 'Design and Environmental Analysis', 'Business;Theater', 'Yerevan, Armenia', '');
+
 
 CREATE TABLE 'member_images' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -88,40 +102,81 @@ member_id,
 ext,
 name
 ) VALUES
-(1,'.jpg','Armine Kalbakian');
+(1,'jpg','Armine Kalbakian');
+-- source: original content, Armenian Students Organization at Cornell
 
 INSERT INTO `member_images` (
 member_id,
 ext,
 name
 ) VALUES
-(2,'jpg','Jasmine Ng');
+(2,'jpg','Margot Chirikjian');
+-- source: original content, Jasmine Ng's image
+
 INSERT INTO `member_images` (
 member_id,
 ext,
 name
 ) VALUES
 (3,'jpg','Salpi Bocchieriyan');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT INTO `member_images` (
 member_id,
 ext,
 name
 ) VALUES
 (4,'jpg','Tigran Mehrabyan');
+-- source: original content, Armenian Students Organization at Cornell
+
 INSERT INTO `member_images` (
 member_id,
 ext,
 name
 ) VALUES
 (5,'jpg','Prof. Lori Khatchadourian');
+-- source: original content, Armenian Students Organization at Cornell
+
+INSERT INTO `member_images` (
+member_id,
+ext,
+name
+) VALUES
+(6,'jpg','Maya Martirossyan');
+-- source: original content, Armenian Students Organization at Cornell
+
+INSERT INTO `member_images` (
+member_id,
+ext,
+name
+) VALUES
+(7,'jpg','Alice Gevorgyan');
+-- source: original content, Armenian Students Organization at Cornell
+
+INSERT INTO `member_images` (
+member_id,
+ext,
+name
+) VALUES
+(8,'jpg','Anna Srapionyan');
+-- source: original content, Armenian Students Organization at Cornell
+
+
+INSERT INTO `member_images` (
+member_id,
+ext,
+name
+) VALUES
+(9,'jpg','Mané Mehrabyan');
+-- source: original content, Armenian Students Organization at Cornell
 
 CREATE TABLE 'gal_images' (
      'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'filename' TEXT NOT NULL,
     'ext' TEXT NOT NULL,
     'alt' TEXT
-
 );
+
 INSERT into 'gal_images'
     (filename, ext, alt)
 VALUES
