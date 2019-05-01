@@ -18,6 +18,8 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
   $result = exec_sql_query($db, $sql, $params);
   // $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
+}else{
+  array_push($messages, "You must login to add event");
 }
 
 ?>
@@ -53,9 +55,9 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
         echo  "<div class='events'>
   <h3 class='eventhead'>" . htmlspecialchars($record["title"]) . "</h3>
-  <p>" . htmlspecialchars($record["description"]) . "</p>
-  <p>" . htmlspecialchars($record["time"]) . "</p>
-  <p>" . htmlspecialchars($record["location"]) . "</p>
+  <p> Description: " . htmlspecialchars($record["description"]) . "</p>
+  <p> Date: " . htmlspecialchars($record["time"]) . "</p>
+  <p> Location: " . htmlspecialchars($record["location"]) . "</p>
   </div>";
       } ?>
     </div>
