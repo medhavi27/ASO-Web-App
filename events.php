@@ -2,6 +2,7 @@
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
 include("includes/init.php");
 
+$messages = array();
 if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
@@ -18,8 +19,7 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
   $result = exec_sql_query($db, $sql, $params);
   // $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
-}else{
-  array_push($messages, "You must login to add event");
+
 }
 
 ?>
@@ -64,7 +64,8 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
     <div class="addevent">
       <h2>Add an event</h2>
-
+<?php if (is_user_logged_in()){
+  ?>
       <form id="event-form" action="events.php" method="post">
         <ul>
           <li>
@@ -86,7 +87,9 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
         </ul>
         <button name="submit-event" type="submit" id="add-button">Add</button>
       </form>
-
+<?php }else{
+  include("includes/login.php");
+}?>
     </div>
   </div>
   <?php include("includes/footer.php") ?>
