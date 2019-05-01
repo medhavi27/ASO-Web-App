@@ -742,7 +742,7 @@ Right now we decided to use an include for the login form, but it might be a bet
 ## Issues & Challenges
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
-
+- A challenge that all of us faced while trying to complete milestone 3 was making the design of the website aesethetically pleasing
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
 

@@ -64,32 +64,32 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
 
     <div class="addevent">
       <h2>Add an event</h2>
-<?php if (is_user_logged_in()){
-  ?>
-      <form id="event-form" action="events.php" method="post">
-        <ul>
-          <li>
-            <label>Title: </label>
-            <input type="text" name="title">
-          </li>
-          <li>
-            <label>Date:</label>
-            <input type="date" name="time">
-          </li>
-          <li>
-            <label>Location:</label>
-            <input type="text" name="location">
-          </li>
-          <li>
-            <label>Description:</label>
-            <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
-          </li>
-        </ul>
-        <button name="submit-event" type="submit" id="add-button">Add</button>
-      </form>
-<?php }else{
-  include("includes/login.php");
-}?>
+      <?php if (is_user_logged_in()) {
+        ?>
+        <form id="event-form" action="events.php" method="post">
+          <ul>
+            <li>
+              <label>Title: </label>
+              <input type="text" name="title">
+            </li>
+            <li>
+              <label>Date:</label>
+              <input type="date" name="time">
+            </li>
+            <li>
+              <label>Location:</label>
+              <input type="text" name="location">
+            </li>
+            <li>
+              <label>Description:</label>
+              <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+            </li>
+          </ul>
+          <button name="submit-event" type="submit" id="add-button">Add</button>
+        </form>
+      <?php } else {
+      include("includes/login.php");
+    } ?>
     </div>
   </div>
   <?php include("includes/footer.php") ?>
