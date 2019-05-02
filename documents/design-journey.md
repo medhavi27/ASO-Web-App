@@ -442,10 +442,9 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 ![Members Page](final_member.jpg)
 ![About Page](final_about.jpg)
 ![Single Image Page](final_viewimg.jpg)
-![Alumni Page](final_alumni1.jpg)
 ![Contact Page](final_contact.jpg)
 ![Events Page](final_events.png)
-![Learn More Page](final_lm.png)
+![Learn More Page](final-lm.png)
 ![Eboard Page](final_eboard.jpg)
 
 
