@@ -122,23 +122,27 @@ Website:
   - *About*: Introduction to ASO using text and several images
     - *Introduction/History*: Text
     - *Images*: Images of past experiences with organization and background image of club picture
-  - *Alumni*: Photo gallery including all alumni of the organization
-    - *Alumni*: Separate page that is shown through a dropdown menu when hovering over "About" in the navigation bar. Picture all alumni of ASO through a similar display as the gallery webpage. Use images with captions, but most likely shorter descriptions.
+    - When you click on an image, you will see the full size image and a caption
+
   - *Members*: Photo gallery including all members of the organization
     - *Members*: Picture of every member in ASO as well as a description paired with the image
-    - *Members Form*: E-board members will have the option to login and add members to the photo gallery
     - *Members Search Function*: Search by name, position, year
-    - *Donation*: Bottom section of webpage describing the donation process to ASO.
   - *Events*: List of upcoming events.
     - *Images/Descriptions*: Pictures and captions of upcoming events
     - *Events Form*: E-board members will have the option to login and add upcoming events to the events gallery
   - *Learn More*: Additional information about ASO.
-    - *Blog Information*: Images associated with blog titles
-    - *Blog Form*: E-board members will have the option to login and add new blog information to the blog gallery that they think is important to announce/share with the community
+    - *Blog Information*: Blog posts and links
   - *Contact*: Webpage designed to reach the organization
     - *Info of e-board*: Positions with contact information (email, phone number, name)
     - *Social Media links*: Links to social media such as Facebook or Instagram
+    - *Donation*: Bottom section of webpage describing the donation process to ASO.
 
+  - *Eboard*: page for logged in eboard members to do tasls
+    - *Table displaying member info*
+    - *Table displaying member attendance*
+    - *Form to add new images to about.php*
+    - *Members Form*: form to add new members
+    - *Blog Form*: form to add new blog posts
 - **Process**
   - [photo of card sort]
   ![Content to Card Sort](cs1.jpg)
@@ -167,7 +171,11 @@ We will have a login/logout function for e-board members so that they can update
 
 We will also include an image gallery so that the client may showcase any pictures of the events the club holds, club members, etc. This will also give the audience a visual perspective of the type of events and the community the club brings together.
 
+Once you click on an image in the gallery, you will be able to see details, which we will implement using query string parameters.
+
 We can also add a filter/search function on the members page so that if the user would like to search for a name, position, year, or major then it'll show up the corresponding data.
+
+We also added the ability to add blog posts, images to the image gallery, and events. We also are going to implement a form to take attendance, which will make the website a comprehensive place to view data and do things for the eboard.
 
 
 ## Work Distribution
@@ -433,11 +441,11 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 [Include sketches of your finalized design.]
 ![Members Page](final_member.jpg)
 ![About Page](final_about.jpg)
+![Single Image Page](final_viewimg.jpg)
 ![Alumni Page](final_alumni1.jpg)
-![Alumni Page when user logs in](final_alumni_loggedin.jpg)
 ![Contact Page](final_contact.jpg)
-![Events Page](final_events.jpg)
-![Learn More Page](final_LM.jpg)
+![Events Page](final_events.png)
+![Learn More Page](final_lm.png)
 ![Eboard Page](final_eboard.jpg)
 
 
@@ -503,11 +511,7 @@ Table: sessions
 * field 2: user_id (INTEGER NOT NULL)
 * field 3: session (TEXT NOT NULL)
 
-Table: donations
-* field 1: id (PK, INTEGER U, NOT, AT)
-* field 2: donor_name (TEXT, NOT),
-* field 3: amount (INTEGER NOT)
-* field 4: cause (TEXT)
+
 
 ## Database Queries
 
@@ -543,8 +547,7 @@ Table: donations
  - SELECT members.name, events.title FROM members INNER JOIN members_and_events ON members_and_events.member_id = members.id INNER JOIN events on members_and_events.event_id = events.id;
  Shows eboard members who is attending their events and meeting requirements
 
- - SELECT * from donations;
- shows donations and details
+
 
 
 ## PHP File Structure
@@ -610,23 +613,18 @@ that links to ASO's respective fb and ig
 
 ```
 ```
-Pseudocode for membersingle.php...
+Pseudocode for view_img.php...
 
 include init.php
 
 include header.php
 
-background image (member centered)
 
-signed in as .... (sign out button)
+single image dynamically loaded from get url id
 
-Name of member 'year (centered)
+caption
 
-Headshot/image of member (centered)
 
-major/minor (centered)
-
-remove button (centered)
 
 Footer at bottom containing fb and instagram logo
 that links to ASO's respective fb and ig
@@ -646,21 +644,8 @@ Meet the Alumni (text wrapped in h2 element)
 Name, major/minor, and bio about each alumni along with headshot
 ```
 
-```
-Pseudocode for alumni_loggedin.php...
 
-include init.php
 
-include header.php
-
-Text indiciating that user is signed in, sign out button next to it
-
-Form to add alumni
-
-Meet the Alumni (text wrapped in h2 element)
-
-Name, major/minor, and bio about each alumni along with headshot
-```
 
 ```
 Pseudocode for contact.php...
@@ -687,9 +672,7 @@ Title (h1) Events
 
 List of events
 
-Delete button for each event
 
-Form to add new events: includes date, location, title, and fb/iCal link
 
 ```
 
@@ -705,7 +688,6 @@ Title (h1) Blog Posts
 
 Blog posts displayed as flex elements- including details like who wrote it, a title, a date and a link
 
-Form to add a new blog post with the data mentioned above
 
 ```
 
@@ -722,7 +704,11 @@ Table displaying all members and their information
 
 Table displaying members and events they've attended
 
-Table displaying donations, amounts, and who they're from
+Form to add new events: includes date, location, title, and fb/iCal link
+
+Form to add a new blog post with the data mentioned above
+
+
 
 ```
 
@@ -741,7 +727,9 @@ Right now we decided to use an include for the login form, but it might be a bet
 ## Issues & Challenges
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
-- A challenge that all of us faced while trying to complete milestone 3 was making the design of the website aesethetically pleasing
+- A challenge that all of us faced while trying to complete milestone 3 was making the design of the website aesthetically pleasing
+- We also struggled to decide whether add blog/event/image forms should be on individual pages or on the eboard page. We re-did our card sort, and decided to move image and blog add forms to the eboard page, for ease of use.
+
 
 --- <!-- ^^^ Milestone 3; vvv FINAL SUBMISSION-->
 
