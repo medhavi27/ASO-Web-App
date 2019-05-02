@@ -441,7 +441,7 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 [Include sketches of your finalized design.]
 ![Members Page](final_member.jpg)
 ![About Page](final_about.jpg)
-![Single Image Page](final_viewimg.jpg)
+![Single Image Page](final-viewimg.jpg)
 ![Contact Page](final_contact.jpg)
 ![Events Page](final_events.png)
 ![Learn More Page](final-lm.png)
