@@ -306,20 +306,22 @@ author
 ) VALUES
 ('Today marks prominent writer Hovhannes Tumanyan’s 150th birthday','https://www.panorama.am/en/news/2019/02/19/Hovhannes-Tumanyan-birthday/2074576?fbclid=IwAR21VU28H2gWO55W78_rNEKgo7EnCKTNUDzib-E5IlMf3PZC3u889akyO44', 'April 30, 2019', 'Panorama Staff');
 
-CREATE TABLE 'members_and_events' (
+CREATE TABLE 'event_suggestions' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    'member_id' INTEGER NOT NULL,
-    'event_id' INTEGER NOT NULL
+    'title' TEXT NOT NULL,
+    'description' TEXT NOT NULL
 );
 
-INSERT INTO `members_and_events` (
-member_id,event_id
+INSERT INTO `event_suggestions` (
+title, description
 ) VALUES
-(1,1);
-INSERT INTO `members_and_events` (
-member_id,event_id
+("Ice Skating Fundraiser","You should have an ice skating event for the public to donate");
+INSERT INTO `event_suggestions` (
+title, description
 ) VALUES
-(2,2);
+("Armenian Food Night","Something like the Chinese and Filipino food nights");
+
+
 
 CREATE TABLE 'donations' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,

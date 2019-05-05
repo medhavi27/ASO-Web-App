@@ -3,18 +3,16 @@
 include("includes/init.php");
 
 $messages = array();
-if (isset($_POST["submit-event"]) && is_user_logged_in()) {
+if (isset($_POST["submit-sug"]) && is_user_logged_in()) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-  $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING);
-  $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
+  $submit_desc = filter_input(INPUT_POST, 'description-sug', FILTER_SANITIZE_STRING);
 
-  $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
+
+  $sql = "INSERT INTO event_suggestions(title, description) VALUES (:title, :description)";
   $params = array(
     ':title' => $submit_title,
     ':description' => $submit_desc,
-    ':time' => $submit_date,
-    ':location' => $submit_loc,
+
   );
 
   $result = exec_sql_query($db, $sql, $params);
@@ -62,33 +60,22 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
     </div>
 
     <div class="addevent">
-      <h2>Add an event</h2>
-      <?php if (is_user_logged_in()) {
-        ?>
-        <form id="event-form" action="events.php" method="post">
+      <h2>Suggest events for ASO to plan!</h2>
+
+        <form id="event-sug" action="events.php" method="post">
           <ul>
             <li>
-              <label>Title: </label>
+              <label>Event Title: </label>
               <input type="text" name="title">
             </li>
             <li>
-              <label>Date:</label>
-              <input type="date" name="time">
-            </li>
-            <li>
-              <label>Location:</label>
-              <input type="text" name="location">
-            </li>
-            <li>
               <label>Description:</label>
-              <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+              <textarea name="description-sug" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
             </li>
           </ul>
-          <button name="submit-event" type="submit" id="add-button">Add</button>
+          <button name="submit-sug" type="submit" id="add-sug">Submit</button>
         </form>
-      <?php } else {
-      include("includes/login.php");
-    } ?>
+
     </div>
   </div>
   <?php include("includes/footer.php") ?>

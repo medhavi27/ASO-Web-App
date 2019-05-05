@@ -134,7 +134,7 @@ h2 {
 
 .home:hover,
 .members:hover,
-.events:hover,
+/* .events:hover, */
 .learn_more:hover,
 .contact:hover,
 .eboard:hover {
@@ -264,18 +264,26 @@ text-align: center;
   font-size: 20px;
   margin: auto;
 }
-#event-form input,
+/* #event-form input,
 #event-form textarea
 {
   margin-left: 15px;
 }
 
-#event-form ul{
+event-form ul{
   list-style-type: none;
 }
+*/
 
 #event-form li{
-  padding:10px;
+list-style-type: none
+}
+#uploadBlog {
+    text-align: center;
+}
+#uploadBlog li {
+  list-style: none;
+  margin-left: -80px;
 }
 
 label{
@@ -284,14 +292,14 @@ label{
   text-align: right;
 }
 
-#add-button{
+/* #add-button{
   display: block;
   margin:20px auto;
   font-size: 15px;
   border: none;
   background-color: #FB1919;
   padding: 10px;
-}
+} */
 
 .first_row{
   display: flex;
@@ -364,7 +372,7 @@ th,td {
 
 .eboard_forms {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -405,6 +413,9 @@ th,td {
 #addblog {
   margin-left: 90px;
 }
+#eventadd {
+  margin-left: 180px;
+}
 #addMember ul{
   margin-left: auto;
   margin-right: auto;
@@ -415,7 +426,17 @@ th,td {
 #addMember li{
   list-style: none;
 }
+.forms {
 
+}
+
+#event-sug ul {
+list-style-type: none;
+
+}
+#add-sug {
+  margin-left: 220px;
+}
 h4.mem_major{
   margin-right: 100px;
   width: 300px;

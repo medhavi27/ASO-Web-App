@@ -139,15 +139,30 @@ if (isset($_GET['foo'])) {
   }
 }
 
+///add an event
+if (isset($_POST["submit-event"]) && is_user_logged_in()) {
+  $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+  $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
+  $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING);
+  $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
 
+  $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
+  $params = array(
+    ':title' => $submit_title,
+    ':description' => $submit_desc,
+    ':time' => $submit_date,
+    ':location' => $submit_loc,
+  );
+
+  $resevent = exec_sql_query($db, $sql, $params);
+}
 
 function print_event_record($record)
 {
   ?>
   <tr>
-    <td><?php echo htmlspecialchars($record["name"]); ?></td>
     <td><?php echo htmlspecialchars($record["title"]); ?></td>
-    <td><?php echo htmlspecialchars($record["time"]); ?></td>
+    <td><?php echo htmlspecialchars($record["description"]); ?></td>
 
   </tr>
 <?php
@@ -197,17 +212,16 @@ function print_member_record($record)
 
   <?php if (is_user_logged_in()) {
     ///to view events that members attended
-    $sql1 = "SELECT members.name, events.title, events.time FROM members INNER JOIN members_and_events ON members_and_events.member_id = members.id INNER JOIN events on members_and_events.event_id = events.id;";
+    $sql1 = "SELECT * from event_suggestions;";
     $result = exec_sql_query($db, $sql1)->fetchAll(PDO::FETCH_ASSOC);
     if ($result) {
       ?>
       <h2> Information for Eboard members </h2>
-      <p class="eboardinfo"> Members and Events Attended </p>
+      <p class="eboardinfo"> Event Suggestions </p>
       <table class="eboardtable">
         <tr>
-          <th>Member</th>
           <th>Event</th>
-          <th>Date </th>
+          <th>Description</th>
         </tr>
         <?php
         foreach ($result as $record) {
@@ -251,7 +265,7 @@ function print_member_record($record)
   }
   ?>
     <div class="eboard_forms">
-      <div>
+      <div class="forms">
         <p class="eboardinfo"> Add a member </p>
         <form id="addMember" action="eboard.php" method="post" enctype="multipart/form-data">
           <ul>
@@ -298,7 +312,7 @@ function print_member_record($record)
         </form>
       </div>
 
-      <div>
+      <div class="forms">
         <p class="eboardinfo"> Add a new gallery image </p>
 
         <form id="uploadImage" action="eboard.php" method="post" enctype="multipart/form-data">
@@ -322,7 +336,7 @@ function print_member_record($record)
           </ul>
         </form>
       </div>
-      <div>
+      <div class="forms">
         <p class="eboardinfo"> Add a new blog post</p>
         <form id="uploadBlog" action="eboard.php" method="post">
           <ul>
@@ -348,7 +362,34 @@ function print_member_record($record)
           </ul>
         </form>
       </div>
+        <div class="forms">
+        <p class="eboardinfo"> Add a new event </p>
+        <form id="event-form" action="events.php" method="post">
+          <ul>
+            <li>
+              <label>Title: </label>
+              <input type="text" name="title">
+            </li>
+            <li>
+              <label>Date:</label>
+              <input type="date" name="time">
+            </li>
+            <li>
+              <label>Location:</label>
+              <input type="text" name="location">
+            </li>
+            <li>
+              <label>Description:</label>
+              <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+            </li>
+            <li>
+            <button name="submit-event" type="submit" id="eventadd">Add</button>
+          </li>
+          </ul>
+        </form>
+      </div>
     </div>
+
   <?php
 } else {
   include("includes/login.php");
