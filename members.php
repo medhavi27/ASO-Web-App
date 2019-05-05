@@ -22,20 +22,20 @@ include("includes/init.php");
     <h2 class="background_text">Members</h2>
   </div>
 
-  <?php if (is_user_logged_in()) {  ?>
+  <!-- <?php if (is_user_logged_in()) {  ?>
 
 
   <?php } else {
   ?>
     <h2 class="membersTitle">To update this page, E-board members must be logged in.</h2>
-  <?php } ?>
+  <?php } ?> -->
 
 
   <!-- Filter form that allows user to view members for specific a specific filter, or just view
     all members in the gallery -->
   <form id="filter_form" action="members.php" method="get">
     <label for="member">Filter by:</label>
-    <select name="category">
+    <select name="category" id="member">
       <option value="None">None</option>
       <?php $tags = exec_sql_query($db, "SELECT * FROM members_tags;")->fetchAll();
       foreach ($tags as $tag) { ?>
@@ -67,7 +67,7 @@ include("includes/init.php");
     $search = NULL;
   } ?>
 
-  <h3>Meet the Members</h3>
+  <!-- <h3 class="mem">Meet the Members</h3> -->
 
   <div class="mem_categories">
     <h4>Name</h4>
@@ -75,7 +75,6 @@ include("includes/init.php");
     <h4>Hometown</h4>
   </div>
 
-  <hr />
 
   <?php
   if ($do_search) {
@@ -91,15 +90,16 @@ include("includes/init.php");
       if (count($records) > 0) {
         foreach ($records as $record) {
           echo "<div class='member_bios'>
-            <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . ".jpg" . "\">
-            <figcaption>" .  $record['name'] . "</figcaption>
-            <figcaption>" .  $record['year'] . "</figcaption></figure>
-            <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
-            <h4 class='mem_bio'>" . $record['bio'] . "</h4>
-            </div>";
+                  <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . "." . $record['ext'] . "\">
+                  <figcaption>" .  $record['name'] . "</figcaption>
+                  <figcaption>" .  $record['year'] . "</figcaption></figure>
+                  <h4 class='mem_major'>" . $record['major']  . ',' . $record['minor'] . "</h4>
+                  <h4 class='mem_bio'>" . $record['bio'] . "</h4>
+                  </div>";
         }
         ?>
       <?php
+        // <figcaption>" .  $record['year'] . "</figcaption>
     }
   } else {
     echo "<p>No members found.</p>";
@@ -117,7 +117,7 @@ include("includes/init.php");
                 <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . "." . $record['ext'] . "\">
                 <figcaption>" .  $record['name'] . "</figcaption>
                 <figcaption>" .  $record['year'] . "</figcaption></figure>
-                <h4 class='mem_major'>" . $record['major']  . '/' . $record['minor'] . "</h4>
+                <h4 class='mem_major'>" . $record['major']  . ',' . $record['minor'] . "</h4>
                 <h4 class='mem_bio'>" . $record['bio'] . "</h4>
                 </div>";
       }

@@ -180,7 +180,7 @@ function print_member_record($record)
     <td><?php echo htmlspecialchars($record["minor"]); ?></td>
     <td><?php echo htmlspecialchars($record["phonenumber"]); ?></td>
     <td>
-      <form id="deleteMember" action="eboard.php" method="GET">
+      <form class="deleteMember" action="eboard.php" method="GET">
         <input type='submit' name='foo' value=<?php echo htmlspecialchars($record["netid"]) ?>></form>
     </td>
 

@@ -327,6 +327,7 @@ h3 {
   display: flex;
   flex-wrap:nowrap;
   justify-content: space-around;
+  margin-top: 40px;
 }
 
 /* CSS Styling of members.php */
@@ -344,9 +345,11 @@ h3 {
   width: 250px;
   margin-left: 50px;
 }
+
 figcaption {
   margin-left: 48px;
-  font-size: 25px;
+  font-size: 20px;
+  text-align: center;
 }
 .member_bios {
   display: flex;
@@ -474,7 +477,6 @@ h4 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
-  border-bottom: 1px solid black;
   margin: 0 auto;
   font-weight:300;
 }

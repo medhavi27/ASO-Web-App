@@ -43,12 +43,11 @@ include("includes/init.php");
       echo "<ul><li> Source: <a href='" . htmlspecialchars($record['link']) . "'>" . htmlspecialchars(getsource($record["link"])) . "</a></li>
       <li> Author: " . htmlspecialchars($record["author"]) . "</li>
       <li> Date: " . htmlspecialchars($record["date"]) . "</li>
-      <ul></div>";
+      </ul></div>";
     } ?>
 
   </div>
 
-  </div>
   <?php include("includes/footer.php"); ?>
 </body>
 

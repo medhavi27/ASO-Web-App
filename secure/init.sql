@@ -53,40 +53,40 @@ CREATE TABLE 'members' (
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology & Archaeology', 'Business,Global Health', 'Little Armenia, Los Angeles, CA', '404-044-0000');
+values('Armine Kalbakian', 'ask267', 'Junior', 'FALSE', 'TRUE', 'Anthropology & Archaeology', ' Business, Global Health', 'Little Armenia, Los Angeles, CA', '404-044-0000');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Margot Chirkjian', 'mkc224', 'Junior', 'FALSE', 'TRUE', 'Global and Public Health Sciences', '', 'Baltimore,Maryland', '');
+values('Margot Chirkjian', 'mkc224', 'Junior', 'FALSE', 'TRUE', 'Global and Public Health Sciences', ' ', 'Baltimore, Maryland', '');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Salpi Bocchieriyan', 'sab475', '2nd Year, PhD Student', 'TRUE', 'TRUE', 'Archaeology', '', 'Denver, Colorado', '');
+values('Salpi Bocchieriyan', 'sab475', '2nd Year, PhD Student', 'TRUE', 'TRUE', 'Archaeology', ' ', 'Denver, Colorado', ' ');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Tigran Mehrabyan', 'tm545', 'Senior', 'FALSE', 'TRUE', 'Biological Engineering', '', 'Yerevan,Armenia', '');
+values('Tigran Mehrabyan', 'tm545', 'Senior', 'FALSE', 'TRUE', 'Biological Engineering', '', 'Yerevan, Armenia', ' ');
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Department: Near Eastern Studies;Archaeology', '', '', '');
+values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Department: Near Eastern Studies; Archaeology', ' ', 'Our Faculty Advisor', ' ');
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Maya Martirossyan
-', 'mmm457', 'First Year, PhD Student', 'FALSE', 'FALSE', 'Department: Materials Science and Engineering', '', 'Glendale,California', '');
+', 'mmm457', 'First Year, PhD Student', 'FALSE', 'FALSE', 'Department: Materials Science and Engineering', ' ', 'Glendale,California', ' ');
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Alice Gevorgyan
-', 'ag997', 'Freshman', 'FALSE', 'FALSE', 'Plant Sciences', '', 'San Carlos,California', '');
+', 'ag997', 'Freshman', 'FALSE', 'FALSE', 'Plant Sciences', ' ', 'San Carlos,California', ' ');
 
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Anna Srapionyan
-', 'as3348', 'PhD 2019', 'TRUE', 'FALSE', 'Applied Mathematics', '', 'Yerevan, Armenia', '');
+', 'as3348', 'PhD 2019', 'TRUE', 'FALSE', 'Applied Mathematics', ' ', 'Yerevan, Armenia', ' ');
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Mané Mehrabyan
-', '', 'Class of 2017', 'TRUE', 'FALSE', 'Design and Environmental Analysis', 'Business;Theater', 'Yerevan, Armenia', '');
+', 'mm2327', 'Class of 2017', 'TRUE', 'FALSE', 'Design and Environmental Analysis', 'Business;Theater', 'Yerevan, Armenia', ' ');
 
 
 CREATE TABLE 'member_images' (
