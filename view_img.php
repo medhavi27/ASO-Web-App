@@ -27,7 +27,7 @@ $idimg = $_GET['id'];
     $img = $resultforimg->fetchAll();
     $dispimg = $img[0];
     echo "<p class='caption'>" . htmlspecialchars($dispimg["alt"]) . "</p>";
-    echo "<img class='bigimg' src= 'uploads/images/about_gallery/about" . htmlspecialchars($dispimg["id"]) . "." . htmlspecialchars($dispimg["ext"]) . "'>";
+    echo "<img class='bigimg' src= 'uploads/images/about_gallery/about" . htmlspecialchars($dispimg["id"]) . "." . htmlspecialchars($dispimg["ext"]) . "' alt='".$dispimg["alt"]."'>";
   }
 
 
