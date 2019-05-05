@@ -31,6 +31,7 @@ Your Team Name: [green-lion]
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
 
 > The potential audience for this website will be current and potential ASO members (including staff and Ithaca community members), and other organizations looking to collaborate on events/campaigns together. An example of when users might interact with the website is when potential members visit it to gain a better understanding of the organization's goals or purpose.
+> A secondary target audience is the eboard members of the club, that might need to update the page content. While this wasn't stated in the meeting notes, we know that the website is going to need to be updated, so some pages are going to help the client do that.
 
 ## Client Requirements & Target Audiences' Needs
 
@@ -53,7 +54,7 @@ Client Requirement/Target Audience Need
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
     - Have a login/logout function so that e-board members can edit event/blog pages
   - **Rationale** [Justify your decisions; additional notes.]
-    - We can create a database of events since this seems to be a critical content for the client
+    - We can create a database of events, members and blog posts. Our client wants to showcase events and blog posts, and this will be an easy way to dynamically showcase those. In addition to this, having a database and forms makes it easy to add and delete members, events and blog posts without coding.
 
 ## Initial Design
 
@@ -244,7 +245,7 @@ Task 1: [Abby is on the e-board for ASO, and is in charge of the initiation of n
 
 Task 2: [Abby is on the e-board for ASO, and has been taking the lead of planning an upcoming event hosted by ASO. To spread awareness about the event, she would like to add it to the website.]
 
-  1. [Click on the events page in the navgiation bar]
+  1. [Click on the events page in the navigation bar]
   2. [Input username and password so that she is logged in]
   3. [Input all information that is required to add a new event]
   4. [Click on the add button to successfully add the event]
@@ -500,10 +501,10 @@ Table: users
 * field 2: username (TEXT NOT NULL)
 * field 3: password (TEXT NOT NULL)
 
-Table: members_and_events
+Table: event_suggestions
 * field 1: id (PK, INTEGER U, NOT, AT)
-* field 2: member_id (INTEGER, NOT, FOREIGN KEY)
-* field 3: event_id (INTEGER, NOT, FOREIGN KEY)
+* field 2: title (TEXT, NOT)
+* field 3: description (TEXT, NOT)
 
 Table: sessions
 * field 1: id (PK, INTEGER U, NOT, AT)
