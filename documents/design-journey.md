@@ -30,7 +30,7 @@ Your Team Name: [green-lion]
 
 [Tell us about the potential audience for this website. How, when, and where would they interact with the website? Get as much detail as possible from the client to help you find representative users.]
 
-> The potential audience for this website will be current and potential ASO members (including staff and Ithaca community members), and other organizations looking to collaborate on events/campaigns together. An example of when users might interact with the website is when potential members visit it to gain a better understanding of the organization's goals or purpose.
+> The potential audience for this website will be current and potential ASO members (including staff and Ithaca community members), and other organizations looking to collaborate on events/campaigns together. An example of when users might interact with the website is when potential members visit it to gain a better understanding of the organization's goals or purpose. We're going to showcase events, blog posts, pictures and members of the client's organization.
 > A secondary target audience is the eboard members of the club, that might need to update the page content. While this wasn't stated in the meeting notes, we know that the website is going to need to be updated, so some pages are going to help the client do that.
 
 ## Client Requirements & Target Audiences' Needs
@@ -544,8 +544,10 @@ Table: sessions
   - SELECT * FROM blog;
 
 - Eboard page:
- - SELECT members.name, events.title FROM members INNER JOIN members_and_events ON members_and_events.member_id = members.id INNER JOIN events on members_and_events.event_id = events.id;
- Shows eboard members who is attending their events and meeting requirements
+  - SELECT * from event_suggestions
+    - To display all event suggestions
+  - SELECT * from members
+    - To display all member info
 
 
 
@@ -558,9 +560,8 @@ Table: sessions
 * includes/init.php - stuff that useful for every web page.
 * includes/login.php - include for login code
 * events.php
-* eventsingle.php
 * member.php
-* membersingle.php
+* view_img.php
 * learn.php
 * contact.php
 * alumni.php
@@ -672,6 +673,7 @@ Title (h1) Events
 
 List of events
 
+Form to suggest events
 
 
 ```
@@ -737,11 +739,20 @@ Right now we decided to use an include for the login form, but it might be a bet
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 
+I think we were able to meet all the client's needs!
+
 
 ## Final Notes to the Graders
 
 [1. Give us three specific strengths of your site that sets it apart from the previous website of the client (if applicable) and/or from other websites. Think of this as your chance to argue for the things you did really well.]
 
+Three strengths of our website are:
+1. It showcases everything our client would want to showcase: event images, member bios, blog posts, event descriptions, etc. There's no need to go on a facebook page for event info, or an instagram for images.
+2. It's very functional for eboard members. You can basically update the entire website without having to look at code at all.
+3. It's not only functional for the eboard, but also anyone not logged in. They can interact with the image gallery, and suggest events for the club.
+
 [2. Tell us about things that don't work, what you wanted to implement, or what you would do if you keep working with the client in the future. Give justifications.]
+
+I wish we had time to implement event attendance. This would have given us a chance to use more joins, and made the website an even more centralized app for the client.
 
 [3. Tell us anything else you need us to know for when we're looking at the project.]

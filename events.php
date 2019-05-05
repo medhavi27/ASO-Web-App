@@ -19,6 +19,22 @@ if (isset($_POST["submit-sug"]) && is_user_logged_in()) {
   // $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
 
 }
+// delete blog
+if (isset($_GET['deleteEve'])) {
+  $getid = explode("#", $_GET['deleteEve']);
+
+  $eve_id = $getid[1];
+  // $recordssel = exec_sql_query($db, "SELECT * FROM blogs WHERE id='$blog_id'")->fetchAll(PDO::FETCH_ASSOC);
+  // foreach ($recordssel as $recordsel) {
+  //   $blog_id = $recordsel['id'];
+  // }
+  $sql = "DELETE FROM events WHERE id=:id";
+  $params = array(
+    ':id' => $eve_id,
+  );
+  $resultdel = exec_sql_query($db, $sql, $params);
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -54,9 +70,16 @@ if (isset($_POST["submit-sug"]) && is_user_logged_in()) {
   <h3 class='eventhead'>" . htmlspecialchars($record["title"]) . "</h3>
   <p> Description: " . htmlspecialchars($record["description"]) . "</p>
   <p> Date: " . htmlspecialchars($record["time"]) . "</p>
-  <p> Location: " . htmlspecialchars($record["location"]) . "</p>
-  </div>";
-      } ?>
+  <p> Location: " . htmlspecialchars($record["location"]) . "</p>";
+  if (is_user_logged_in()) {
+    echo
+    "<p><form class='deleteEve' action='events.php' method='GET'>
+      <input type='submit' name='deleteEve' value='Delete Event #". htmlspecialchars($record['id'])."'></form></p></div>";
+      }
+      else {
+        echo "</div>";
+      }
+    }?>
     </div>
 
     <div class="addevent">

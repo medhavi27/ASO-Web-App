@@ -1,5 +1,6 @@
 <?php
 // INCLUDE ON EVERY TOP-LEVEL PAGE!
+include("includes/init.php");
 
 ///takes in a url and returns what website it's coming from
 function getsource($inp)
@@ -8,10 +9,23 @@ function getsource($inp)
   $res = $substr[1];
   return ucfirst($res);
 }
+// delete blog
+if (isset($_GET['deleteBlog'])) {
+  $getid = explode("#", $_GET['deleteBlog']);
 
+  $blog_id = $getid[1];
+  // $recordssel = exec_sql_query($db, "SELECT * FROM blogs WHERE id='$blog_id'")->fetchAll(PDO::FETCH_ASSOC);
+  // foreach ($recordssel as $recordsel) {
+  //   $blog_id = $recordsel['id'];
+  // }
+  $sql = "DELETE FROM blogs WHERE id=:id";
+  $params = array(
+    ':id' => $blog_id,
+  );
+  $resultdel = exec_sql_query($db, $sql, $params);
 
+}
 
-include("includes/init.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +57,15 @@ include("includes/init.php");
       echo "<ul><li> Source: <a href='" . htmlspecialchars($record['link']) . "'>" . htmlspecialchars(getsource($record["link"])) . "</a></li>
       <li> Author: " . htmlspecialchars($record["author"]) . "</li>
       <li> Date: " . htmlspecialchars($record["date"]) . "</li>
-      </ul></div>";
+      ";
+      if (is_user_logged_in()) {
+        echo
+        "<li><form class='deleteBlog' action='blog.php' method='GET'>
+          <input type='submit' name='deleteBlog' value='Delete Blog #". htmlspecialchars($record['id'])."'></form></li></ul></div>";
+      }
+      else {
+        echo "</ul></div>";
+      }
     } ?>
 
   </div>

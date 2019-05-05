@@ -69,15 +69,15 @@ values('Tigran Mehrabyan', 'tm545', 'Senior', 'FALSE', 'TRUE', 'Biological Engin
 
 INSERT INTO members
     (name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
-values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Department: Near Eastern Studies; Archaeology', ' ', 'Our Faculty Advisor', ' ');
+values('Prof. Lori Khatchadourian', 'lk323', 'Faculty Advisor', 'FALSE', 'TRUE', 'Department: Near Eastern Studies; Archaeology', ' ', 'Ithaca, NY', ' ');
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Maya Martirossyan
-', 'mmm457', 'First Year, PhD Student', 'FALSE', 'FALSE', 'Department: Materials Science and Engineering', ' ', 'Glendale,California', ' ');
+', 'mmm457', 'First Year, PhD Student', 'FALSE', 'FALSE', 'Department: Materials Science and Engineering', ' ', 'Glendale, California', ' ');
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Alice Gevorgyan
-', 'ag997', 'Freshman', 'FALSE', 'FALSE', 'Plant Sciences', ' ', 'San Carlos,California', ' ');
+', 'ag997', 'Freshman', 'FALSE', 'FALSE', 'Plant Sciences', ' ', 'San Carlos, California', ' ');
 
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
@@ -86,7 +86,7 @@ values('Anna Srapionyan
 
 INSERT INTO members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber)
 values('Mané Mehrabyan
-', 'mm2327', 'Class of 2017', 'TRUE', 'FALSE', 'Design and Environmental Analysis', 'Business;Theater', 'Yerevan, Armenia', ' ');
+', 'mm2327', 'Class of 2017', 'TRUE', 'FALSE', 'Design and Environmental Analysis', 'Business, Theater', 'Yerevan, Armenia', ' ');
 
 
 CREATE TABLE 'member_images' (
