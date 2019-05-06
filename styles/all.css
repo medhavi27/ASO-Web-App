@@ -317,16 +317,10 @@ list-style-type: none
 
 button {
   cursor: pointer;
-  border: none;
-  padding: 6px 8px;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: initial;
-  font-size: 12px;
-  border-radius: 12px;
-  background-color: #FB1919;
-  color: white;
 }
 
 button:hover {
@@ -398,8 +392,10 @@ figcaption {
   flex-wrap: nowrap;
   justify-content: space-around;
 }
-.figcap{
-margin-left: 80px;
+.figcap {
+  margin-left: 40px;
+  text-align: center;
+
 }
 .eboardtable {
   margin: 0 auto;

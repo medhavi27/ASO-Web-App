@@ -59,7 +59,9 @@ Client Requirement/Target Audience Need
 ## Initial Design
 
 [Include exploratory idea sketches of your website.]
+
 ![Header Template](header_template.jpg)
+![Footer Template](footer.JPG)
 ![About Page](about.JPG)
 ![Members Page](members.jpg)
 ![Members Page Logged In](members_logged_in.jpg)
@@ -89,25 +91,27 @@ Example:
 Website:
 - **Navigation**
   - About
-    - Introduction/History
-    - Images (Background Image)
+    - Introduction/Overview
+    - Message from President
+    - Images
   - Members
+    - Members Search Function
     - Current Members
-    - Form to add members
-    - Donation information
   - Events
-    - Images/Descriptions
-    - Form to add events
+    - Description of Events
+    - Suggestion form for events
   - Learn More
     - Blog information
-    - Form to add blogs/news
   - Contact
-    - Information for eboard
-    - Social media links
+    - Information of eboard
   - Eboard
-    - View all members
-    - View additional info about members
-    - Add images to image gallery
+    - Table displaying event suggestions
+    - Table displaying additional member info
+    - Form to add new images to about.php
+    - Form to add new members
+    - Form to add events
+    - Form to add blogs/news
+- **Footer**
 
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
@@ -118,29 +122,40 @@ Website:
 
 - ASO website
   - *About*: Introduction to ASO using text and several images
-    - *Introduction/History*: Text
-    - *Images*: Images of past experiences with organization and background image of club picture
-    - When you click on an image, you will see the full size image and a caption
+    - *Introduction/Overview*: Quick overview of what ASO is through the use of text
+    - *Message from President*: Personal message from the president of ASO introducing both herself and the organization
+    - *Images*: Images of past experiences within the organization. When you click on an image,
+    you will see the full size image and a caption
 
   - *Members*: Photo gallery including all members of the organization
-    - *Members*: Picture of every member in ASO as well as a description paired with the image
-    - *Members Search Function*: Search by name, position, year
+    - *Members Search Function*: Allows users to search members by name, position, or year
+    - *Current Members*: Picture of every member in ASO as well as a description paired with the image
+
   - *Events*: List of upcoming events.
-    - *Images/Descriptions*: Pictures and captions of upcoming events
-    - *Events Form*: E-board members will have the option to login and add upcoming events to the events gallery
+    - *Description of Events*: Titles, descriptions, dates, and locations of upcoming events
+    - *Suggestion form for events*: Users are able to submit their own suggestions through this form
+    regarding events they would like to see ASO potentially host in the future.
+
   - *Learn More*: Additional information about ASO.
     - *Blog Information*: Blog posts and links
-  - *Contact*: Webpage designed to reach the organization
-    - *Info of e-board*: Positions with contact information (email, phone number, name)
-    - *Social Media links*: Links to social media such as Facebook or Instagram
-    - *Donation*: Bottom section of webpage describing the donation process to ASO.
 
-  - *Eboard*: page for logged in eboard members to do tasls
-    - *Table displaying member info*
-    - *Table displaying member attendance*
-    - *Form to add new images to about.php*
-    - *Members Form*: form to add new members
-    - *Blog Form*: form to add new blog posts
+  - *Contact*: Webpage designed to reach the organization
+    - *Info of e-board*: Positions with contact information (name, email)
+
+  - *Eboard*: page for logged in eboard members to do tasks
+    - *Table displaying event suggestions*: Displays all event suggestions that users submit in the events webpage
+    - *Table displaying additional member info*: Displays basic information about all members (name, netid, year, major/minor, etc.) Also
+    includes a remove button for each member, which removes that specific member from the database.
+    - *Form to add new images to about.php*: E-bord members have the option to login and add more images to the gallery on the about
+    webpage
+    - *Form to add new members*: E-board members have the option to login and add new members to the members gallery
+    - *Form to add events*: E-board members have the option to login and add upcoming events to the events gallery
+    - *Form to add blogs/news*: E-board members have the option to login and add new blog posts to the learn more webpage
+
+  - *Footer*: Template at the bottom of every page. Contains facebook logo linking to ASO, an orgsync
+  link that give more information about ASO, and finally a link used to contact ASO or
+  inquire about donations.
+
 - **Process**
   - [photo of card sort]
   ![Content to Card Sort](cs1.jpg)
@@ -437,10 +452,13 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 ## Final Design
 
 [Include sketches of your finalized design.]
+
+![Header Template](header_template.jpg)
+![Footer Template](footer.JPG)
 ![Members Page](final_member.jpg)
 ![About Page](final_about.jpg)
 ![Single Image Page](final-viewimg.jpg)
-![Contact Page](final_contact.jpg)
+![Contact Page](final_contact.JPG)
 ![Events Page](final_events.png)
 ![Learn More Page](final-lm.png)
 ![Eboard Page](final_eboard.jpg)
