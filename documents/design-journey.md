@@ -9,7 +9,7 @@ Your Team Name: [green-lion]
 
 [Tell us about your client. Who is your client? What kind of website do they want? What are their key goals?]
 
-> Our client is a Cornell student that is currently involved in the Armenian Student Organization on campus. Being that her organization does not have a website, she would like to have one that mainly provides further information about current members and events ongoing. Some of the key goals that she would like the website to accomplish are notifying others of future events involved with ASO, general information about current members, and to spread more awareness about ASO both on campus and in the Ithaca community.
+> Our client is a Cornell student that is currently the president of the Armenian Student Organization on campus. Since her organization does not have a website, she would like to have one that mainly provides information about current members and upcoming events. Some of the key goals that she has for the website are being able to deliver future events involved with ASO to Cornell students who are interested in getting involved in the Armenian community on campus, introduce general information about current members, and to spread more awareness about ASO both on campus and in the Ithaca community.
 
 [NOTE: If you are redesigning an existing website, give us the current URL and some screenshots of the current site. Tell us how you plan to update the site in a significant way that meets the final project requirements.]
 
@@ -49,12 +49,29 @@ Example:
 Client Requirement/Target Audience Need
   - **Requirement or Need** [What does your client and audience need or want?]
     - Client needs to convey information about upcoming events, and blog/new posts
-    - The client also wants to have member rosters with bios on the website
-    - The audience also wants to find ways to get involved in the Cornell/Ithaca community by attending these events
   - **Design Ideas and Choices** [How will you meet those needs or wants?]
     - Have a login/logout function so that e-board members can edit event/blog pages
   - **Rationale** [Justify your decisions; additional notes.]
-    - We can create a database of events, members and blog posts. Our client wants to showcase events and blog posts, and this will be an easy way to dynamically showcase those. In addition to this, having a database and forms makes it easy to add and delete members, events and blog posts without coding.
+    - We can create a database of events and blog posts. Our client wants to showcase events and blog posts, and this will be an easy way to dynamically showcase those. In addition to this, having a database and forms makes it easy to add and delete events and blog posts without coding.
+
+Client Requirement/Target Audience Need
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The client also wants to have member rosters with bios on the website
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - Have a login/logout function so that e-board members can remove members or add in members and be able to input varying member information
+  - **Rationale** [Justify your decisions; additional notes.]
+    - We can create a database of members. Having a database and forms makes it easy to add and delete members without coding.
+
+Client Requirement/Target Audience Need
+  - **Requirement or Need** [What does your client and audience need or want?]
+    - The audience wants to see the logistics of the upcoming events in the intention to support the Armenian community
+  - **Design Ideas and Choices** [How will you meet those needs or wants?]
+    - The audience will be able to easily locate information on upcoming events by navigating to the events page
+    - If the audience wishes to attend a particular event or have a vision for the club to host a particular event, the audience may suggest an event by filling out a visible form on the events page.
+    - If the audience would also like to support the Armenian community by doing a collaboration with the Armenian Student Organization at Cornell with their own campus organization, they may complete the form to suggest this collaboration to the eboard
+  - **Rationale** [Justify your decisions; additional notes.]
+    - We can create a form for the audeince to fill out and in this way when the eboard logs in to eboard they can see the suggested events.
+
 
 ## Initial Design
 
@@ -180,7 +197,7 @@ Website:
 [What interactive features will your site have? What PHP elements will you include?]
 
 [Also, describe how the interactivity connects with the needs of the clients/target audience.]
-We will have a login/logout function for e-board members so that they can update upcoming events and the blog. This connects with the needs of the client because one main focus of the website is to deliver information on the club's events and this also fits the needs of the audience so that they can stay up to date with the organization.
+We will have a login/logout function for e-board members so that they can update upcoming events, members, and the blog. This connects with the needs of the client because one main focus of the website is to deliver information on the club's events and this also fits the needs of the audience so that they can stay up to date with the organization.
 
 We will also include an image gallery so that the client may showcase any pictures of the events the club holds, club members, etc. This will also give the audience a visual perspective of the type of events and the community the club brings together.
 
@@ -189,6 +206,8 @@ Once you click on an image in the gallery, you will be able to see details, whic
 We can also add a filter/search function on the members page so that if the user would like to search for a name, position, year, or major then it'll show up the corresponding data.
 
 We also added the ability to add blog posts, images to the image gallery, and events. We also are going to implement a form to take attendance, which will make the website a comprehensive place to view data and do things for the eboard.
+
+We also added a form for the audience to be able to suggest an event to eboard that they would like to see happen from the Armenian Organization.
 
 
 ## Work Distribution
@@ -753,7 +772,7 @@ Right now we decided to use an include for the login form, but it might be a bet
 ## Issues & Challenges
 
 [Tell us about any issues or challenges you faced while trying to complete milestone 3. Bullet points preferred.]
-- A challenge that all of us faced while trying to complete milestone 3 was making the design of the website aesthetically pleasing
+- A challenge that all of us faced while trying to complete milestone 3 was making the design of the website aesthetically pleasing, and playing with whitespace
 - We also struggled to decide whether add blog/event/image forms should be on individual pages or on the eboard page. We re-did our card sort, and decided to move image and blog add forms to the eboard page, for ease of use.
 
 
