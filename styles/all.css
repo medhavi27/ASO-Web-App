@@ -437,17 +437,19 @@ th,td {
   justify-content: space-evenly;
 }
 
-#addMember li {
+#addMember li,
+#uploadImage li,
+#uploadBlog li,
+#event-form li {
   padding: 5px 0;
   text-align:left;
+  font-size: 14px;
 }
 
-#addMember input {
-  width: 200px;
-  display: inline-block;
-}
-
-#addMember label {
+#addMember label,
+#uploadImage label,
+#uploadBlog label,
+#event-form label {
   text-align:left;
 }
 
@@ -455,63 +457,36 @@ th,td {
   margin-left: 120px;
 }
 
-#uploadImage li {
-  padding: 5px 0;
-  text-align: left;
-}
-
-#uploadImage input {
+#uploadImage input,
+#uploadBlog input,
+#event-form input,
+#addMember input {
   width: 200px;
   display: inline-block;
-}
-
-#uploadImage label {
-  text-align: center;
 }
 
 #uploadImage button {
   margin-left: 100px;
 }
 
-#uploadBlog li {
-  padding: 5px 0;
-  text-align: left;
-}
-
-#uploadBlog input {
-  width: 200px;
-  display: inline-block;
-}
-
-#uploadBlog label {
-  text-align: left;
-}
-
-#addblog {
-  margin: 0 0 30px 105px;
-}
-
-#event-form li {
-  padding: 5px 0;
-  text-align: left;
-}
-
-#event-form input {
-  width: 200px;
-  display: inline-block;
-}
-
-#event-form label {
-  text-align: center;
-  vertical-align: top;
-}
-
+#addblog,
 #eventadd {
-  margin-left: 90px;
+  margin-left: 60px;
 }
 
-.row_one_forms {
+.row_one_forms,
+.row_two_forms {
   display: flex;
+  margin: 50px 0 50px 0;
+}
+
+legend {
+  font-weight: 700;
+}
+
+.row_one_forms fieldset,
+.row_two_forms fieldset {
+  height: 400px;
 }
 
 .eboard_background {
