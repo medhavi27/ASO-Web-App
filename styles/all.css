@@ -398,6 +398,9 @@ figcaption {
   flex-wrap: nowrap;
   justify-content: space-around;
 }
+.figcap{
+margin-left: 80px;
+}
 .eboardtable {
   margin: 0 auto;
   border-collapse: collapse;

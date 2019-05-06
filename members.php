@@ -93,8 +93,8 @@ include("includes/init.php");
         foreach ($records as $record) {
           echo "<div class='member_bios'>
                   <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . "." . $record['ext'] . "\">
-                  <figcaption>" .  $record['name'] . "</figcaption>
-                  <figcaption>" .  $record['year'] . "</figcaption></figure>
+                  <p class='figcap'>" .  $record['name'] . "</p>
+                  <p class='figcap'>" .  $record['year'] . "</p></figure>
                   <h4 class='mem_major'>" . $record['major']  . ',' . $record['minor'] . "</h4>
                   <h4 class='mem_bio'>" . $record['bio'] . "</h4>
                   </div>";
@@ -117,8 +117,8 @@ include("includes/init.php");
       foreach ($records as $record) {
         echo "<div class='member_bios'>
                 <figure><img alt='image' class='members_image' src=\"uploads/headshots/" . $record["id"] . "." . $record['ext'] . "\">
-                <figcaption>" .  $record['name'] . "</figcaption>
-                <figcaption>" .  $record['year'] . "</figcaption></figure>
+                <p class='figcap'>" .  $record['name'] . "</p>
+                <p class='figcap'>" .  $record['year'] . "</p></figure>
                 <h4 class='mem_major'>" . $record['major']  . ',' . $record['minor'] . "</h4>
                 <h4 class='mem_bio'>" . $record['bio'] . "</h4>
                 </div>";

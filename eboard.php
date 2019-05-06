@@ -70,7 +70,7 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
     $input_link = $upload_link . "." . $upload_ext;
     $alt = "ASO Image";
 
-    $sql = "INSERT INTO member_images(member_id, ext, name) VALUES(:member_id, :ext, :title );";
+    $sql = "INSERT INTO member_images(member_id, ext, membername) VALUES(:member_id, :ext, :title );";
     $params = array(
       ':member_id' => $new_memid,
       ':ext' => $upload_ext,
@@ -142,7 +142,7 @@ if (isset($_GET['foo'])) {
 if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING);
+  $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING );
   $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
 
   $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
@@ -314,7 +314,7 @@ function print_member_record($record)
 
         <div class="forms">
           <p class="eboardinfo"> Add a new event </p>
-          <form id="event-form" action="events.php" method="post">
+          <form id="event-form" action="eboard.php" method="post">
             <ul>
               <li>
                 <label>Title: </label>
