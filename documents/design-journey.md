@@ -61,7 +61,6 @@ Client Requirement/Target Audience Need
 [Include exploratory idea sketches of your website.]
 ![Header Template](header_template.jpg)
 ![About Page](about.JPG)
-![Alumni Page](alumni.JPG)
 ![Members Page](members.jpg)
 ![Members Page Logged In](members_logged_in.jpg)
 ![Events](events.jpg)
@@ -92,8 +91,6 @@ Website:
   - About
     - Introduction/History
     - Images (Background Image)
-    - Alumni in dropdown when hovered over
-      - Alumni
   - Members
     - Current Members
     - Form to add members
@@ -159,7 +156,7 @@ Website:
   * Our client wanted a list of events, so we added an Events page, in which we'll have the list of upcoming events, as well as the form to add new events (for logged in eboard members)
   * Our client wanted to display a few blog posts, so we decided to add a "Learn More" page for people interested in reading more in detail about the club. We also included the form to submit blog posts on this page.
   * We decided it would be good to have all the contact information in one place, so we're going to create a Contact page, and add to it the eboard contact info, and the social media links.
-  * Thus, we ended up with our 6 main pages (About, Members, Alumni, Events, Learn More, Contact) and the information we're going to add to each one of them.
+  * Thus, we ended up with our 5 main pages (About, Members, Events, Learn More, Contact) and the information we're going to add to each one of them.
 
 
 
@@ -559,20 +556,44 @@ Table: sessions
 * index.php - main page.
 * includes/init.php - stuff that useful for every web page.
 * includes/login.php - include for login code
+* includes/header.php - provides a header for every top-level webpage
+* includes/footer.php - provides a footer for every top-level webpagee
 * events.php
-* member.php
+* members.php
 * view_img.php
-* learn.php
+* blog.php
 * contact.php
-* alumni.php
 * eboard.php
 
 ## Pseudocode
 
 [For each PHP file, plan out your pseudocode. You probably want a subheading for each file.]
 
-### index.php
+### header.php
+```
+Pseudocode for header.php...
 
+Armenian Student Organization at Cornell (Wrapped in h1)
+
+Navbar containing links to other webpages
+```
+
+### footer.php
+```
+Pseudocode for footer.php...
+
+(Background color to make a contrast with rest of webpage)
+
+Facebook logo linked to ASO
+
+Link to ASO's orgsync
+
+Learn more and donations link
+
+copyright text
+```
+
+### index.php
 ```
 Pseudocode for index.php...
 
@@ -580,39 +601,40 @@ include init.php
 
 include header.php
 
-background image (About centered)
-
-Overview wrapped in h2
+background image (About centered wrapped in h1)
 
 p element giving an overview of ASO
 
-A Message From Our President (text wrapped in h2 element)
+A Message From Our President (wrapped in h2)
 
 p element displaying the message
 
-6 images (displayed as flex, spaced evenly)
+12 images (displayed as flex, spaced evenly)
+
+include footer.php
 ```
+
+### members.php
 ```
-Pseudocode for member.php...
+Pseudocode for members.php...
 
 include init.php
 
 include header.php
 
-background image (member centered)
+background image (Members centered wrapped in h1)
 
-Executive Board 2019 (wrapped in h2)
+search bar use to filter members
 
-Positions and names of each e-board member along with headshot, major/minor and bio
+Meet the Members (subtitle)
 
-Members 2019 (wrapped in h2)
+Positions and names of each member along with headshot, major/minor and bio
 
-names of each member along with headshot, major/minor and bio
-
-Footer at bottom containing fb and instagram logo
-that links to ASO's respective fb and ig
+include footer.php
 
 ```
+
+### view_img.php
 ```
 Pseudocode for view_img.php...
 
@@ -620,34 +642,13 @@ include init.php
 
 include header.php
 
+single image dynamically loaded from get url id along with caption
 
-single image dynamically loaded from get url id
-
-caption
-
-
-
-Footer at bottom containing fb and instagram logo
-that links to ASO's respective fb and ig
+include footer.php
 
 ```
-```
-Pseudocode for alumni.php...
 
-include init.php
-
-include header.php
-
-background image (Alumni centered)
-
-Meet the Alumni (text wrapped in h2 element)
-
-Name, major/minor, and bio about each alumni along with headshot
-```
-
-
-
-
+### contact.php
 ```
 Pseudocode for contact.php...
 
@@ -655,13 +656,16 @@ include init.php
 
 include header.php
 
-background image (Contact centered)
+background image (Contact centered wrapped in h1)
 
 Executive Board 2019 (wrapped in h2)
 
-Positions and names of each e-board member along with email and linkedin
+Positions and names of each e-board member along with email
 
+include footer.php
 ```
+
+### events.php
 ```
 Pseudocode for events.php
 
@@ -675,10 +679,10 @@ List of events
 
 Form to suggest events
 
-
+include footer.php
 ```
 
-
+### blog.php
 ```
 Pseudocode for learnmore.php
 
@@ -690,9 +694,10 @@ Title (h1) Blog Posts
 
 Blog posts displayed as flex elements- including details like who wrote it, a title, a date and a link
 
-
+include footer.php
 ```
 
+### eboard.php
 ```
 Pseudocode for eboard.php
 
@@ -710,10 +715,9 @@ Form to add new events: includes date, location, title, and fb/iCal link
 
 Form to add a new blog post with the data mentioned above
 
-
+include footer.php
 
 ```
-
 
 
 
