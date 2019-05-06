@@ -508,7 +508,9 @@ Table: sessions
 * field 2: user_id (INTEGER NOT NULL)
 * field 3: session (TEXT NOT NULL)
 
-
+Table: members_tags
+* field 1: id (PK, INTEGER U, NOT NULL, AT)
+* field 2: tag (TEXT, NOT NULL, UNIQUE)
 
 ## Database Queries
 
