@@ -23,7 +23,6 @@ if (isset($_GET['deleteBlog'])) {
     ':id' => $blog_id,
   );
   $resultdel = exec_sql_query($db, $sql, $params);
-
 }
 
 ?>
@@ -60,10 +59,9 @@ if (isset($_GET['deleteBlog'])) {
       ";
       if (is_user_logged_in()) {
         echo
-        "<li><form class='deleteBlog' action='blog.php' method='GET'>
-          <input type='submit' name='deleteBlog' value='Delete Blog #". htmlspecialchars($record['id'])."'></form></li></ul></div>";
-      }
-      else {
+          "<li><form class='deleteBlog' action='blog.php' method='GET'>
+          <input type='submit' name='deleteBlog' value='Delete Blog #" . htmlspecialchars($record['id']) . "'></form></li></ul></div>";
+      } else {
         echo "</ul></div>";
       }
     } ?>

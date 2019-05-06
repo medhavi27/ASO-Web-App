@@ -33,7 +33,6 @@ if (isset($_GET['deleteEve'])) {
     ':id' => $eve_id,
   );
   $resultdel = exec_sql_query($db, $sql, $params);
-
 }
 
 ?>
@@ -71,33 +70,32 @@ if (isset($_GET['deleteEve'])) {
   <p> Description: " . htmlspecialchars($record["description"]) . "</p>
   <p> Date: " . htmlspecialchars($record["time"]) . "</p>
   <p> Location: " . htmlspecialchars($record["location"]) . "</p>";
-  if (is_user_logged_in()) {
-    echo
-    "<p><form class='deleteEve' action='events.php' method='GET'>
-      <input type='submit' name='deleteEve' value='Delete Event #". htmlspecialchars($record['id'])."'></form></p></div>";
-      }
-      else {
-        echo "</div>";
-      }
-    }?>
+        if (is_user_logged_in()) {
+          echo
+            "<p><form class='deleteEve' action='events.php' method='GET'>
+      <input type='submit' name='deleteEve' value='Delete Event #" . htmlspecialchars($record['id']) . "'></form></p></div>";
+        } else {
+          echo "</div>";
+        }
+      } ?>
     </div>
 
     <div class="addevent">
       <h2>Suggest events for ASO to plan!</h2>
 
-        <form id="event-sug" action="events.php" method="post">
-          <ul>
-            <li>
-              <label>Event Title: </label>
-              <input type="text" name="title">
-            </li>
-            <li>
-              <label>Description:</label>
-              <textarea name="description-sug" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
-            </li>
-          </ul>
-          <button name="submit-sug" type="submit" id="add-sug">Submit</button>
-        </form>
+      <form id="event-sug" action="events.php" method="post">
+        <ul>
+          <li>
+            <label>Event Title: </label>
+            <input type="text" name="title">
+          </li>
+          <li>
+            <label>Description:</label>
+            <textarea name="description-sug" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+          </li>
+        </ul>
+        <button name="submit-sug" type="submit" id="add-sug">Submit</button>
+      </form>
 
     </div>
   </div>

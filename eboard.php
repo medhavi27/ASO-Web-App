@@ -264,128 +264,130 @@ function print_member_record($record)
   }
   ?>
     <div class="eboard_forms">
-      <div class="forms">
-        <p class="eboardinfo"> Add a member </p>
-        <form id="addMember" action="eboard.php" method="post" enctype="multipart/form-data">
-          <ul>
-            <li><label for="headshot">Upload a headshot:</label>
-              <input id="headshot" type="file" name="headshot"></li>
+      <div class="row_one_forms">
+        <div class="forms">
+          <p class="eboardinfo"> Add a member </p>
+          <form id="addMember" action="eboard.php" method="post" enctype="multipart/form-data">
+            <ul>
+              <li><label for="headshot">Upload a headshot:</label>
+                <input id="headshot" type="file" name="headshot"></li>
 
-            <li><label for="name">Name:</label>
-              <input id="name" type="text" name="name"></li>
+              <li><label for="name">Name:</label>
+                <input id="name" type="text" name="name"></li>
 
-            <li><label for="netid">Net ID:</label>
-              <input id="netid" type="text" name="netid"></li>
+              <li><label for="netid">Net ID:</label>
+                <input id="netid" type="text" name="netid"></li>
 
-            <li>Year: <select name="year">
-                <option value="Freshman">Freshman</option>
-                <option value="Sophomore">Sophomore</option>
-                <option value="Junior">Junior</option>
-                <option value="Senior">Senior</option>
-              </select> </li>
+              <li>Year: <select name="year">
+                  <option value="Freshman">Freshman</option>
+                  <option value="Sophomore">Sophomore</option>
+                  <option value="Junior">Junior</option>
+                  <option value="Senior">Senior</option>
+                </select> </li>
 
-            <li>Alumni? <select name="alumni">
-                <option value=TRUE>TRUE</option>
-                <option value=FALSE>FALSE</option>
-              </select> </li>
+              <li>Alumni? <select name="alumni">
+                  <option value=TRUE>TRUE</option>
+                  <option value=FALSE>FALSE</option>
+                </select> </li>
 
-            <li>Eboard? <select name="eboard">
-                <option value=TRUE>TRUE</option>
-                <option value=FALSE>FALSE</option>
-              </select></li>
+              <li>Eboard? <select name="eboard">
+                  <option value=TRUE>TRUE</option>
+                  <option value=FALSE>FALSE</option>
+                </select></li>
 
-            <li><label for="major">Major:</label>
-              <input id="major" type="text" name="major"></li>
+              <li><label for="major">Major:</label>
+                <input id="major" type="text" name="major"></li>
 
-            <li><label for="major">Minor (N/A if none):</label>
-              <input id="minor" type="text" name="minor"></li>
+              <li><label for="major">Minor (N/A if none):</label>
+                <input id="minor" type="text" name="minor"></li>
 
-            <li><label for="bio">Bio:</label>
-              <input id="bio" type="text" name="bio"></li>
+              <li><label for="bio">Bio:</label>
+                <input id="bio" type="text" name="bio"></li>
 
-            <li><label for="phone">Phone Number:</label>
-              <input id="phone" type="number" name="phone"></li>
+              <li><label for="phone">Phone Number:</label>
+                <input id="phone" type="number" name="phone"></li>
 
-            <li><button name="add" type="submit">Add Member</button></li>
-          </ul>
-        </form>
+              <li class="add_mem_btn"><button name="add" type="submit">Add Member</button></li>
+            </ul>
+          </form>
+        </div>
+
+        <div class="forms">
+          <p class="eboardinfo"> Add a new event </p>
+          <form id="event-form" action="events.php" method="post">
+            <ul>
+              <li>
+                <label>Title: </label>
+                <input type="text" name="title">
+              </li>
+              <li>
+                <label>Date:</label>
+                <input type="date" name="time">
+              </li>
+              <li>
+                <label>Location:</label>
+                <input type="text" name="location">
+              </li>
+              <li>
+                <label class="event_descr">Description:</label>
+                <textarea name="description" cols="25" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+              </li>
+              <li>
+                <button name="submit-event" type="submit" id="eventadd">Add Event</button>
+              </li>
+            </ul>
+          </form>
+        </div>
       </div>
 
-      <div class="forms">
-        <p class="eboardinfo"> Add a new gallery image </p>
+      <div class="row_two_forms">
+        <div class="forms">
+          <p class="eboardinfo"> Add a new blog post</p>
+          <form id="uploadBlog" action="eboard.php" method="post">
+            <ul>
+              <li>
+                <label for="add_blog">Title:</label>
+                <input id="add_blog" type="text" name="add_blog">
+              </li>
+              <li>
+                <label for="add_link">Link:</label>
+                <input id="add_link" type="text" name="add_link">
+              </li>
+              <li>
+                <label for="add_date">Date:</label>
+                <input id="add_date" type="date" name="add_date">
+              </li>
+              <li>
+                <label for="add_auth">Author:</label>
+                <input id="add_auth" type="text" name="add_auth">
+              </li>
+              <li>
+                <button name="addblog" id="addblog" type="submit">Add Blog</button>
+              </li>
+            </ul>
+          </form>
+        </div>
 
-        <form id="uploadImage" action="eboard.php" method="post" enctype="multipart/form-data">
-          <ul>
+        <div class="forms">
+          <p class="eboardinfo"> Add a new gallery image </p>
 
-            <li>
-              <label for="add_img">Choose an Image:</label>
-              <input id="add_img" type="file" name="add_img">
-            </li>
-            <li>
-              <label for="img_name">Title:</label>
-              <input id="img_name" type="text" name="title">
-            </li>
-            <!-- <li>
-                                                  <label for="img_source">Provide a source:</label>
-                                                  <input id="img_source" type="text" name="img_source">
-                                                  </li> -->
-            <li>
-              <button name="upload" type="submit">Upload File</button>
-            </li>
-          </ul>
-        </form>
-      </div>
-      <div class="forms">
-        <p class="eboardinfo"> Add a new blog post</p>
-        <form id="uploadBlog" action="eboard.php" method="post">
-          <ul>
-            <li>
-              <label for="add_blog">Title:</label>
-              <input id="add_blog" type="text" name="add_blog">
-            </li>
-            <li>
-              <label for="add_link">Link:</label>
-              <input id="add_link" type="text" name="add_link">
-            </li>
-            <li>
-              <label for="add_date">Date:</label>
-              <input id="add_date" type="date" name="add_date">
-            </li>
-            <li>
-              <label for="add_auth">Author:</label>
-              <input id="add_auth" type="text" name="add_auth">
-            </li>
-            <li>
-              <button name="addblog" id="addblog" type="submit">Add Blog</button>
-            </li>
-          </ul>
-        </form>
-      </div>
-      <div class="forms">
-        <p class="eboardinfo"> Add a new event </p>
-        <form id="event-form" action="events.php" method="post">
-          <ul>
-            <li>
-              <label>Title: </label>
-              <input type="text" name="title">
-            </li>
-            <li>
-              <label>Date:</label>
-              <input type="date" name="time">
-            </li>
-            <li>
-              <label>Location:</label>
-              <input type="text" name="location">
-            </li>
-            <li>
-              <label>Description:</label>
-              <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
-            </li>
-            <li>
-              <button name="submit-event" type="submit" id="eventadd">Add</button>
-            </li>
-          </ul>
-        </form>
+          <form id="uploadImage" action="eboard.php" method="post" enctype="multipart/form-data">
+            <ul>
+
+              <li>
+                <label for="add_img">Choose an Image:</label>
+                <input id="add_img" type="file" name="add_img">
+              </li>
+              <li>
+                <label for="img_name">Title:</label>
+                <input id="img_name" type="text" name="title">
+              </li>
+              <li>
+                <button name="upload" type="submit">Upload File</button>
+              </li>
+            </ul>
+          </form>
+        </div>
       </div>
     </div>
 

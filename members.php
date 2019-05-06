@@ -22,13 +22,12 @@ include("includes/init.php");
     <h2 class="background_text">Members</h2>
   </div>
 
-  <!-- <?php if (is_user_logged_in()) {  ?>
+  <?php if (is_user_logged_in()) {  ?>
 
 
   <?php } else {
   ?>
-    <h2 class="membersTitle">To update this page, E-board members must be logged in.</h2>
-  <?php } ?> -->
+  <?php } ?>
 
 
   <!-- Filter form that allows user to view members for specific a specific filter, or just view
@@ -70,10 +69,12 @@ include("includes/init.php");
   <!-- <h3 class="mem">Meet the Members</h3> -->
 
   <div class="mem_categories">
-    <h4>Name</h4>
+    <h4>Member</h4>
     <h4>Major/Minor</h4>
     <h4>Hometown</h4>
   </div>
+
+  <hr />
 
 
   <?php
@@ -99,7 +100,7 @@ include("includes/init.php");
         }
         ?>
       <?php
-        // <figcaption>" .  $record['year'] . "</figcaption>
+      // <figcaption>" .  $record['year'] . "</figcaption>
     }
   } else {
     echo "<p>No members found.</p>";
