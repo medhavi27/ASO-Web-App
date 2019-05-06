@@ -93,14 +93,14 @@ CREATE TABLE 'member_images' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     'member_id' INTEGER NOT NULL,
     'ext' TEXT NOT NULL,
-    'name' TEXT NOT NULL
+    'membername' TEXT NOT NULL
 );
 
 
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (1,'jpg','Armine Kalbakian');
 -- source: original content, Armenian Students Organization at Cornell
@@ -108,7 +108,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (2,'jpg','Margot Chirikjian');
 -- source: original content, Jasmine Ng's image
@@ -116,7 +116,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (3,'jpg','Salpi Bocchieriyan');
 -- source: original content, Armenian Students Organization at Cornell
@@ -124,7 +124,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (4,'jpg','Tigran Mehrabyan');
 -- source: original content, Armenian Students Organization at Cornell
@@ -132,7 +132,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (5,'jpg','Prof. Lori Khatchadourian');
 -- source: original content, Armenian Students Organization at Cornell
@@ -140,7 +140,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (6,'jpg','Maya Martirossyan');
 -- source: original content, Armenian Students Organization at Cornell
@@ -148,7 +148,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (7,'jpg','Alice Gevorgyan');
 -- source: original content, Armenian Students Organization at Cornell
@@ -156,7 +156,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (8,'jpg','Anna Srapionyan');
 -- source: original content, Armenian Students Organization at Cornell
@@ -165,7 +165,7 @@ name
 INSERT INTO `member_images` (
 member_id,
 ext,
-name
+membername
 ) VALUES
 (9,'jpg','Mané Mehrabyan');
 -- source: original content, Armenian Students Organization at Cornell

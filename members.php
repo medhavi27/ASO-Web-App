@@ -81,7 +81,7 @@ include("includes/init.php");
   if ($do_search) {
     ?>
     <?php
-    $sql = "SELECT members.id AS id, members.name, members.year, members.major, members.minor, members.bio, member_images.ext FROM members INNER JOIN member_images ON members.id=member_images.member_id WHERE $search_field LIKE '%' || :search || '%'";
+    $sql = "SELECT members.id, members.name, members.year, members.major, members.minor, members.bio, member_images.ext FROM members INNER JOIN member_images ON members.id=member_images.member_id WHERE $search_field LIKE '%' || :search || '%'";
 
     $params = array(
       ":search" => $search
