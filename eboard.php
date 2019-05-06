@@ -93,15 +93,14 @@ if (isset($_POST["addblog"]) && is_user_logged_in()) {
   $upload_link = filter_input(INPUT_POST, 'add_link', FILTER_SANITIZE_STRING);
   $upload_date = filter_input(INPUT_POST, 'add_date', FILTER_SANITIZE_STRING);
   $upload_auth = filter_input(INPUT_POST, 'add_auth', FILTER_SANITIZE_STRING);
-$sqlblog = "INSERT INTO blogs(title,link, date, author) VALUES(:title, :link, :date, :auth );";
-$paramsblog = array(
-  ':title' => $upload_blog,
-  ':link' => $upload_link,
-  ':date' => $upload_date,
-  ':auth' => $upload_auth
-);
-$resultblog = exec_sql_query($db, $sqlblog, $paramsblog);
-
+  $sqlblog = "INSERT INTO blogs(title,link, date, author) VALUES(:title, :link, :date, :auth );";
+  $paramsblog = array(
+    ':title' => $upload_blog,
+    ':link' => $upload_link,
+    ':date' => $upload_date,
+    ':auth' => $upload_auth
+  );
+  $resultblog = exec_sql_query($db, $sqlblog, $paramsblog);
 }
 
 
@@ -327,9 +326,9 @@ function print_member_record($record)
               <input id="img_name" type="text" name="title">
             </li>
             <!-- <li>
-                                            <label for="img_source">Provide a source:</label>
-                                            <input id="img_source" type="text" name="img_source">
-                                            </li> -->
+                                                  <label for="img_source">Provide a source:</label>
+                                                  <input id="img_source" type="text" name="img_source">
+                                                  </li> -->
             <li>
               <button name="upload" type="submit">Upload File</button>
             </li>
@@ -362,7 +361,7 @@ function print_member_record($record)
           </ul>
         </form>
       </div>
-        <div class="forms">
+      <div class="forms">
         <p class="eboardinfo"> Add a new event </p>
         <form id="event-form" action="events.php" method="post">
           <ul>
@@ -383,8 +382,8 @@ function print_member_record($record)
               <textarea name="description" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
             </li>
             <li>
-            <button name="submit-event" type="submit" id="eventadd">Add</button>
-          </li>
+              <button name="submit-event" type="submit" id="eventadd">Add</button>
+            </li>
           </ul>
         </form>
       </div>
