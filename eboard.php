@@ -294,6 +294,8 @@ function print_member_record($record)
                     <option value="Sophomore">Sophomore</option>
                     <option value="Junior">Junior</option>
                     <option value="Senior">Senior</option>
+                    <option value="Grad">Grad Student</option>
+
                   </select> </li>
 
                 <li>Alumni? <select name="alumni">
@@ -306,7 +308,7 @@ function print_member_record($record)
                     <option value=FALSE>FALSE</option>
                   </select></li>
 
-                <li><label for="major">Major:</label>
+                <li><label for="major">Major/Department:</label>
                   <input id="major" type="text" name="major"></li>
 
                 <li><label for="major">Minor:</label>
