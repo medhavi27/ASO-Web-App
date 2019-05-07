@@ -153,7 +153,7 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
   $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING);
   $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
-
+if ($submit_title !=NULL && $submit_desc!=NULL && $submit_date!=NULL && $submit_loc!=NULL ) {
   $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
   $params = array(
     ':title' => $submit_title,
@@ -163,6 +163,7 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   );
 
   $resevent = exec_sql_query($db, $sql, $params);
+}
 }
 
 function print_event_record($record)
