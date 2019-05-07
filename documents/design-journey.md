@@ -163,7 +163,7 @@ Website:
     - *Table displaying event suggestions*: Displays all event suggestions that users submit in the events webpage
     - *Table displaying additional member info*: Displays basic information about all members (name, netid, year, major/minor, etc.) Also
     includes a remove button for each member, which removes that specific member from the database.
-    - *Form to add new images to about.php*: E-bord members have the option to login and add more images to the gallery on the about
+    - *Form to add new images to about.php*: E-board members have the option to login and add more images to the gallery on the about
     webpage
     - *Form to add new members*: E-board members have the option to login and add new members to the members gallery
     - *Form to add events*: E-board members have the option to login and add upcoming events to the events gallery
