@@ -341,8 +341,14 @@ button:hover {
   margin-bottom: 20px;
 }
 .about_image:hover {
-  opacity: 0.6;
+  opacity: 0.8;
   cursor: pointer;
+}
+
+.first_row a:active,
+.first_row a:focus {
+  outline: none;
+  border: none;
 }
 
 .membersTitle {
