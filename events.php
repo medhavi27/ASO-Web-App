@@ -7,7 +7,7 @@ if (isset($_POST["submit-sug"])) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   $submit_desc = filter_input(INPUT_POST, 'description-sug', FILTER_SANITIZE_STRING);
 
-
+ if ($submit_title!=NULL && $submit_desc!=NULL) {
   $sql = "INSERT INTO event_suggestions(title, description) VALUES (:title, :description)";
   $params = array(
     ':title' => $submit_title,
@@ -16,6 +16,7 @@ if (isset($_POST["submit-sug"])) {
   );
 
   $result = exec_sql_query($db, $sql, $params);
+  }
   // $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
 
 }
