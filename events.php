@@ -7,28 +7,22 @@ if (isset($_POST["submit-sug"])) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   $submit_desc = filter_input(INPUT_POST, 'description-sug', FILTER_SANITIZE_STRING);
 
- if ($submit_title!=NULL && $submit_desc!=NULL) {
-  $sql = "INSERT INTO event_suggestions(title, description) VALUES (:title, :description)";
-  $params = array(
-    ':title' => $submit_title,
-    ':description' => $submit_desc,
+  if ($submit_title != NULL && $submit_desc != NULL) {
+    $sql = "INSERT INTO event_suggestions(title, description) VALUES (:title, :description)";
+    $params = array(
+      ':title' => $submit_title,
+      ':description' => $submit_desc,
 
-  );
+    );
 
-  $result = exec_sql_query($db, $sql, $params);
+    $result = exec_sql_query($db, $sql, $params);
   }
-  // $records = exec_sql_query($db, "SELECT * FROM events")->fetchAll(PDO::FETCH_ASSOC);
-
 }
 // delete blog
 if (isset($_GET['deleteEve'])) {
   $getid = explode("#", $_GET['deleteEve']);
 
   $eve_id = $getid[1];
-  // $recordssel = exec_sql_query($db, "SELECT * FROM blogs WHERE id='$blog_id'")->fetchAll(PDO::FETCH_ASSOC);
-  // foreach ($recordssel as $recordsel) {
-  //   $blog_id = $recordsel['id'];
-  // }
   $sql = "DELETE FROM events WHERE id=:id";
   $params = array(
     ':id' => $eve_id
@@ -56,8 +50,6 @@ if (isset($_GET['deleteEve'])) {
   <div class="events_background">
     <h2 class="background_text">Events</h2>
   </div>
-  <!-- <h2 class="about">Events</h2> -->
-  <!-- <hr /> -->
 
 
   <div class="row-events">
@@ -88,18 +80,19 @@ if (isset($_GET['deleteEve'])) {
         <ul>
           <li>
             <label>Event Title: </label>
-            <input type="text" name="title">
+            <input type="text" name="title" required>
           </li>
           <li>
             <label>Description:</label>
-            <textarea name="description-sug" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+            <textarea name="description-sug" cols="50" rows="5" class="description-input" placeholder="Write a short description of the event." required></textarea>
           </li>
         </ul>
         <button name="submit-sug" type="submit" id="add-sug">Submit</button>
       </form>
-      <p id= "suggestionadded"> <?php
-      if ($result){
-        echo "Your suggestion was added!";} ?> </p>
+      <p id="suggestionadded"> <?php
+                                if ($result) {
+                                  echo "Your suggestion was added!";
+                                } ?> </p>
     </div>
   </div>
   <?php include("includes/footer.php") ?>
