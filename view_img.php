@@ -73,7 +73,7 @@ if (isset($_GET['deleteImg'])) {
     if (is_user_logged_in()) {
       echo
         "<form class='deleteImg' action='view_img.php' method='GET'>
-        <input type='submit' name='deleteImg' value='Delete Img #" . htmlspecialchars($dispimg['id']) . "'></form>";
+        <input type='submit' id='delimg' name='deleteImg' value='Delete Img #" . htmlspecialchars($dispimg['id']) . "'></form>";
 
   }
 
