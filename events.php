@@ -97,7 +97,9 @@ if (isset($_GET['deleteEve'])) {
         </ul>
         <button name="submit-sug" type="submit" id="add-sug">Submit</button>
       </form>
-
+      <p id= "suggestionadded"> <?php
+      if ($result){
+        echo "Your suggestion was added!";} ?> </p>
     </div>
   </div>
   <?php include("includes/footer.php") ?>

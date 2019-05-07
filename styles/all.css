@@ -627,3 +627,9 @@ h5 {
 #loginForm button {
   margin-left: 20px;
 }
+
+#suggestionadded{
+  margin-top: 30px;
+  margin-left: 52px;
+  color: red;
+}
