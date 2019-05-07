@@ -65,8 +65,8 @@ if (isset($_GET['deleteEve'])) {
   <p>" . htmlspecialchars($record["location"]) . "</p>";
         if (is_user_logged_in()) {
           echo
-            "<p><form class='deleteEve' action='events.php' method='GET'>
-      <input type='submit' name='deleteEve' value='Delete Event #" . htmlspecialchars($record['id']) . "'></form></p></div>";
+            "<form class='deleteEve' action='events.php' method='GET'>
+      <input type='submit' name='deleteEve' value='Delete Event #" . htmlspecialchars($record['id']) . "'></form></div>";
         } else {
           echo "</div>";
         }
