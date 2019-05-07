@@ -177,7 +177,6 @@ Website:
   - [photo of card sort]
   ![Content to Card Sort](cs1.jpg)
   ![Pages to Card Sort](cs2.jpg)
-  ![Pages to Card Sort](cs3.jpg)
 
 
   - [explanation of how your come up with your content organization and navigation.]
