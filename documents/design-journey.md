@@ -136,6 +136,7 @@ Website:
 - ASO website
   - *About*: Introduction to ASO using text and several images
     - *Introduction/History*: Text
+    - *President Message*
     - *Images*: Images of past experiences with organization and background image of club picture
     - When you click on an image, you will see the full size image and a caption
 
@@ -143,7 +144,7 @@ Website:
     - *Members*: Picture of every member in ASO as well as a description paired with the image
     - *Members Search Function*: Search by name, position, year
   - *Events*: List of upcoming events.
-    - *Images/Descriptions*: Pictures and captions of upcoming events
+    - *Descriptions*: descriptions of upcoming events
     - *Events Form*: E-board members will have the option to login and add upcoming events to the events gallery
   - *Learn More*: Additional information about ASO.
     - *Blog Information*: Blog posts and links
@@ -154,10 +155,11 @@ Website:
 
   - *Eboard*: page for logged in eboard members to do tasls
     - *Table displaying member info*
-    - *Table displaying member attendance*
+    - *Table displaying suggested events*
     - *Form to add new images to about.php*
     - *Members Form*: form to add new members
     - *Blog Form*: form to add new blog posts
+    - *Event Form*: Form to add a new upcoming event
 - **Process**
   - [photo of card sort]
   ![Content to Card Sort](cs1.jpg)
