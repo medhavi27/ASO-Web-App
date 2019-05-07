@@ -31,7 +31,7 @@ if (isset($_GET['deleteEve'])) {
   // }
   $sql = "DELETE FROM events WHERE id=:id";
   $params = array(
-    ':id' => $eve_id,
+    ':id' => $eve_id
   );
   $resultdel = exec_sql_query($db, $sql, $params);
 }

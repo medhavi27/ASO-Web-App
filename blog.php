@@ -20,7 +20,7 @@ if (isset($_GET['deleteBlog'])) {
   // }
   $sql = "DELETE FROM blogs WHERE id=:id";
   $params = array(
-    ':id' => $blog_id,
+    ':id' => $blog_id
   );
   $resultdel = exec_sql_query($db, $sql, $params);
 }

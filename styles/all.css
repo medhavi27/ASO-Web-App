@@ -350,7 +350,10 @@ button:hover {
   outline: none;
   border: none;
 }
-
+#delimg {
+  margin-left: 680px;
+  margin-bottom: 20px;
+}
 .membersTitle {
   font-size: 20px;
 }
