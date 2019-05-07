@@ -41,6 +41,8 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
   $upload_minor = filter_input(INPUT_POST, 'minor', FILTER_SANITIZE_STRING);
   $upload_bio = filter_input(INPUT_POST, 'bio', FILTER_SANITIZE_STRING);
   $upload_phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_NUMBER_INT);
+  if ($upload_name!=NULL && $upload_net!=NULL && $upload_year!=NULL && $upload_major!=NULL ) {
+
 
   $sql = "INSERT INTO members (name,netid,year,alumni,eboard,major,minor,bio,phonenumber) VALUES (:name, :netid, :year, :alumni, :eboard, :major,:minor,:bio,:phone)";
   $params = array(
@@ -79,6 +81,7 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
 
     $result2 = exec_sql_query($db, $sql, $params);
     if ($result2) {
+      $countsql = exec_sql_query($db, "SELECT COUNT(*) FROM member_images;");
       $file_id = $db->lastInsertId('id');
       $id_filename = "uploads/headshots/" . $file_id . "." . $upload_ext;
       move_uploaded_file($upload_head['tmp_name'], $id_filename);
@@ -86,6 +89,10 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
       array_push($messages, "Couldn't upload headshot");
     }
   }
+}
+else {
+  array_push($messages, "Couldn't add member");
+}
 }
 ////add blog post
 if (isset($_POST["addblog"]) && is_user_logged_in()) {
