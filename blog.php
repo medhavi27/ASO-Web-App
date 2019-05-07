@@ -14,10 +14,6 @@ if (isset($_GET['deleteBlog'])) {
   $getid = explode("#", $_GET['deleteBlog']);
 
   $blog_id = $getid[1];
-  // $recordssel = exec_sql_query($db, "SELECT * FROM blogs WHERE id='$blog_id'")->fetchAll(PDO::FETCH_ASSOC);
-  // foreach ($recordssel as $recordsel) {
-  //   $blog_id = $recordsel['id'];
-  // }
   $sql = "DELETE FROM blogs WHERE id=:id";
   $params = array(
     ':id' => $blog_id
@@ -46,8 +42,6 @@ if (isset($_GET['deleteBlog'])) {
     <h2 class="background_text">Learn More</h2>
   </div>
 
-  <!-- <h2 class="about">Learn more about ASO at Cornell and Armenia</h2>
-  <hr> -->
   <div class="row">
     <?php $records = exec_sql_query($db, "SELECT * FROM blogs")->fetchAll(PDO::FETCH_ASSOC);
     foreach ($records as $record) {

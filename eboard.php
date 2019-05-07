@@ -358,7 +358,6 @@ function print_member_record($record)
 
       <div class="row_two_forms">
         <div class="forms">
-          <!-- <p class="eboardinfo"> Add a new blog post</p> -->
           <form id="uploadBlog" action="eboard.php" method="post">
             <fieldset>
               <legend>Add New Blog Post</legend>
@@ -388,7 +387,6 @@ function print_member_record($record)
         </div>
 
         <div class="forms">
-          <!-- <p class="eboardinfo"> Add a new gallery image </p> -->
           <form id="uploadImage" action="eboard.php" method="post" enctype="multipart/form-data">
             <fieldset>
               <legend>Add New Gallery Image</legend>
