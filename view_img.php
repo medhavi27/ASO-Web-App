@@ -3,11 +3,11 @@ $idimg = $_GET['id'];
 
 ///delete image
 if (isset($_GET['deleteImg'])) {
- $get_value = $_GET['deleteImg'];
- $getid = explode("#", $get_value);
+  $get_value = $_GET['deleteImg'];
+  $getid = explode("#", $get_value);
 
 
- $img_id = $getid[1];
+  $img_id = $getid[1];
 
   $sql = "DELETE FROM gal_images WHERE id=:imgid;";
   $params = array(
@@ -27,21 +27,17 @@ if (isset($_GET['deleteImg'])) {
 
 
   if ($resultdel) {
-   // array_push($messages, “Image File Successfully Deleted”);
-   $paramsdelete = array(
-     ':imageid' => $idimg
-   );
-   $sql122 = "SELECT * FROM gal_images WHERE id=:imageid";
+    $paramsdelete = array(
+      ':imageid' => $idimg
+    );
+    $sql122 = "SELECT * FROM gal_images WHERE id=:imageid";
 
-   $check_empty = exec_sql_query($db, $sql122, $paramsdelete)->fetchAll(PDO::FETCH_ASSOC);
-   if (empty($check_empty)) {
-     header('Location: index.php');
-   }
- }
- }
- // } else {
- //   array_push($messages, “Failed to Delete Image File”);
- // }
+    $check_empty = exec_sql_query($db, $sql122, $paramsdelete)->fetchAll(PDO::FETCH_ASSOC);
+    if (empty($check_empty)) {
+      header('Location: index.php');
+    }
+  }
+}
 
 ?>
 
@@ -70,23 +66,19 @@ if (isset($_GET['deleteImg'])) {
     $img = $resultforimg->fetchAll();
     $dispimg = $img[0];
     echo "<p class='caption'>" . htmlspecialchars($dispimg["alt"]) . "</p>";
-    echo "<img class='bigimg' src= 'uploads/images/about_gallery/about" . htmlspecialchars($dispimg["id"]) . "." . htmlspecialchars($dispimg["ext"]) . "' alt='".$dispimg["alt"]."'>";
+    echo "<img class='bigimg' src= 'uploads/images/about_gallery/about" . htmlspecialchars($dispimg["id"]) . "." . htmlspecialchars($dispimg["ext"]) . "' alt='" . $dispimg["alt"] . "'>";
     if (is_user_logged_in()) {
       echo
         "<form class='deleteImg' action='view_img.php' method='GET'>
         <input type='submit' id='delimg' name='deleteImg' value='Delete Img #" . htmlspecialchars($dispimg['id']) . "'></form>";
-
+    }
   }
-
-
-
-}
 
 
 
   ?>
   <?php include("includes/footer.php");
-?>
+  ?>
 
 </body>
 

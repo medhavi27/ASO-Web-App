@@ -41,58 +41,57 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
   $upload_minor = filter_input(INPUT_POST, 'minor', FILTER_SANITIZE_STRING);
   $upload_bio = filter_input(INPUT_POST, 'bio', FILTER_SANITIZE_STRING);
   $upload_phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_NUMBER_INT);
-  if ($upload_name!=NULL && $upload_net!=NULL && $upload_year!=NULL && $upload_major!=NULL ) {
+  if ($upload_name != NULL && $upload_net != NULL && $upload_year != NULL && $upload_major != NULL) {
 
 
-  $sql = "INSERT INTO members (name,netid,year,alumni,eboard,major,minor,bio,phonenumber) VALUES (:name, :netid, :year, :alumni, :eboard, :major,:minor,:bio,:phone)";
-  $params = array(
-    ':name' => $upload_name,
-    ':netid' => $upload_net,
-    ':year' => $upload_year,
-    ':alumni' => $upload_alumni,
-    ':eboard' => $upload_eboard,
-    ':major' => $upload_major,
-    ':minor' => $upload_minor,
-    ':bio' => $upload_bio,
-    ':phone' => $upload_phone,
-  );
-
-  $result = exec_sql_query($db, $sql, $params);
-  $records = exec_sql_query($db, "SELECT * FROM members WHERE name ='$upload_name'")->fetchAll(PDO::FETCH_ASSOC);
-
-  foreach ($records as $record) {
-    $new_memid = $record['id'];
-    $new_memname = $record['name'];
-  }
-
-  //add member
-  if ($upload_head['error'] == UPLOAD_ERR_OK) {
-    $upload_link = basename($upload_head["name"]);
-    $upload_ext = strtolower(pathinfo($upload_link, PATHINFO_EXTENSION));
-    $input_link = $upload_link . "." . $upload_ext;
-    $alt = "ASO Image";
-
-    $sql = "INSERT INTO member_images(member_id, ext, membername) VALUES(:member_id, :ext, :title );";
+    $sql = "INSERT INTO members (name,netid,year,alumni,eboard,major,minor,bio,phonenumber) VALUES (:name, :netid, :year, :alumni, :eboard, :major,:minor,:bio,:phone)";
     $params = array(
-      ':member_id' => $new_memid,
-      ':ext' => $upload_ext,
-      ':title' => $new_memname
+      ':name' => $upload_name,
+      ':netid' => $upload_net,
+      ':year' => $upload_year,
+      ':alumni' => $upload_alumni,
+      ':eboard' => $upload_eboard,
+      ':major' => $upload_major,
+      ':minor' => $upload_minor,
+      ':bio' => $upload_bio,
+      ':phone' => $upload_phone,
     );
 
-    $result2 = exec_sql_query($db, $sql, $params);
-    if ($result2) {
+    $result = exec_sql_query($db, $sql, $params);
+    $records = exec_sql_query($db, "SELECT * FROM members WHERE name ='$upload_name'")->fetchAll(PDO::FETCH_ASSOC);
 
-      $file_id = $db->lastInsertId('id');
-      $id_filename = "uploads/headshots/" . $file_id . "." . $upload_ext;
-      move_uploaded_file($upload_head['tmp_name'], $id_filename);
-    } else {
-      array_push($messages, "Couldn't upload headshot");
+    foreach ($records as $record) {
+      $new_memid = $record['id'];
+      $new_memname = $record['name'];
     }
+
+    //add member
+    if ($upload_head['error'] == UPLOAD_ERR_OK) {
+      $upload_link = basename($upload_head["name"]);
+      $upload_ext = strtolower(pathinfo($upload_link, PATHINFO_EXTENSION));
+      $input_link = $upload_link . "." . $upload_ext;
+      $alt = "ASO Image";
+
+      $sql = "INSERT INTO member_images(member_id, ext, membername) VALUES(:member_id, :ext, :title );";
+      $params = array(
+        ':member_id' => $new_memid,
+        ':ext' => $upload_ext,
+        ':title' => $new_memname
+      );
+
+      $result2 = exec_sql_query($db, $sql, $params);
+      if ($result2) {
+
+        $file_id = $db->lastInsertId('id');
+        $id_filename = "uploads/headshots/" . $file_id . "." . $upload_ext;
+        move_uploaded_file($upload_head['tmp_name'], $id_filename);
+      } else {
+        array_push($messages, "Couldn't upload headshot");
+      }
+    }
+  } else {
+    array_push($messages, "Couldn't add member");
   }
-}
-else {
-  array_push($messages, "Couldn't add member");
-}
 }
 ////add blog post
 if (isset($_POST["addblog"]) && is_user_logged_in()) {
@@ -100,16 +99,16 @@ if (isset($_POST["addblog"]) && is_user_logged_in()) {
   $upload_link = filter_input(INPUT_POST, 'add_link', FILTER_SANITIZE_STRING);
   $upload_date = filter_input(INPUT_POST, 'add_date', FILTER_SANITIZE_STRING);
   $upload_auth = filter_input(INPUT_POST, 'add_auth', FILTER_SANITIZE_STRING);
-    if ($upload_blog!=NULL && $upload_link!=NULL && $upload_date!=NULL && $upload_auth!=NULL ) {
-  $sqlblog = "INSERT INTO blogs(title,link, date, author) VALUES(:title, :link, :date, :auth );";
-  $paramsblog = array(
-    ':title' => $upload_blog,
-    ':link' => $upload_link,
-    ':date' => $upload_date,
-    ':auth' => $upload_auth
-  );
-  $resultblog = exec_sql_query($db, $sqlblog, $paramsblog);
-}
+  if ($upload_blog != NULL && $upload_link != NULL && $upload_date != NULL && $upload_auth != NULL) {
+    $sqlblog = "INSERT INTO blogs(title,link, date, author) VALUES(:title, :link, :date, :auth );";
+    $paramsblog = array(
+      ':title' => $upload_blog,
+      ':link' => $upload_link,
+      ':date' => $upload_date,
+      ':auth' => $upload_auth
+    );
+    $resultblog = exec_sql_query($db, $sqlblog, $paramsblog);
+  }
 }
 
 
@@ -153,17 +152,17 @@ if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
   $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING);
   $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
-if ($submit_title !=NULL && $submit_desc!=NULL && $submit_date!=NULL && $submit_loc!=NULL ) {
-  $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
-  $params = array(
-    ':title' => $submit_title,
-    ':description' => $submit_desc,
-    ':time' => $submit_date,
-    ':location' => $submit_loc,
-  );
+  if ($submit_title != NULL && $submit_desc != NULL && $submit_date != NULL && $submit_loc != NULL) {
+    $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
+    $params = array(
+      ':title' => $submit_title,
+      ':description' => $submit_desc,
+      ':time' => $submit_date,
+      ':location' => $submit_loc,
+    );
 
-  $resevent = exec_sql_query($db, $sql, $params);
-}
+    $resevent = exec_sql_query($db, $sql, $params);
+  }
 }
 
 function print_event_record($record)
@@ -273,19 +272,10 @@ function print_member_record($record)
     <?php
   }
   ?>
-    <!-- <select name="forms">
-          <option value="" selected>Choose form</option>
-          <option value="1">Add New Member</option>
-          <option value="2">Add New Event</option>
-          <option value="3">Add New Blog Post</option>
-          <option value="4">Add New Gallery Image</option>
-        </select>
-        <button name="choose_form" type="submit">Submit</button> -->
 
     <div class="eboard_forms">
       <div class="row_one_forms">
         <div class="forms">
-          <!-- <p class="eboardinfo"> Add a member </p> -->
           <form id="addMember" action="eboard.php" method="post" enctype="multipart/form-data">
             <fieldset>
               <legend>Add New Member</legend>
@@ -294,10 +284,10 @@ function print_member_record($record)
                   <input id="headshot" type="file" name="headshot"></li>
 
                 <li><label for="name">Name:</label>
-                  <input id="name" type="text" name="name"></li>
+                  <input id="name" type="text" name="name" required></li>
 
                 <li><label for="netid">Net ID:</label>
-                  <input id="netid" type="text" name="netid"></li>
+                  <input id="netid" type="text" name="netid" required></li>
 
                 <li>Year: <select name="year">
                     <option value="Freshman">Freshman</option>
@@ -319,7 +309,7 @@ function print_member_record($record)
                   </select></li>
 
                 <li><label for="major">Major/Department:</label>
-                  <input id="major" type="text" name="major"></li>
+                  <input id="major" type="text" name="major" required></li>
 
                 <li><label for="major">Minor:</label>
                   <input id="minor" type="text" name="minor"></li>
@@ -337,26 +327,25 @@ function print_member_record($record)
         </div>
 
         <div class="forms">
-          <!-- <p class="eboardinfo"></p> -->
           <form id="event-form" action="eboard.php" method="post">
             <fieldset>
               <legend>Add New Event</legend>
               <ul>
                 <li>
                   <label>Title: </label>
-                  <input type="text" name="title">
+                  <input type="text" name="title" required>
                 </li>
                 <li>
                   <label>Date and Time:</label>
-                  <input type="datetime-local" name="time">
+                  <input type="datetime-local" name="time" required>
                 </li>
                 <li>
                   <label>Location:</label>
-                  <input type="text" name="location">
+                  <input type="text" name="location" required>
                 </li>
                 <li>
                   <label class="event_descr">Description:</label>
-                  <textarea name="description" cols="25" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+                  <textarea name="description" cols="25" rows="5" class="description-input" placeholder="Write a short description of the event." required></textarea>
                 </li>
                 <li>
                   <button name="submit-event" type="submit" id="eventadd">Add Event</button>
@@ -376,19 +365,19 @@ function print_member_record($record)
               <ul>
                 <li>
                   <label for="add_blog">Title:</label>
-                  <input id="add_blog" type="text" name="add_blog">
+                  <input id="add_blog" type="text" name="add_blog" required>
                 </li>
                 <li>
                   <label for="add_link">Link:</label>
-                  <input id="add_link" type="text" name="add_link">
+                  <input id="add_link" type="text" name="add_link" required>
                 </li>
                 <li>
                   <label for="add_date">Date:</label>
-                  <input id="add_date" type="date" name="add_date">
+                  <input id="add_date" type="date" name="add_date" required>
                 </li>
                 <li>
                   <label for="add_auth">Author:</label>
-                  <input id="add_auth" type="text" name="add_auth">
+                  <input id="add_auth" type="text" name="add_auth" required>
                 </li>
                 <li>
                   <button name="addblog" id="addblog" type="submit">Add Blog</button>
