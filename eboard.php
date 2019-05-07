@@ -81,7 +81,7 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
 
     $result2 = exec_sql_query($db, $sql, $params);
     if ($result2) {
-      $countsql = exec_sql_query($db, "SELECT COUNT(*) FROM member_images;");
+     
       $file_id = $db->lastInsertId('id');
       $id_filename = "uploads/headshots/" . $file_id . "." . $upload_ext;
       move_uploaded_file($upload_head['tmp_name'], $id_filename);
@@ -100,6 +100,7 @@ if (isset($_POST["addblog"]) && is_user_logged_in()) {
   $upload_link = filter_input(INPUT_POST, 'add_link', FILTER_SANITIZE_STRING);
   $upload_date = filter_input(INPUT_POST, 'add_date', FILTER_SANITIZE_STRING);
   $upload_auth = filter_input(INPUT_POST, 'add_auth', FILTER_SANITIZE_STRING);
+    if ($upload_blog!=NULL && $upload_link!=NULL && $upload_date!=NULL && $upload_auth!=NULL ) {
   $sqlblog = "INSERT INTO blogs(title,link, date, author) VALUES(:title, :link, :date, :auth );";
   $paramsblog = array(
     ':title' => $upload_blog,
