@@ -340,6 +340,10 @@ button:hover {
   width: 300px;
   margin-bottom: 20px;
 }
+.about_image:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
 
 .membersTitle {
   font-size: 20px;

@@ -337,8 +337,8 @@ function print_member_record($record)
                   <input type="text" name="title">
                 </li>
                 <li>
-                  <label>Date:</label>
-                  <input type="date" name="time">
+                  <label>Date and Time:</label>
+                  <input type="datetime-local" name="time">
                 </li>
                 <li>
                   <label>Location:</label>
