@@ -341,8 +341,14 @@ button:hover {
   margin-bottom: 20px;
 }
 .about_image:hover {
-  opacity: 0.6;
+  opacity: 0.8;
   cursor: pointer;
+}
+
+.first_row a:active,
+.first_row a:focus {
+  outline: none;
+  border: none;
 }
 
 .membersTitle {
@@ -626,4 +632,10 @@ h5 {
 
 #loginForm button {
   margin-left: 20px;
+}
+
+#suggestionadded{
+  margin-top: 30px;
+  margin-left: 52px;
+  color: red;
 }

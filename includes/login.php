@@ -9,7 +9,8 @@
   ?>
 
 <form id="loginForm" action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="post">
-<p class="signIn"><h3>Login to update members, events, and blogs!</h3>
+<h2>LOGIN</h2>
+<p class="signIn"><h3>You must be an eboard member to update members, events, and blogs!</h3>
       <label for="username">Username:</label>
       <input id="username" type="text" name="username" />
       <label for="password">Password:</label>
