@@ -15,15 +15,16 @@ if (isset($_GET['deleteImg'])) {
   );
   $sqlforimgdel = "SELECT * from gal_images WHERE id=:imgid";
   $paramsdel = array(
-    ':imgid' => $idimg
+    ':imgid' => $img_id
   );
   $res = exec_sql_query($db, $sqlforimgdel, $paramsdel)->fetchAll(PDO::FETCH_ASSOC);
   if ($res) {
     $acc = $res[0];
-    $acc_ext = $acc['ext'];
+    var_dump("uploads/images/about_gallery/about".$acc['id'].".".$acc['ext']);
+    $unlinked= unlink("uploads/images/about_gallery/about".$acc['id'].".".$acc['ext']);
   }
   $resultdel = exec_sql_query($db, $sql, $params);
-  unlink("uploads/images/about_gallery/about".$idimg.".".$acc_ext);
+
 
   if ($resultdel) {
    // array_push($messages, “Image File Successfully Deleted”);
