@@ -42,4 +42,5 @@ See the course website for a detailed citation policy with more information on u
 Each team member should sign their name and include today's date and time to submit **FINAL VERSION**.
 
 - Full Name of Each Contributing Team Member:
-- Date & Time:
+Medhavi Gandhi
+- Date & Time: 05/07/19 2:27 PM
