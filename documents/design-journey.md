@@ -200,11 +200,11 @@ We will have a login/logout function for e-board members so that they can update
 
 We will also include an image gallery so that the client may showcase any pictures of the events the club holds, club members, etc. This will also give the audience a visual perspective of the type of events and the community the club brings together.
 
-Once you click on an image in the gallery, you will be able to see details, which we will implement using query string parameters.
+Once you click on an image in the gallery, you will be able to see details, which we will implement using query string parameters, and logged in members can delete images.
 
 We can also add a filter/search function on the members page so that if the user would like to search for a name, position, year, or major then it'll show up the corresponding data.
 
-We also added the ability to add blog posts, images to the image gallery, and events. Every page that dynamically displays data like events and blogs will also have the ability to delete these if you're logged in.
+We also added the ability to add and delete blog posts, images to the image gallery, and events. Every page that dynamically displays data like events and blogs will also have the ability to delete these if you're logged in.
 
 We also added a form for the audience to be able to suggest an event to eboard that they would like to see happen from the Armenian Organization.
 
@@ -587,7 +587,11 @@ Table: members_tags
     - To display all event suggestions
   - SELECT * from members
     - To display all member info
-
+- Single Image page:
+  - SELECT * FROM gal_images where id = $urlid
+    - To display one image
+  - DELETE FROM gal_images where id = $urlid
+    - To delete the image
 
 
 
@@ -685,6 +689,8 @@ include init.php
 include header.php
 
 single image dynamically loaded from get url id along with caption
+
+button to delete the image if logged in
 
 include footer.php
 
