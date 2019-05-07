@@ -20,8 +20,7 @@ if (isset($_GET['deleteImg'])) {
   $res = exec_sql_query($db, $sqlforimgdel, $paramsdel)->fetchAll(PDO::FETCH_ASSOC);
   if ($res) {
     $acc = $res[0];
-    var_dump("uploads/images/about_gallery/about".$acc['id'].".".$acc['ext']);
-    $unlinked= unlink("uploads/images/about_gallery/about".$acc['id'].".".$acc['ext']);
+    $unlinked = unlink("uploads/images/about_gallery/about" . $acc['id'] . "." . $acc['ext']);
   }
   $resultdel = exec_sql_query($db, $sql, $params);
 
