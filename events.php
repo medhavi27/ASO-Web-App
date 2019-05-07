@@ -3,7 +3,7 @@
 include("includes/init.php");
 
 $messages = array();
-if (isset($_POST["submit-sug"]) && is_user_logged_in()) {
+if (isset($_POST["submit-sug"])) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   $submit_desc = filter_input(INPUT_POST, 'description-sug', FILTER_SANITIZE_STRING);
 
@@ -67,9 +67,9 @@ if (isset($_GET['deleteEve'])) {
 
         echo  "<div class='events'>
   <h3 class='eventhead'>" . htmlspecialchars($record["title"]) . "</h3>
-  <p> Description: " . htmlspecialchars($record["description"]) . "</p>
-  <p> Date: " . htmlspecialchars($record["time"]) . "</p>
-  <p> Location: " . htmlspecialchars($record["location"]) . "</p>";
+  <p> " . htmlspecialchars($record["description"]) . "</p>
+  <p>" . htmlspecialchars($record["time"]) . "</p>
+  <p>" . htmlspecialchars($record["location"]) . "</p>";
         if (is_user_logged_in()) {
           echo
             "<p><form class='deleteEve' action='events.php' method='GET'>

@@ -142,7 +142,7 @@ if (isset($_GET['foo'])) {
 if (isset($_POST["submit-event"]) && is_user_logged_in()) {
   $submit_title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
   $submit_desc = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
-  $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING );
+  $submit_date = filter_input(INPUT_POST, 'time', FILTER_SANITIZE_STRING);
   $submit_loc = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
 
   $sql = "INSERT INTO events (title, description, time, location) VALUES (:title, :description, :time, :location)";
@@ -263,129 +263,151 @@ function print_member_record($record)
     <?php
   }
   ?>
+    <!-- <select name="forms">
+          <option value="" selected>Choose form</option>
+          <option value="1">Add New Member</option>
+          <option value="2">Add New Event</option>
+          <option value="3">Add New Blog Post</option>
+          <option value="4">Add New Gallery Image</option>
+        </select>
+        <button name="choose_form" type="submit">Submit</button> -->
+
     <div class="eboard_forms">
       <div class="row_one_forms">
         <div class="forms">
-          <p class="eboardinfo"> Add a member </p>
+          <!-- <p class="eboardinfo"> Add a member </p> -->
           <form id="addMember" action="eboard.php" method="post" enctype="multipart/form-data">
-            <ul>
-              <li><label for="headshot">Upload a headshot:</label>
-                <input id="headshot" type="file" name="headshot"></li>
+            <fieldset>
+              <legend>Add New Member</legend>
+              <ul>
+                <li><label for="headshot">Upload a headshot:</label>
+                  <input id="headshot" type="file" name="headshot"></li>
 
-              <li><label for="name">Name:</label>
-                <input id="name" type="text" name="name"></li>
+                <li><label for="name">Name:</label>
+                  <input id="name" type="text" name="name"></li>
 
-              <li><label for="netid">Net ID:</label>
-                <input id="netid" type="text" name="netid"></li>
+                <li><label for="netid">Net ID:</label>
+                  <input id="netid" type="text" name="netid"></li>
 
-              <li>Year: <select name="year">
-                  <option value="Freshman">Freshman</option>
-                  <option value="Sophomore">Sophomore</option>
-                  <option value="Junior">Junior</option>
-                  <option value="Senior">Senior</option>
-                </select> </li>
+                <li>Year: <select name="year">
+                    <option value="Freshman">Freshman</option>
+                    <option value="Sophomore">Sophomore</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Grad">Grad Student</option>
 
-              <li>Alumni? <select name="alumni">
-                  <option value=TRUE>TRUE</option>
-                  <option value=FALSE>FALSE</option>
-                </select> </li>
+                  </select> </li>
 
-              <li>Eboard? <select name="eboard">
-                  <option value=TRUE>TRUE</option>
-                  <option value=FALSE>FALSE</option>
-                </select></li>
+                <li>Alumni? <select name="alumni">
+                    <option value=TRUE>TRUE</option>
+                    <option value=FALSE>FALSE</option>
+                  </select> </li>
 
-              <li><label for="major">Major:</label>
-                <input id="major" type="text" name="major"></li>
+                <li>Eboard? <select name="eboard">
+                    <option value=TRUE>TRUE</option>
+                    <option value=FALSE>FALSE</option>
+                  </select></li>
 
-              <li><label for="major">Minor (N/A if none):</label>
-                <input id="minor" type="text" name="minor"></li>
+                <li><label for="major">Major/Department:</label>
+                  <input id="major" type="text" name="major"></li>
 
-              <li><label for="bio">Bio:</label>
-                <input id="bio" type="text" name="bio"></li>
+                <li><label for="major">Minor:</label>
+                  <input id="minor" type="text" name="minor"></li>
 
-              <li><label for="phone">Phone Number:</label>
-                <input id="phone" type="number" name="phone"></li>
+                <li><label for="bio">Bio:</label>
+                  <input id="bio" type="text" name="bio"></li>
 
-              <li class="add_mem_btn"><button name="add" type="submit">Add Member</button></li>
-            </ul>
+                <li><label for="phone">Phone Number:</label>
+                  <input id="phone" type="number" name="phone"></li>
+
+                <li class="add_mem_btn"><button name="add" type="submit">Add Member</button></li>
+              </ul>
+            </fieldset>
           </form>
         </div>
 
         <div class="forms">
-          <p class="eboardinfo"> Add a new event </p>
+          <!-- <p class="eboardinfo"></p> -->
           <form id="event-form" action="eboard.php" method="post">
-            <ul>
-              <li>
-                <label>Title: </label>
-                <input type="text" name="title">
-              </li>
-              <li>
-                <label>Date:</label>
-                <input type="date" name="time">
-              </li>
-              <li>
-                <label>Location:</label>
-                <input type="text" name="location">
-              </li>
-              <li>
-                <label class="event_descr">Description:</label>
-                <textarea name="description" cols="25" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
-              </li>
-              <li>
-                <button name="submit-event" type="submit" id="eventadd">Add Event</button>
-              </li>
-            </ul>
+            <fieldset>
+              <legend>Add New Event</legend>
+              <ul>
+                <li>
+                  <label>Title: </label>
+                  <input type="text" name="title">
+                </li>
+                <li>
+                  <label>Date and Time:</label>
+                  <input type="datetime-local" name="time">
+                </li>
+                <li>
+                  <label>Location:</label>
+                  <input type="text" name="location">
+                </li>
+                <li>
+                  <label class="event_descr">Description:</label>
+                  <textarea name="description" cols="25" rows="5" class="description-input" placeholder="Write a short description of the event."></textarea>
+                </li>
+                <li>
+                  <button name="submit-event" type="submit" id="eventadd">Add Event</button>
+                </li>
+              </ul>
+            </fieldset>
           </form>
         </div>
       </div>
 
       <div class="row_two_forms">
         <div class="forms">
-          <p class="eboardinfo"> Add a new blog post</p>
+          <!-- <p class="eboardinfo"> Add a new blog post</p> -->
           <form id="uploadBlog" action="eboard.php" method="post">
-            <ul>
-              <li>
-                <label for="add_blog">Title:</label>
-                <input id="add_blog" type="text" name="add_blog">
-              </li>
-              <li>
-                <label for="add_link">Link:</label>
-                <input id="add_link" type="text" name="add_link">
-              </li>
-              <li>
-                <label for="add_date">Date:</label>
-                <input id="add_date" type="date" name="add_date">
-              </li>
-              <li>
-                <label for="add_auth">Author:</label>
-                <input id="add_auth" type="text" name="add_auth">
-              </li>
-              <li>
-                <button name="addblog" id="addblog" type="submit">Add Blog</button>
-              </li>
-            </ul>
+            <fieldset>
+              <legend>Add New Blog Post</legend>
+              <ul>
+                <li>
+                  <label for="add_blog">Title:</label>
+                  <input id="add_blog" type="text" name="add_blog">
+                </li>
+                <li>
+                  <label for="add_link">Link:</label>
+                  <input id="add_link" type="text" name="add_link">
+                </li>
+                <li>
+                  <label for="add_date">Date:</label>
+                  <input id="add_date" type="date" name="add_date">
+                </li>
+                <li>
+                  <label for="add_auth">Author:</label>
+                  <input id="add_auth" type="text" name="add_auth">
+                </li>
+                <li>
+                  <button name="addblog" id="addblog" type="submit">Add Blog</button>
+                </li>
+              </ul>
+            </fieldset>
           </form>
         </div>
 
         <div class="forms">
-          <p class="eboardinfo"> Add a new gallery image </p>
-
+          <!-- <p class="eboardinfo"> Add a new gallery image </p> -->
           <form id="uploadImage" action="eboard.php" method="post" enctype="multipart/form-data">
-            <ul>
+            <fieldset>
+              <legend>Add New Gallery Image</legend>
+              <ul>
 
-              <li>
-                <label for="add_img">Choose an Image:</label>
-                <input id="add_img" type="file" name="add_img">
-              </li>
-              <li>
-                <label for="img_name">Title:</label>
-                <input id="img_name" type="text" name="title">
-              </li>
-              <li>
-                <button name="upload" type="submit">Upload File</button>
-              </li>
-            </ul>
+                <li>
+                  <label for="add_img">Choose an Image:</label>
+                  <input id="add_img" type="file" name="add_img">
+                </li>
+                <li>
+                  <label for="img_name">Title:</label>
+                  <input id="img_name" type="text" name="title">
+                </li>
+                <li>
+                  <button name="upload" type="submit">Upload File</button>
+                </li>
+              </ul>
+            </fieldset>
           </form>
         </div>
       </div>

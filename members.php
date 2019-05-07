@@ -101,7 +101,6 @@ include("includes/init.php");
         }
         ?>
       <?php
-      // <figcaption>" .  $record['year'] . "</figcaption>
     }
   } else {
     echo "<p>No members found.</p>";

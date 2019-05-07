@@ -76,7 +76,9 @@ Client Requirement/Target Audience Need
 ## Initial Design
 
 [Include exploratory idea sketches of your website.]
+
 ![Header Template](header_template.jpg)
+![Footer Template](footer.JPG)
 ![About Page](about.JPG)
 ![Members Page](members.jpg)
 ![Members Page Logged In](members_logged_in.jpg)
@@ -106,25 +108,27 @@ Example:
 Website:
 - **Navigation**
   - About
-    - Introduction/History
-    - Images (Background Image)
+    - Introduction/Overview
+    - Message from President
+    - Images
   - Members
+    - Members Search Function
     - Current Members
-    - Form to add members
-    - Donation information
   - Events
-    - Images/Descriptions
-    - Form to add events
+    - Description of Events
+    - Suggestion form for events
   - Learn More
     - Blog information
-    - Form to add blogs/news
   - Contact
-    - Information for eboard
-    - Social media links
+    - Information of eboard
   - Eboard
-    - View all members
-    - View additional info about members
-    - Add images to image gallery
+    - Table displaying event suggestions
+    - Table displaying additional member info
+    - Form to add new images to about.php
+    - Form to add new members
+    - Form to add events
+    - Form to add blogs/news
+- **Footer**
 
 
 - **Content** (List all the content corresponding to main navigation and sub-categories.)
@@ -135,31 +139,40 @@ Website:
 
 - ASO website
   - *About*: Introduction to ASO using text and several images
-    - *Introduction/History*: Text
-    - *President Message*
-    - *Images*: Images of past experiences with organization and background image of club picture
-    - When you click on an image, you will see the full size image and a caption
+    - *Introduction/Overview*: Quick overview of what ASO is through the use of text
+    - *Message from President*: Personal message from the president of ASO introducing both herself and the organization
+    - *Images*: Images of past experiences within the organization. When you click on an image,
+    you will see the full size image and a caption
 
   - *Members*: Photo gallery including all members of the organization
-    - *Members*: Picture of every member in ASO as well as a description paired with the image
-    - *Members Search Function*: Search by name, position, year
+    - *Members Search Function*: Allows users to search members by name, position, or year
+    - *Current Members*: Picture of every member in ASO as well as a description paired with the image
+
   - *Events*: List of upcoming events.
-    - *Descriptions*: descriptions of upcoming events
-    - *Events Form*: E-board members will have the option to login and add upcoming events to the events gallery
+    - *Description of Events*: Titles, descriptions, dates, and locations of upcoming events
+    - *Suggestion form for events*: Users are able to submit their own suggestions through this form
+    regarding events they would like to see ASO potentially host in the future.
+
   - *Learn More*: Additional information about ASO.
     - *Blog Information*: Blog posts and links
-  - *Contact*: Webpage designed to reach the organization
-    - *Info of e-board*: Positions with contact information (email, phone number, name)
-    - *Social Media links*: Links to social media such as Facebook or Instagram
-    - *Donation*: Bottom section of webpage describing the donation process to ASO.
 
-  - *Eboard*: page for logged in eboard members to do tasls
-    - *Table displaying member info*
-    - *Table displaying suggested events*
-    - *Form to add new images to about.php*
-    - *Members Form*: form to add new members
-    - *Blog Form*: form to add new blog posts
-    - *Event Form*: Form to add a new upcoming event
+  - *Contact*: Webpage designed to reach the organization
+    - *Info of e-board*: Positions with contact information (name, email)
+
+  - *Eboard*: page for logged in eboard members to do tasks
+    - *Table displaying event suggestions*: Displays all event suggestions that users submit in the events webpage
+    - *Table displaying additional member info*: Displays basic information about all members (name, netid, year, major/minor, etc.) Also
+    includes a remove button for each member, which removes that specific member from the database.
+    - *Form to add new images to about.php*: E-bord members have the option to login and add more images to the gallery on the about
+    webpage
+    - *Form to add new members*: E-board members have the option to login and add new members to the members gallery
+    - *Form to add events*: E-board members have the option to login and add upcoming events to the events gallery
+    - *Form to add blogs/news*: E-board members have the option to login and add new blog posts to the learn more webpage
+
+  - *Footer*: Template at the bottom of every page. Contains facebook logo linking to ASO, an orgsync
+  link that give more information about ASO, and finally a link used to contact ASO or
+  inquire about donations.
+
 - **Process**
   - [photo of card sort]
   ![Content to Card Sort](cs1.jpg)
@@ -192,7 +205,7 @@ Once you click on an image in the gallery, you will be able to see details, whic
 
 We can also add a filter/search function on the members page so that if the user would like to search for a name, position, year, or major then it'll show up the corresponding data.
 
-We also added the ability to add blog posts, images to the image gallery, and events. We also are going to implement a form to take attendance, which will make the website a comprehensive place to view data and do things for the eboard.
+We also added the ability to add blog posts, images to the image gallery, and events. Every page that dynamically displays data like events and blogs will also have the ability to delete these if you're logged in.
 
 We also added a form for the audience to be able to suggest an event to eboard that they would like to see happen from the Armenian Organization.
 
@@ -221,7 +234,7 @@ In addition to this, each member will be either a database, design, communicatio
 Our client was generally happy with our design, but noticed a few things she wanted us to update:
 * She wanted our Learn More page to showcase the blogs more, instead of half the page having the form to add blogs, which only eboard members can do anyway.
 * She wanted very specific member bios- like the ones on the Arts and Sciences page (http://ambassadors.as.cornell.edu/meet-the-ambassadors/).
-* She wanted the Events page to be clearer in functionality.
+* She wanted the Events page to be clearer in functionality and mentioned that our initial sketches didn't show how you could update information on the website (like update Events), so we have to implement this as well.
 
 
 ## Iterated Design
@@ -458,10 +471,13 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 ## Final Design
 
 [Include sketches of your finalized design.]
+
+![Header Template](header_template.jpg)
+![Footer Template](footer.JPG)
 ![Members Page](final_member.jpg)
 ![About Page](final_about.jpg)
 ![Single Image Page](final-viewimg.jpg)
-![Contact Page](final_contact.jpg)
+![Contact Page](final_contact.JPG)
 ![Events Page](final_events.png)
 ![Learn More Page](final-lm.png)
 ![Eboard Page](final_eboard.jpg)
@@ -469,7 +485,10 @@ Task 2: [Abby is on the e-board for ASO, and has been taking the lead of plannin
 
 
 [What changes did you make to your final design based on the results on your cognitive walkthrough?]
-On the members page, we added a search function so anyone could search for a member(s) with the name that the user typed in or obtain a list of members with the corresponding searched year/major. We also discussed about adding a seperate php to have the user click on a specific member's headshot to be able to delete their profile on the member page. We included this because we thought it would be useful to have a delete function in conjunction to the add member function.
+On the members page, we added a search function so anyone could search for a member(s) with the name that the user typed in or obtain a list of members with the corresponding searched year/major. We also discussed about adding a separate php to have the user click on a specific member's headshot to be able to delete their profile on the member page.
+We included this because we thought it would be useful to have a delete function in conjunction to the add member function.
+Adding the delete member function made us realize we could do the same to blogs and events, so we added the ability to delete those as well.
+
 
 
 ## Database Schema
@@ -538,7 +557,7 @@ Table: members_tags
 [Plan your database queries. You may use natural language, pseudocode, or SQL.]
 
 - Members page
-  - SELECT * FROM members INNER JOIN member_images WHERE members.id = member_images.member_id;
+  - SELECT * FROM members INNER JOIN member_images ON members.id = member_images.member_id;
     Query needed to display images
   - SELECT name, bio FROM members WHERE alumni = "False";
     - retrieves all members that are not alumni
@@ -547,12 +566,13 @@ Table: members_tags
   - DELETE * FROM members WHERE user_id = :id;
     - Option to delete a specific member that is clicked on
 
-  - SELECT name, bio FROM members WHERE " . $searchfield . " LIKE  '%' || :search ||  '%';
-   Shows specific members according to what is searched
+  - SELECT * FROM members INNER JOIN member_images ON members.id = member_images.member_id WHERE  . $searchfield . " LIKE  '%' || :search ||  '%';
+    - Shows specific members according to what is searched
 
   - INSERT into members(name, netid, year, alumni, eboard, major, minor, bio, phonenumber) values(form_name, form_netid, form_year, form_a, form_eb, form_major, form_minor, form_bio, form_number);
+     - Adds a new member
   - INSERT into members_images(member_id, ext, name) values(member_id, form_img, form_name);
-  to add a new member, and update their member image
+    - Adds their member image
 
 - Events page
   - SELECT * FROM events;
@@ -717,6 +737,8 @@ Title (h1) Blog Posts
 
 Blog posts displayed as flex elements- including details like who wrote it, a title, a date and a link
 
+Function to extract source from url
+
 include footer.php
 ```
 
@@ -766,7 +788,7 @@ Right now we decided to use an include for the login form, but it might be a bet
 
 [Include any other information that your client needs to know about your final website design. For example, what client wants or needs were unable to be realized in your final product? Why were you unable to meet those wants/needs?]
 
-I think we were able to meet all the client's needs!
+I think we were able to meet all the client's needs other than a detailed member bio page. The members of ASO didn't provide us with bios like the Arts and Sciences page did, but this can be easily fixed in the future.
 
 
 ## Final Notes to the Graders

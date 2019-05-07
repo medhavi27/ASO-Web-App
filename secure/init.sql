@@ -263,7 +263,7 @@ description,
 time,
 location
 ) VALUES
-('Awareness Days','Monday and Tuesday is discussion', 'Monday 12:00 PM', 'WSH');
+('Awareness Dinner','A chance to learn about the history of Armenia', '02/12/19, 8 PM', 'WSH 220');
 
 INSERT INTO `events` (
 title,
@@ -271,7 +271,15 @@ description,
 time,
 location
 ) VALUES
-('Ice Cream Social','Come meet the members', 'Wednesday 1:00 PM', 'WSH');
+('Annual BBQ','Come eat with our members and professors', '02/23/19, 5 PM', 'Stewart Park');
+INSERT INTO `events` (
+title,
+description,
+time,
+location
+) VALUES
+('Ice Cream Social','Come meet the members and eat Cornell Dairy Treats!', '03/29/19, 3 PM', 'Klarman Atrium');
+
 
 
 CREATE TABLE 'blogs' (
@@ -305,6 +313,13 @@ date,
 author
 ) VALUES
 ('Today marks prominent writer Hovhannes Tumanyan’s 150th birthday','https://www.panorama.am/en/news/2019/02/19/Hovhannes-Tumanyan-birthday/2074576?fbclid=IwAR21VU28H2gWO55W78_rNEKgo7EnCKTNUDzib-E5IlMf3PZC3u889akyO44', 'April 30, 2019', 'Panorama Staff');
+INSERT INTO `blogs` (
+title,
+link,
+date,
+author
+) VALUES
+('Armenia is a Wine Lovers Paradise','https://www.deccanchronicle.com/sunday-chronicle/triptease/050519/armenia-is-a-wine-lovers-paradise.html?fbclid=IwAR03VbUcVtUN9ua04ILwh9HAV1dXTuhbvtfF0YBTKeA7V8YUGc868gAnpgo', 'May 6, 2019', 'Benjamin Kemper');
 
 CREATE TABLE 'event_suggestions' (
     'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -320,6 +335,11 @@ INSERT INTO `event_suggestions` (
 title, description
 ) VALUES
 ("Armenian Food Night","Something like the Chinese and Filipino food nights");
+INSERT INTO `event_suggestions` (
+title, description
+) VALUES
+("Armenian Movie Night","Show off art from Armenia");
+
 
 
 
