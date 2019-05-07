@@ -81,7 +81,7 @@ if (isset($_POST["add"]) && is_user_logged_in()) {
 
     $result2 = exec_sql_query($db, $sql, $params);
     if ($result2) {
-     
+
       $file_id = $db->lastInsertId('id');
       $id_filename = "uploads/headshots/" . $file_id . "." . $upload_ext;
       move_uploaded_file($upload_head['tmp_name'], $id_filename);
@@ -109,6 +109,7 @@ if (isset($_POST["addblog"]) && is_user_logged_in()) {
     ':auth' => $upload_auth
   );
   $resultblog = exec_sql_query($db, $sqlblog, $paramsblog);
+}
 }
 
 
